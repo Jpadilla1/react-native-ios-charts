@@ -21,6 +21,8 @@ class RNBarChart : BarChartView {
   var descriptionFontSize: CGFloat = 9.0;
   var infoTextFontName: String = "HelveticaNeue";
   var infoTextFontSize: CGFloat = 12.0;
+  var legendTextFontName: String = "HelveticaNeue";
+  var legendTextFontSize: CGFloat = 12.0;
   
   override init(frame: CGRect) {
     super.init(frame: frame);
@@ -129,6 +131,149 @@ class RNBarChart : BarChartView {
       self.leftAxis.drawGridLinesEnabled = json["showBackgroundGrid"].boolValue;
       self.rightAxis.drawGridLinesEnabled = json["showBackgroundGrid"].boolValue;
       self.xAxis.drawGridLinesEnabled = json["showBackgroundGrid"].boolValue;
+    }
+
+    if json["descriptionTextAlign"].isExists() {
+      switch (json["descriptionTextAlign"].stringValue) {
+        case "left":
+          self.descriptionTextAlign = NSTextAlignment.Left;
+          break;
+        case "center":
+          self.descriptionTextAlign = NSTextAlignment.Center;
+          break;
+        case "right":
+          self.descriptionTextAlign = NSTextAlignment.Right;
+          break;
+        case "justified":
+          self.descriptionTextAlign = NSTextAlignment.Justified;
+          break;
+        default:
+          break;
+      }
+    }
+    
+    if json["drawBorders"].isExists() {
+      self.drawBordersEnabled = json["drawBorders"].boolValue;
+    }
+    
+    if json["borderColor"].isExists() {
+      self.borderColor = RCTConvert.UIColor(json["borderColor"].intValue);
+    }
+    
+    if json["borderLineWidth"].isExists() {
+      self.borderLineWidth = CGFloat(json["borderLineWidth"].floatValue);
+    }
+    
+    if json["drawMarkers"].isExists() {
+      self.drawMarkers = json["drawMarkers"].boolValue;
+    }
+    
+    if json["drawValueAboveBar"].isExists() {
+      self.drawValueAboveBarEnabled = json["drawValueAboveBar"].boolValue;
+    }
+    
+    if json["drawHighlightArrow"].isExists() {
+      self.drawHighlightArrowEnabled = json["drawHighlightArrow"].boolValue;
+    }
+    
+    if json["drawBarShadow"].isExists() {
+      self.drawBarShadowEnabled = json["drawBarShadow"].boolValue;
+    }
+
+    if json["minOffset"].isExists() {
+      self.minOffset = CGFloat(json["minOffset"].floatValue);
+    }
+    
+    if json["autoScaleMinMax"].isExists() {
+      self.autoScaleMinMaxEnabled = json["autoScaleMinMax"].boolValue;
+    }
+    
+    if json["highlightPerTap"].isExists() {
+      self.highlightPerTapEnabled = json["highlightPerTap"].boolValue;
+    }
+    
+    if json["showLegend"].isExists() {
+      self.legend.enabled = json["showLegend"].boolValue;
+    }
+    
+    if json["legend"].isExists() {
+      if json["legend"]["textColor"].isExists() {
+        self.legend.textColor = RCTConvert.UIColor(json["legend"]["textColor"].intValue);
+      }
+      
+      if json["legend"]["textSize"].isExists() {
+        self.legendTextFontSize = CGFloat(json["legend"]["textSize"].floatValue);
+        self.legend.font = UIFont(
+          name: self.legendTextFontName,
+          size: self.legendTextFontSize
+        )!;
+      }
+      
+      if json["legend"]["typeface"].isExists() {
+        self.legendTextFontName = json["legend"]["typeface"].stringValue;
+        self.legend.font = UIFont(
+          name: self.legendTextFontName,
+          size: self.legendTextFontSize
+          )!;
+      }
+      
+      if json["legend"]["wordWrap"].isExists() {
+        self.legend.wordWrapEnabled = json["legend"]["wordWrap"].boolValue;
+      }
+      
+      if json["legend"]["maxSizePercent"].isExists() {
+        self.legend.maxSizePercent = CGFloat(json["legend"]["maxSizePercent"].floatValue);
+      }
+      
+      if json["legend"]["position"].isExists() {
+        switch(json["legend"]["position"].stringValue) {
+          case "rightOfChart":
+            self.legend.position = ChartLegend.ChartLegendPosition.RightOfChart;
+            break;
+          case "rightOfChartCenter":
+            self.legend.position = ChartLegend.ChartLegendPosition.RightOfChartCenter;
+            break;
+          case "rightOfChartInside":
+            self.legend.position = ChartLegend.ChartLegendPosition.RightOfChartInside;
+            break;
+          case "leftOfChart":
+            self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChart;
+            break;
+          case "leftOfChartCenter":
+            self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChartCenter;
+            break;
+          case "leftOfChartInside":
+            self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChartInside;
+            break;
+          case "belowChartLeft":
+            self.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft;
+            break;
+          case "belowChartRight":
+            self.legend.position = ChartLegend.ChartLegendPosition.BelowChartRight;
+            break;
+          case "belowChartCenter":
+            self.legend.position = ChartLegend.ChartLegendPosition.BelowChartCenter;
+            break;
+          case "aboveChartLeft":
+            self.legend.position = ChartLegend.ChartLegendPosition.AboveChartLeft;
+            break;
+          case "aboveChartRight":
+            self.legend.position = ChartLegend.ChartLegendPosition.AboveChartRight;
+            break;
+          case "aboveChartCenter":
+            self.legend.position = ChartLegend.ChartLegendPosition.AboveChartCenter;
+            break;
+          case "pieChartCenter":
+            self.legend.position = ChartLegend.ChartLegendPosition.PiechartCenter;
+            break;
+          default:
+            self.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft;
+            break;
+        }
+      }
+      
+      
+      
     }
     
     if self.values.count > 0 && self.labels.count > 0 {

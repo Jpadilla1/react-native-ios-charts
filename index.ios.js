@@ -20,20 +20,32 @@ var RCTIOSCharts = React.createClass({
       <View style={styles.container}>
         <BarChart
           config={{
-            // values: [20.9, 10, 40, 39.1],
-            // labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+            values: [20.9, 10, 40, 39.1, 32, 43, 50, 23, 25, 30, 12, 45],
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             backgroundColor: 'black',
             gridBackgroundColor: 'white',
-            showBackgroundGrid: false,
-            descriptionText: 'hi Mom',
+            showBackgroundGrid: true,
+            descriptionText: 'Sales per month',
             dataSetLabel: 'I am a label',
+            colors: ['lightblue'],
             descriptionTextColor: 'black',
             descriptionFontSize: 10,
             descriptionTextPosition: {
               x: 175, y: 0
             },
+            descriptionTextAlign: 'center',
             infoTextFontSize: 16,
-            infoTextColor: 'lightgray'
+            infoTextColor: 'lightgray',
+            drawBorders: true,
+            borderColor: 'blue',
+            borderLineWidth: 10,
+            drawValueAboveBar: true,
+            drawHighlightArrow: false,
+            drawBarShadow: false,
+            minOffset: 30,
+            highlightPerTap: false,
+            showLegend: false
           }}
           style={styles.chart}/>
       </View>
@@ -44,10 +56,10 @@ var RCTIOSCharts = React.createClass({
 var styles = StyleSheet.create({
   chart: {
     position: 'absolute',
-    top: 100,
+    top: 50,
     left: 10,
     right: 10,
-    bottom: 100
+    bottom: 50
   },
   container: {
     flex: 1,
