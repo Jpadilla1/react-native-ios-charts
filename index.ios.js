@@ -45,7 +45,12 @@ var RCTIOSCharts = React.createClass({
             drawBarShadow: false,
             minOffset: 30,
             highlightPerTap: false,
-            showLegend: false
+            showLegend: false,
+            legend: {
+              textColor: 'red',
+              textSize: 16,
+              position: 'belowChartRight'
+            }
           }}
           style={styles.chart}/>
       </View>
