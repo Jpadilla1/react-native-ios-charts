@@ -23,6 +23,8 @@ class RNBarChart : BarChartView {
   var infoTextFontSize: CGFloat = 12.0;
   var legendTextFontName: String = "HelveticaNeue";
   var legendTextFontSize: CGFloat = 12.0;
+  var legendColors: [UIColor] = ChartColorTemplates.colorful();
+  var legendLabels: [String] = [];
   
   override init(frame: CGRect) {
     super.init(frame: frame);
@@ -272,7 +274,53 @@ class RNBarChart : BarChartView {
         }
       }
       
+      if json["legend"]["form"].isExists() {
+        switch(json["legend"]["form"]) {
+          case "square":
+            self.legend.form = ChartLegend.ChartLegendForm.Square;
+            break;
+          case "circle":
+            self.legend.form = ChartLegend.ChartLegendForm.Circle;
+            break;
+          case "line":
+            self.legend.form = ChartLegend.ChartLegendForm.Line;
+            break;
+          default:
+            self.legend.form = ChartLegend.ChartLegendForm.Square;
+            break;
+        }
+      }
       
+      if json["legend"]["formSize"].isExists() {
+        self.legend.formSize = CGFloat(json["legend"]["formSize"].floatValue);
+      }
+      
+      if json["legend"]["xEntrySpace"].isExists() {
+        self.legend.xEntrySpace = CGFloat(json["legend"]["xEntrySpace"].floatValue);
+      }
+      
+      if json["legend"]["yEntrySpace"].isExists() {
+        self.legend.yEntrySpace = CGFloat(json["legend"]["yEntrySpace"].floatValue);
+      }
+      
+      if json["legend"]["formToTextSpace"].isExists() {
+        self.legend.formToTextSpace = CGFloat(json["legend"]["formToTextSpace"].floatValue);
+      }
+      
+      if json["legend"]["colors"].isExists() {
+        let arrColors = json["legend"]["colors"].arrayObject as! [Int];
+        self.legendColors = arrColors.map({return RCTConvert.UIColor($0)});
+        if self.legendLabels.count == self.legendColors.count {
+          self.legend.setCustom(colors: self.legendColors, labels: self.legendLabels);
+        }
+      }
+      
+      if json["legend"]["labels"].isExists() {
+        self.legendLabels = json["legend"]["labels"].arrayObject as! [String];
+        if self.legendLabels.count == self.legendColors.count {
+          self.legend.setCustom(colors: self.legendColors, labels: self.legendLabels);
+        }
+      }
       
     }
     

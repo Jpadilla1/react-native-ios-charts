@@ -28,7 +28,7 @@ var RCTIOSCharts = React.createClass({
             showBackgroundGrid: true,
             descriptionText: 'Sales per month',
             dataSetLabel: 'I am a label',
-            colors: ['lightblue'],
+            // colors: ['lightblue'],
             descriptionTextColor: 'black',
             descriptionFontSize: 10,
             descriptionTextPosition: {
@@ -45,11 +45,18 @@ var RCTIOSCharts = React.createClass({
             drawBarShadow: false,
             minOffset: 30,
             highlightPerTap: false,
-            showLegend: false,
+            showLegend: true,
             legend: {
               textColor: 'red',
               textSize: 16,
-              position: 'belowChartRight'
+              position: 'belowChartCenter',
+              form: 'circle',
+              formSize: 16,
+              xEntrySpace: 30,
+              yEntrySpace: 0,
+              formToTextSpace: 10,
+              colors: ['red', 'blue', 'orange'],
+              labels: ['a', 'b', 'c']
             }
           }}
           style={styles.chart}/>

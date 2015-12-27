@@ -31,6 +31,14 @@ var BarChart = React.createClass({
       config.infoTextColor = processColor(config.infoTextColor);
     }
 
+    if ('legend' in config && 'textColor' in config.legend) {
+      config.legend.textColor = processColor(config.legend.textColor);
+    }
+
+    if ('legend' in config && 'colors' in config.legend) {
+      config.legend.colors = processColor(config.legend.colors);
+    }
+
     return <RNBarChart
       config={JSON.stringify(config)}
       {...otherProps}/>;
