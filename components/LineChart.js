@@ -117,8 +117,151 @@ var LineChart = React.createClass({
   }
 });
 
-// LineChart.propTypes = {
-//   config: React.PropTypes.array.isRequired,
-// }
-
+LineChart.propTypes = {
+  config: React.PropTypes.shape({
+    values: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+    labels: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    backgroundColor: React.PropTypes.string,
+    gridBackgroundColor: React.PropTypes.string,
+    showBackgroundGrid: React.PropTypes.bool,
+    descriptionText: React.PropTypes.string,
+    colors: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    descriptionTextColor: React.PropTypes.string,
+    descriptionFontSize: React.PropTypes.number,
+    dataSetLabel: React.PropTypes.string,
+    descriptionTextPosition: React.PropTypes.shape({
+      x: React.PropTypes.number,
+      y: React.PropTypes.number
+    }),
+    descriptionTextAlign: React.PropTypes.string,
+    infoTextFontSize: React.PropTypes.number,
+    infoTextColor: React.PropTypes.string,
+    drawBorders: React.PropTypes.bool,
+    borderColor: React.PropTypes.string,
+    borderLineWidth: React.PropTypes.number,
+    drawValueAboveBar: React.PropTypes.bool,
+    drawHighlightArrow: React.PropTypes.bool,
+    drawBarShadow: React.PropTypes.bool,
+    minOffset: React.PropTypes.number,
+    highlightPerTap: React.PropTypes.bool,
+    showLegend: React.PropTypes.bool,
+    legend: React.PropTypes.shape({
+      textColor: React.PropTypes.string,
+      textSize: React.PropTypes.number,
+      position: React.PropTypes.oneOf([
+        'rightOfChart',
+        'rightOfChartCenter',
+        'rightOfChartInside',
+        'leftOfChart',
+        'leftOfChartCenter',
+        'leftOfChartInside',
+        'belowChartLeft',
+        'belowChartRight',
+        'belowChartCenter',
+        'aboveChartLeft',
+        'aboveChartRight',
+        'aboveChartCenter',
+        'pieChartCenter'
+      ]),
+      form: React.PropTypes.oneOf([
+        'square',
+        'circle',
+        'line'
+      ]),
+      formSize: React.PropTypes.number,
+      xEntrySpace: React.PropTypes.number,
+      yEntrySpace: React.PropTypes.number,
+      formToTextSpace: React.PropTypes.number,
+      colors: React.PropTypes.arrayOf(React.PropTypes.string),
+      labels: React.PropTypes.arrayOf(React.PropTypes.string)
+    }),
+    highlightValues: React.PropTypes.arrayOf(React.PropTypes.number),
+    xAxis: React.PropTypes.shape({
+      enabled: React.PropTypes.bool,
+      position: React.PropTypes.string,
+      drawAxisLine: React.PropTypes.bool,
+      drawGridLines: React.PropTypes.bool,
+      drawLabels: React.PropTypes.bool,
+      textColor: React.PropTypes.string,
+      textSize: React.PropTypes.number,
+      gridColor: React.PropTypes.string,
+      gridLineWidth: React.PropTypes.number,
+      axisLineColor: React.PropTypes.string,
+      axisLineWidth: React.PropTypes.number,
+      drawLimitLinesBehindData: React.PropTypes.bool,
+      gridDashedLine: React.PropTypes.shape({
+        lineLength: React.PropTypes.number,
+        spaceLength: React.PropTypes.number,
+        phase: React.PropTypes.number
+      }),
+      limitLines: React.PropTypes.arrayOf(React.PropTypes.shape({
+        limit: React.PropTypes.number,
+        label: React.PropTypes.string,
+        position: React.PropTypes.string,
+        lineColor: React.PropTypes.string,
+        valueTextColor: React.PropTypes.string,
+        lineDashLengths: React.PropTypes.number,
+        lineWidth: React.PropTypes.number,
+        lineDashPhase: React.PropTypes.number
+      }))
+    }),
+    leftAxis: React.PropTypes.shape({
+      enabled: React.PropTypes.bool,
+      drawAxisLine: React.PropTypes.bool,
+      drawGridLines: React.PropTypes.bool,
+      drawLabels: React.PropTypes.bool,
+      textColor: React.PropTypes.string,
+      textSize: React.PropTypes.number,
+      gridColor: React.PropTypes.string,
+      gridLineWidth: React.PropTypes.number,
+      axisLineColor: React.PropTypes.string,
+      axisLineWidth: React.PropTypes.number,
+      drawLimitLinesBehindData: React.PropTypes.bool,
+      spaceBottom: React.PropTypes.number,
+      gridDashedLine: React.PropTypes.shape({
+        lineLength: React.PropTypes.number,
+        spaceLength: React.PropTypes.number,
+        phase: React.PropTypes.number
+      }),
+      limitLines: React.PropTypes.arrayOf(React.PropTypes.shape({
+        limit: React.PropTypes.number,
+        label: React.PropTypes.string,
+        position: React.PropTypes.string,
+        lineColor: React.PropTypes.string,
+        valueTextColor: React.PropTypes.string,
+        lineDashLengths: React.PropTypes.number,
+        lineWidth: React.PropTypes.number,
+        lineDashPhase: React.PropTypes.number
+      }))
+    }),
+    rightAxis: React.PropTypes.shape({
+      enabled: React.PropTypes.bool,
+      drawAxisLine: React.PropTypes.bool,
+      drawGridLines: React.PropTypes.bool,
+      drawLabels: React.PropTypes.bool,
+      textColor: React.PropTypes.string,
+      textSize: React.PropTypes.number,
+      gridColor: React.PropTypes.string,
+      gridLineWidth: React.PropTypes.number,
+      axisLineColor: React.PropTypes.string,
+      axisLineWidth: React.PropTypes.number,
+      drawLimitLinesBehindData: React.PropTypes.bool,
+      gridDashedLine: React.PropTypes.shape({
+        lineLength: React.PropTypes.number,
+        spaceLength: React.PropTypes.number,
+        phase: React.PropTypes.number
+      }),
+      limitLines: React.PropTypes.arrayOf(React.PropTypes.shape({
+        limit: React.PropTypes.number,
+        label: React.PropTypes.string,
+        position: React.PropTypes.string,
+        lineColor: React.PropTypes.string,
+        valueTextColor: React.PropTypes.string,
+        lineDashLengths: React.PropTypes.number,
+        lineWidth: React.PropTypes.number,
+        lineDashPhase: React.PropTypes.number
+      }))
+    })
+  }),
+}
 module.exports = LineChart;
