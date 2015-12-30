@@ -1,9 +1,27 @@
 {
-  "name": "RCTIOSCharts",
+  "name": "react-native-ios-charts",
   "version": "0.0.1",
-  "private": true,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jpadilla1/react-native-ios-charts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jpadilla1/react-native-ios-charts/issues"
+  },
+  "homepage": "https://github.com/Jpadilla1/react-native-ios-charts#readme",
+  "keywords": [
+    "charts",
+    "graphs",
+    "react-native"
+  ],
+  "author": "Jose Padilla <jpadilla1293@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "start": "react-native start"
+  },
+  "peerDependencies": {
+    "react-native": "^0.17.0"
   },
   "dependencies": {
     "react-native": "^0.17.0"
