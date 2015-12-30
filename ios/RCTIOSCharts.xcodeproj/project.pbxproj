@@ -27,6 +27,9 @@
 		9816ECCD1C2BA89500B3B0A3 /* RNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 9816ECCC1C2BA89500B3B0A3 /* RNBarChart.m */; };
 		9816ECCF1C2BA8F200B3B0A3 /* RNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9816ECCE1C2BA8F200B3B0A3 /* RNBarChart.swift */; };
 		9816ECE81C2C286900B3B0A3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9816ECDB1C2C273200B3B0A3 /* SwiftyJSON.framework */; };
+		9816ECEC1C33604300B3B0A3 /* RNLineChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9816ECEB1C33604300B3B0A3 /* RNLineChartManager.swift */; };
+		9816ECEF1C33605E00B3B0A3 /* RNLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 9816ECEE1C33605E00B3B0A3 /* RNLineChart.m */; };
+		9816ECF11C3360A700B3B0A3 /* RNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9816ECF01C3360A700B3B0A3 /* RNLineChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +211,10 @@
 		9816ECCC1C2BA89500B3B0A3 /* RNBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBarChart.m; sourceTree = "<group>"; };
 		9816ECCE1C2BA8F200B3B0A3 /* RNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNBarChart.swift; sourceTree = "<group>"; };
 		9816ECD01C2C273100B3B0A3 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
+		9816ECEB1C33604300B3B0A3 /* RNLineChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNLineChartManager.swift; sourceTree = "<group>"; };
+		9816ECED1C33605E00B3B0A3 /* RNLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNLineChart.h; sourceTree = "<group>"; };
+		9816ECEE1C33605E00B3B0A3 /* RNLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNLineChart.m; sourceTree = "<group>"; };
+		9816ECF01C3360A700B3B0A3 /* RNLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNLineChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +335,10 @@
 				9816ECCB1C2BA89500B3B0A3 /* RNBarChart.h */,
 				9816ECCC1C2BA89500B3B0A3 /* RNBarChart.m */,
 				9816ECCE1C2BA8F200B3B0A3 /* RNBarChart.swift */,
+				9816ECEB1C33604300B3B0A3 /* RNLineChartManager.swift */,
+				9816ECED1C33605E00B3B0A3 /* RNLineChart.h */,
+				9816ECEE1C33605E00B3B0A3 /* RNLineChart.m */,
+				9816ECF01C3360A700B3B0A3 /* RNLineChart.swift */,
 			);
 			name = RCTIOSCharts;
 			sourceTree = "<group>";
@@ -736,10 +747,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9816ECEC1C33604300B3B0A3 /* RNLineChartManager.swift in Sources */,
 				9816ECCA1C2BA84F00B3B0A3 /* RNBarChartManager.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				9816ECEF1C33605E00B3B0A3 /* RNLineChart.m in Sources */,
 				9816ECCF1C2BA8F200B3B0A3 /* RNBarChart.swift in Sources */,
 				9816ECCD1C2BA89500B3B0A3 /* RNBarChart.m in Sources */,
+				9816ECF11C3360A700B3B0A3 /* RNLineChart.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,6 +827,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEAD_CODE_STRIPPING = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Charts/**",
 					"$(SRCROOT)/SwiftyJSON/**",
@@ -830,6 +845,7 @@
 				PRODUCT_NAME = RCTIOSCharts;
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTIOSCharts-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USE_HEADERMAP = YES;
 			};
 			name = Debug;
@@ -840,6 +856,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Charts/**",
 					"$(SRCROOT)/SwiftyJSON/**",
@@ -856,6 +873,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RCTIOSCharts;
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTIOSCharts-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USE_HEADERMAP = YES;
 			};
 			name = Release;

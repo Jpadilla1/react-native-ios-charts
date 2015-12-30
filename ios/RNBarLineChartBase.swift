@@ -1,8 +1,8 @@
 //
-//  RNBarChart.swift
+//  RNBarLineChartBase.swift
 //  RCTIOSCharts
 //
-//  Created by Jose Padilla on 12/24/15.
+//  Created by Jose Padilla on 12/30/15.
 //  Copyright © 2015 Facebook. All rights reserved.
 //
 
@@ -10,12 +10,8 @@ import Foundation
 import Charts
 import SwiftyJSON
 
-@objc(RNBarChart)
-class RNBarChart : BarChartView {
-  
-  var labels: [String] = [];
-  var values: [Double] = [];
-  var dataSetLabel: String = "";
+class RNBarLineChartBase : BarLineChartViewBase {
+ 
   var colors: [UIColor] = ChartColorTemplates.colorful();
   var descriptionFontName: String = "HelveticaNeue";
   var descriptionFontSize: CGFloat = 9.0;
@@ -35,7 +31,6 @@ class RNBarChart : BarChartView {
   override init(frame: CGRect) {
     super.init(frame: frame);
     self.frame = frame;
-    self.descriptionText = "";
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -47,14 +42,6 @@ class RNBarChart : BarChartView {
     if let data = config.dataUsingEncoding(NSUTF8StringEncoding) {
       json = JSON(data: data);
     };
-    
-    if json["labels"].isExists() {
-      self.labels = json["labels"].arrayObject as! [String];
-    }
-    
-    if json["values"].isExists() {
-      self.values = json["values"].arrayObject as! [Double];
-    }
     
     if json["backgroundColor"].isExists() {
       self.backgroundColor = RCTConvert.UIColor(json["backgroundColor"].intValue);
@@ -74,7 +61,7 @@ class RNBarChart : BarChartView {
     
     if json["descriptionFontName"].isExists() {
       self.descriptionFontName = json["descriptionFontName"].stringValue;
-
+      
       self.descriptionFont = UIFont(
         name: self.descriptionFontName,
         size: self.descriptionFontSize
@@ -95,8 +82,8 @@ class RNBarChart : BarChartView {
     }
     
     if json["descriptionTextPosition"].isExists() &&
-       json["descriptionTextPosition"]["x"].isExists() &&
-       json["descriptionTextPosition"]["y"].isExists() {
+      json["descriptionTextPosition"]["x"].isExists() &&
+      json["descriptionTextPosition"]["y"].isExists() {
         
         self.setDescriptionTextPosition(
           x: CGFloat(json["descriptionTextPosition"]["x"].floatValue),
@@ -126,37 +113,27 @@ class RNBarChart : BarChartView {
       self.infoTextColor = RCTConvert.UIColor(json["infoTextColor"].intValue);
     }
     
-    if json["dataSetLabel"].isExists() {
-      self.dataSetLabel = json["dataSetLabel"].stringValue;
-    }
-    
     if json["colors"].isExists() {
       let arrColors = json["colors"].arrayObject as! [Int];
       self.colors = arrColors.map({return RCTConvert.UIColor($0)});
     }
     
-    if json["showBackgroundGrid"].isExists() {
-      self.leftAxis.drawGridLinesEnabled = json["showBackgroundGrid"].boolValue;
-      self.rightAxis.drawGridLinesEnabled = json["showBackgroundGrid"].boolValue;
-      self.xAxis.drawGridLinesEnabled = json["showBackgroundGrid"].boolValue;
-    }
-
     if json["descriptionTextAlign"].isExists() {
       switch (json["descriptionTextAlign"].stringValue) {
-        case "left":
-          self.descriptionTextAlign = NSTextAlignment.Left;
-          break;
-        case "center":
-          self.descriptionTextAlign = NSTextAlignment.Center;
-          break;
-        case "right":
-          self.descriptionTextAlign = NSTextAlignment.Right;
-          break;
-        case "justified":
-          self.descriptionTextAlign = NSTextAlignment.Justified;
-          break;
-        default:
-          break;
+      case "left":
+        self.descriptionTextAlign = NSTextAlignment.Left;
+        break;
+      case "center":
+        self.descriptionTextAlign = NSTextAlignment.Center;
+        break;
+      case "right":
+        self.descriptionTextAlign = NSTextAlignment.Right;
+        break;
+      case "justified":
+        self.descriptionTextAlign = NSTextAlignment.Justified;
+        break;
+      default:
+        break;
       }
     }
     
@@ -176,24 +153,8 @@ class RNBarChart : BarChartView {
       self.drawMarkers = json["drawMarkers"].boolValue;
     }
     
-    if json["drawValueAboveBar"].isExists() {
-      self.drawValueAboveBarEnabled = json["drawValueAboveBar"].boolValue;
-    }
-    
-    if json["drawHighlightArrow"].isExists() {
-      self.drawHighlightArrowEnabled = json["drawHighlightArrow"].boolValue;
-    }
-    
-    if json["drawBarShadow"].isExists() {
-      self.drawBarShadowEnabled = json["drawBarShadow"].boolValue;
-    }
-
     if json["minOffset"].isExists() {
       self.minOffset = CGFloat(json["minOffset"].floatValue);
-    }
-    
-    if json["autoScaleMinMax"].isExists() {
-      self.autoScaleMinMaxEnabled = json["autoScaleMinMax"].boolValue;
     }
     
     if json["highlightPerTap"].isExists() {
@@ -214,7 +175,7 @@ class RNBarChart : BarChartView {
         self.legend.font = UIFont(
           name: self.legendTextFontName,
           size: self.legendTextFontSize
-        )!;
+          )!;
       }
       
       if json["legend"]["typeface"].isExists() {
@@ -235,65 +196,65 @@ class RNBarChart : BarChartView {
       
       if json["legend"]["position"].isExists() {
         switch(json["legend"]["position"].stringValue) {
-          case "rightOfChart":
-            self.legend.position = ChartLegend.ChartLegendPosition.RightOfChart;
-            break;
-          case "rightOfChartCenter":
-            self.legend.position = ChartLegend.ChartLegendPosition.RightOfChartCenter;
-            break;
-          case "rightOfChartInside":
-            self.legend.position = ChartLegend.ChartLegendPosition.RightOfChartInside;
-            break;
-          case "leftOfChart":
-            self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChart;
-            break;
-          case "leftOfChartCenter":
-            self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChartCenter;
-            break;
-          case "leftOfChartInside":
-            self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChartInside;
-            break;
-          case "belowChartLeft":
-            self.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft;
-            break;
-          case "belowChartRight":
-            self.legend.position = ChartLegend.ChartLegendPosition.BelowChartRight;
-            break;
-          case "belowChartCenter":
-            self.legend.position = ChartLegend.ChartLegendPosition.BelowChartCenter;
-            break;
-          case "aboveChartLeft":
-            self.legend.position = ChartLegend.ChartLegendPosition.AboveChartLeft;
-            break;
-          case "aboveChartRight":
-            self.legend.position = ChartLegend.ChartLegendPosition.AboveChartRight;
-            break;
-          case "aboveChartCenter":
-            self.legend.position = ChartLegend.ChartLegendPosition.AboveChartCenter;
-            break;
-          case "pieChartCenter":
-            self.legend.position = ChartLegend.ChartLegendPosition.PiechartCenter;
-            break;
-          default:
-            self.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft;
-            break;
+        case "rightOfChart":
+          self.legend.position = ChartLegend.ChartLegendPosition.RightOfChart;
+          break;
+        case "rightOfChartCenter":
+          self.legend.position = ChartLegend.ChartLegendPosition.RightOfChartCenter;
+          break;
+        case "rightOfChartInside":
+          self.legend.position = ChartLegend.ChartLegendPosition.RightOfChartInside;
+          break;
+        case "leftOfChart":
+          self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChart;
+          break;
+        case "leftOfChartCenter":
+          self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChartCenter;
+          break;
+        case "leftOfChartInside":
+          self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChartInside;
+          break;
+        case "belowChartLeft":
+          self.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft;
+          break;
+        case "belowChartRight":
+          self.legend.position = ChartLegend.ChartLegendPosition.BelowChartRight;
+          break;
+        case "belowChartCenter":
+          self.legend.position = ChartLegend.ChartLegendPosition.BelowChartCenter;
+          break;
+        case "aboveChartLeft":
+          self.legend.position = ChartLegend.ChartLegendPosition.AboveChartLeft;
+          break;
+        case "aboveChartRight":
+          self.legend.position = ChartLegend.ChartLegendPosition.AboveChartRight;
+          break;
+        case "aboveChartCenter":
+          self.legend.position = ChartLegend.ChartLegendPosition.AboveChartCenter;
+          break;
+        case "pieChartCenter":
+          self.legend.position = ChartLegend.ChartLegendPosition.PiechartCenter;
+          break;
+        default:
+          self.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft;
+          break;
         }
       }
       
       if json["legend"]["form"].isExists() {
         switch(json["legend"]["form"]) {
-          case "square":
-            self.legend.form = ChartLegend.ChartLegendForm.Square;
-            break;
-          case "circle":
-            self.legend.form = ChartLegend.ChartLegendForm.Circle;
-            break;
-          case "line":
-            self.legend.form = ChartLegend.ChartLegendForm.Line;
-            break;
-          default:
-            self.legend.form = ChartLegend.ChartLegendForm.Square;
-            break;
+        case "square":
+          self.legend.form = ChartLegend.ChartLegendForm.Square;
+          break;
+        case "circle":
+          self.legend.form = ChartLegend.ChartLegendForm.Circle;
+          break;
+        case "line":
+          self.legend.form = ChartLegend.ChartLegendForm.Line;
+          break;
+        default:
+          self.legend.form = ChartLegend.ChartLegendForm.Square;
+          break;
         }
       }
       
@@ -364,7 +325,7 @@ class RNBarChart : BarChartView {
         self.xAxis.labelFont = UIFont(
           name: self.xAxisTextFontName,
           size: self.xAxisTextFontSize
-        )!;
+          )!;
       }
       
       if json["xAxis"]["gridColor"].isExists() {
@@ -388,7 +349,7 @@ class RNBarChart : BarChartView {
         if json["xAxis"]["gridDashedLine"]["lineLength"].isExists() {
           self.xAxis.gridLineDashLengths = [CGFloat(
             json["xAxis"]["gridDashedLine"]["lineLength"].floatValue
-          )];
+            )];
         }
         
         if json["xAxis"]["gridDashedLine"]["spaceLength"].isExists() {
@@ -411,8 +372,8 @@ class RNBarChart : BarChartView {
           let tmp = JSON(l);
           
           if tmp["limit"].isExists() &&
-             tmp["label"].isExists() {
-            
+            tmp["label"].isExists() {
+              
               let line = ChartLimitLine(
                 limit: tmp["limit"].doubleValue,
                 label: tmp["label"].stringValue
@@ -420,21 +381,21 @@ class RNBarChart : BarChartView {
               
               if tmp["position"].isExists() {
                 switch(tmp["position"]) {
-                  case "leftBottom":
-                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftBottom;
-                    break;
-                  case "leftTop":
-                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftTop;
-                    break;
-                  case "rightBottom":
-                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightBottom;
-                    break;
-                  case "rightTop":
-                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightTop;
-                    break;
-                  default:
-                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightTop;
-                    break;
+                case "leftBottom":
+                  line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftBottom;
+                  break;
+                case "leftTop":
+                  line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftTop;
+                  break;
+                case "rightBottom":
+                  line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightBottom;
+                  break;
+                case "rightTop":
+                  line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightTop;
+                  break;
+                default:
+                  line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightTop;
+                  break;
                 }
               }
               
@@ -445,7 +406,7 @@ class RNBarChart : BarChartView {
               if tmp["lineDashLengths"].isExists() {
                 line.lineDashLengths = [CGFloat(tmp["lineDashLengths"].floatValue)];
               }
-
+              
               if tmp["lineDashPhase"].isExists() {
                 line.lineDashPhase = CGFloat(tmp["lineDashPhase"].floatValue);
               }
@@ -461,7 +422,7 @@ class RNBarChart : BarChartView {
               if tmp["xOffset"].isExists() {
                 line.xOffset = CGFloat(tmp["xOffset"].floatValue);
               }
-
+              
               if tmp["yOffset"].isExists() {
                 line.yOffset = CGFloat(tmp["yOffset"].floatValue);
               }
@@ -473,24 +434,24 @@ class RNBarChart : BarChartView {
       
       if json["xAxis"]["position"].isExists() {
         switch(json["xAxis"]["position"].stringValue) {
-          case "bothSided":
-            self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.BothSided;
-            break;
-          case "bottom":
-            self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom;
-            break;
-          case "bottomInside":
-            self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.BottomInside;
-            break;
-          case "top":
-            self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Top;
-            break;
-          case "topInside":
-            self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.TopInside;
-            break;
-          default:
-            self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom;
-            break;
+        case "bothSided":
+          self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.BothSided;
+          break;
+        case "bottom":
+          self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom;
+          break;
+        case "bottomInside":
+          self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.BottomInside;
+          break;
+        case "top":
+          self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Top;
+          break;
+        case "topInside":
+          self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.TopInside;
+          break;
+        default:
+          self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom;
+          break;
         }
       }
       
@@ -676,7 +637,7 @@ class RNBarChart : BarChartView {
       if json["leftAxis"]["axisMaximum"].isExists() {
         self.leftAxis.axisMaximum = json["leftAxis"]["axisMaximum"].doubleValue;
       }
-
+      
     }
     
     // rightAxis
@@ -832,33 +793,28 @@ class RNBarChart : BarChartView {
         self.rightAxis.drawLimitLinesBehindDataEnabled = json["rightAxis"]["drawLimitLinesBehindData"].boolValue;
       }
       
-    }
-
-    
-    if self.values.count > 0 && self.labels.count > 0 {
-      setChart();
+      if json["rightAxis"]["spaceTop"].isExists() {
+        self.rightAxis.spaceTop = CGFloat(json["rightAxis"]["spaceTop"].floatValue);
+      }
+      
+      if json["rightAxis"]["spaceBottom"].isExists() {
+        self.rightAxis.spaceBottom = CGFloat(json["rightAxis"]["spaceBottom"].floatValue);
+      }
+      
+      if json["rightAxis"]["startAtZero"].isExists() {
+        self.rightAxis.startAtZeroEnabled = json["rightAxis"]["startAtZeroEnabled"].boolValue;
+      }
+      
+      if json["rightAxis"]["axisMinimum"].isExists() {
+        self.rightAxis.axisMinimum = json["rightAxis"]["axisMinimum"].doubleValue;
+      }
+      
+      if json["rightAxis"]["axisMaximum"].isExists() {
+        self.rightAxis.axisMaximum = json["rightAxis"]["axisMaximum"].doubleValue;
+      }
+      
     }
     
   }
   
-  func setChart() {
-    var dataEntries: [BarChartDataEntry] = [];
-    
-    for i in 0..<self.values.count {
-      let dataEntry = BarChartDataEntry(value: values[i], xIndex: i);
-      dataEntries.append(dataEntry);
-    }
-    
-    let chartDataSet = BarChartDataSet(yVals: dataEntries, label: self.dataSetLabel);
-    let chartData = BarChartData(xVals: self.labels, dataSet: chartDataSet);
-    self.data = chartData;
-    
-    chartDataSet.colors = self.colors;
-    
-    //barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-    //self.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .EaseInBounce)
-    
-    
-  }
-
 }

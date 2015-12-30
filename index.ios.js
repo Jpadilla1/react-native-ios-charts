@@ -13,41 +13,41 @@ var {
 } = React;
 
 var BarChart = require('./components/BarChart');
+var LineChart = require('./components/LineChart');
 
 var RCTIOSCharts = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <BarChart
+        <LineChart
           config={{
-            values: [20.9, 10, 40, 39.1, 32, 43, 50, 23, 25, 30, 12, 45],
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            values: [-1, 1, -1, 1, -1, 1],
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
             backgroundColor: 'black',
             gridBackgroundColor: 'white',
-            showBackgroundGrid: true,
-            descriptionText: 'Sales per month',
-            dataSetLabel: 'I am a label',
-            // colors: ['lightblue'],
+            showBackgroundGrid: false,
+            // descriptionText: 'Sales per month',
+            colors: ['black'],
             descriptionTextColor: 'black',
             descriptionFontSize: 10,
+            dataSetLabel: 'Sine function',
             descriptionTextPosition: {
               x: 175, y: 0
             },
             descriptionTextAlign: 'center',
-            infoTextFontSize: 16,
+            infoTextFontSize: 12,
             infoTextColor: 'lightgray',
-            drawBorders: true,
+            drawBorders: false,
             borderColor: 'blue',
-            borderLineWidth: 10,
-            drawValueAboveBar: true,
+            borderLineWidth: 0,
+            drawValueAboveBar: false,
             drawHighlightArrow: false,
             drawBarShadow: false,
-            minOffset: 30,
+            minOffset: 10,
             highlightPerTap: false,
-            showLegend: true,
+            showLegend: false,
             legend: {
-              textColor: 'red',
+              textColor: 'black',
               textSize: 16,
               position: 'belowChartCenter',
               form: 'circle',
@@ -55,37 +55,37 @@ var RCTIOSCharts = React.createClass({
               xEntrySpace: 30,
               yEntrySpace: 0,
               formToTextSpace: 10,
-              colors: ['red', 'blue', 'orange'],
-              labels: ['a', 'b', 'c']
+              // colors: ['red', 'blue', 'orange'],
+              // labels: ['a', 'b', 'c']
             },
-            highlightValues: [0, 1, 2, 3],
+            // highlightValues: [0, 1, 2, 3],
             xAxis: {
               enabled: true,
               position: 'bottom',
-              drawAxisLine: true,
-              drawGridLines: true,
-              drawLabels: true,
-              textColor: 'red',
+              // drawAxisLine: true,
+              // drawGridLines: true,
+              // drawLabels: true,
+              // textColor: 'red',
               textSize: 12,
-              gridColor: 'blue',
-              gridLineWidth: 3,
-              axisLineColor: 'red',
-              axisLineWidth: 3,
+              // gridColor: 'blue',
+              // gridLineWidth: 3,
+              // axisLineColor: 'red',
+              // axisLineWidth: 3,
               drawLimitLinesBehindData: false,
               gridDashedLine: {
-                lineLength: 10,
-                spaceLength: 2,
-                phase: 0
+                // lineLength: 10,
+                // spaceLength: 2,
+                // phase: 0
               },
               limitLines: [{
-                limit: 5,
-                label: 'expected',
-                position: 'leftBottom',
-                lineColor: 'black',
-                valueTextColor: 'blue',
-                lineDashLengths: 2,
-                lineWidth: 3,
-                lineDashPhase: 0
+                // limit: 5,
+                // label: 'expected',
+                // position: 'leftBottom',
+                // lineColor: 'black',
+                // valueTextColor: 'blue',
+                // lineDashLengths: 2,
+                // lineWidth: 3,
+                // lineDashPhase: 0
               }]
             },
             leftAxis: {
@@ -93,55 +93,56 @@ var RCTIOSCharts = React.createClass({
               drawAxisLine: true,
               drawGridLines: true,
               drawLabels: true,
-              textColor: 'red',
+              // textColor: 'red',
               textSize: 12,
-              gridColor: 'blue',
-              gridLineWidth: 3,
-              axisLineColor: 'black',
-              axisLineWidth: 3,
+              // gridColor: 'blue',
+              // gridLineWidth: 3,
+              // axisLineColor: 'black',
+              // axisLineWidth: 3,
               drawLimitLinesBehindData: false,
+              spaceBottom: 0,
               gridDashedLine: {
-                lineLength: 10,
-                spaceLength: 2,
-                phase: 0
+                // lineLength: 10,
+                // spaceLength: 2,
+                // phase: 0
               },
               limitLines: [{
-                limit: 5,
-                label: 'expected',
-                position: 'leftBottom',
-                lineColor: 'black',
-                valueTextColor: 'blue',
-                lineDashLengths: 2,
-                lineWidth: 3,
-                lineDashPhase: 0
+                // limit: 5,
+                // label: 'expected',
+                // position: 'leftBottom',
+                // lineColor: 'black',
+                // valueTextColor: 'blue',
+                // lineDashLengths: 2,
+                // lineWidth: 3,
+                // lineDashPhase: 0
               }]
             },
             rightAxis: {
-              enabled: true,
-              drawAxisLine: true,
-              drawGridLines: true,
+              enabled: false,
+              // drawAxisLine: true,
+              // drawGridLines: true,
               drawLabels: true,
-              textColor: 'red',
+              // textColor: 'red',
               textSize: 12,
-              gridColor: 'red',
-              gridLineWidth: 3,
-              axisLineColor: 'black',
+              // gridColor: 'red',
+              // gridLineWidth: 3,
+              // axisLineColor: 'black',
               axisLineWidth: 1,
               drawLimitLinesBehindData: false,
               gridDashedLine: {
-                lineLength: 10,
-                spaceLength: 2,
-                phase: 0
+                // lineLength: 10,
+                // spaceLength: 2,
+                // phase: 0
               },
               limitLines: [{
-                limit: 8,
-                label: 'expected',
-                position: 'leftBottom',
-                lineColor: 'black',
-                valueTextColor: 'blue',
-                lineDashLengths: 2,
-                lineWidth: 3,
-                lineDashPhase: 0
+                // limit: 8,
+                // label: 'expected',
+                // position: 'leftBottom',
+                // lineColor: 'black',
+                // valueTextColor: 'blue',
+                // lineDashLengths: 2,
+                // lineWidth: 3,
+                // lineDashPhase: 0
               }]
             }
           }}
@@ -155,8 +156,8 @@ var styles = StyleSheet.create({
   chart: {
     position: 'absolute',
     top: 50,
-    left: 10,
-    right: 10,
+    left: 15,
+    right: 15,
     bottom: 50
   },
   container: {
