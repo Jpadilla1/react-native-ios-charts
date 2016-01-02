@@ -13,7 +13,9 @@
   "keywords": [
     "charts",
     "graphs",
-    "react-native"
+    "react-native",
+    "react-component",
+    "ios"
   ],
   "author": "Jose Padilla <jpadilla1293@gmail.com>",
   "license": "MIT",
