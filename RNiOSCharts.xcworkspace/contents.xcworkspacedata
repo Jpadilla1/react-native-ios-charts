@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "RNiOSCharts">
+      <FileRef
+         location = "group:RNiOSCharts/RNBarChart.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNLineChart.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNBarLineChartBase.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNLineChartManager.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNLineChart.m">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNLineChart.h">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNBarChart.h">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNBarChart.m">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNBarChartManager.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RCTIOSCharts-Bridging-Header.h">
+      </FileRef>
+   </Group>
+</Workspace>
