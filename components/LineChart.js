@@ -369,7 +369,43 @@ LineChart.propTypes = {
       startAtZero: React.PropTypes.bool,
       axisMinimum: React.PropTypes.number,
       axisMaximum: React.PropTypes.number
+    }),
+    animation: React.PropTypes.shape({
+      xAxisDuration: React.PropTypes.number,
+      yAxisDuration: React.PropTypes.number,
+      easingOption: React.PropTypes.oneOf([
+        'linear',
+        'easeInQuad',
+        'easeOutQuad',
+        'easeInOutQuad',
+        'easeInCubic',
+        'easeOutCubic',
+        'easeInOutCubic',
+        'easeInQuart',
+        'easeOutQuart',
+        'easeInOutQuart',
+        'easeInQuint',
+        'easeOutQuint',
+        'easeInOutQuint',
+        'easeInSine',
+        'easeOutSine',
+        'easeInOutSine',
+        'easeInExpo',
+        'easeOutExpo',
+        'easeInOutExpo',
+        'easeInCirc',
+        'easeOutCirc',
+        'easeInOutCirc',
+        'easeInElastic',
+        'easeOutElastic',
+        'easeInBack',
+        'easeOutBack',
+        'easeInOutBack',
+        'easeInBounce',
+        'easeOutBounce',
+        'easeInOutBounce'
+      ])
     })
-  }),
+  })
 }
 module.exports = LineChart;

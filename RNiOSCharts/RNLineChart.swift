@@ -53,7 +53,7 @@ class RNLineChart : LineChartView {
                     var dataEntries: [ChartDataEntry] = [];
                     
                     for i in 0..<values.count {
-                        let dataEntry = BarChartDataEntry(value: values[i], xIndex: i);
+                        let dataEntry = ChartDataEntry(value: values[i], xIndex: i);
                         dataEntries.append(dataEntry);
                     }
                     
@@ -153,15 +153,15 @@ class RNLineChart : LineChartView {
                         dataSet.lineWidth = CGFloat(tmp["lineWidth"].floatValue);
                     }
                     
-                    if tmp["valueFontName"].isExists() {
+                    if tmp["valueTextFontName"].isExists() {
                         dataSet.valueFont = UIFont(
-                            name: tmp["valueFontName"].stringValue,
+                            name: tmp["valueTextFontName"].stringValue,
                             size: dataSet.valueFont.pointSize
                             )!;
                     }
                     
-                    if tmp["valueFontSize"].isExists() {
-                        dataSet.valueFont = dataSet.valueFont.fontWithSize(CGFloat(tmp["valueFontSize"].floatValue));
+                    if tmp["valueTextFontSize"].isExists() {
+                        dataSet.valueFont = dataSet.valueFont.fontWithSize(CGFloat(tmp["valueTextFontSize"].floatValue));
                     }
                     
                     if tmp["valueTextColor"].isExists() {
@@ -964,6 +964,114 @@ class RNLineChart : LineChartView {
             if json["rightAxis"]["axisMaximum"].isExists() {
                 self.rightAxis.axisMaximum = json["rightAxis"]["axisMaximum"].doubleValue;
             }
+        }
+        
+        if json["animation"].isExists() {
+            let xAxisDuration = json["animation"]["xAxisDuration"].isExists() ?
+                json["animation"]["xAxisDuration"].doubleValue : 0;
+            let yAxisDuration = json["animation"]["yAxisDuration"].isExists() ?
+                json["animation"]["yAxisDuration"].doubleValue : 0;
+            
+            var easingOption: ChartEasingOption = .Linear;
+            
+            if json["animation"]["easingOption"].isExists() {
+                switch(json["animation"]["easingOption"].stringValue) {
+                case "linear":
+                    easingOption = .Linear;
+                    break;
+                case "easeInQuad":
+                    easingOption = .EaseInQuad;
+                    break;
+                case "easeOutQuad":
+                    easingOption = .EaseOutQuad;
+                    break;
+                case "easeInOutQuad":
+                    easingOption = .EaseInOutQuad;
+                    break;
+                case "easeInCubic":
+                    easingOption = .EaseInCubic;
+                    break;
+                case "easeOutCubic":
+                    easingOption = .EaseOutCubic;
+                    break;
+                case "easeInOutCubic":
+                    easingOption = .EaseInOutCubic;
+                    break;
+                case "easeInQuart":
+                    easingOption = .EaseInQuart;
+                    break;
+                case "easeOutQuart":
+                    easingOption = .EaseOutQuart;
+                    break;
+                case "easeInOutQuart":
+                    easingOption = .EaseInOutQuart;
+                    break;
+                case "easeInQuint":
+                    easingOption = .EaseInQuint;
+                    break;
+                case "easeOutQuint":
+                    easingOption = .EaseOutQuint;
+                    break;
+                case "easeInOutQuint":
+                    easingOption = .EaseInOutQuint;
+                    break;
+                case "easeInSine":
+                    easingOption = .EaseInSine;
+                    break;
+                case "easeOutSine":
+                    easingOption = .EaseOutSine;
+                    break;
+                case "easeInOutSine":
+                    easingOption = .EaseInOutSine;
+                    break;
+                case "easeInExpo":
+                    easingOption = .EaseInExpo;
+                    break;
+                case "easeOutExpo":
+                    easingOption = .EaseOutExpo;
+                    break;
+                case "easeInOutExpo":
+                    easingOption = .EaseInOutExpo;
+                    break;
+                case "easeInCirc":
+                    easingOption = .EaseInCirc;
+                    break;
+                case "easeOutCirc":
+                    easingOption = .EaseOutCirc;
+                    break;
+                case "easeInOutCirc":
+                    easingOption = .EaseInOutCirc;
+                    break;
+                case "easeInElastic":
+                    easingOption = .EaseInElastic;
+                    break;
+                case "easeOutElastic":
+                    easingOption = .EaseOutElastic;
+                    break;
+                case "easeInBack":
+                    easingOption = .EaseInBack;
+                    break;
+                case "easeOutBack":
+                    easingOption = .EaseOutBack;
+                    break;
+                case "easeInOutBack":
+                    easingOption = .EaseInOutBack;
+                    break;
+                case "easeInBounce":
+                    easingOption = .EaseInBounce;
+                    break;
+                case "easeOutBounce":
+                    easingOption = .EaseOutBounce;
+                    break;
+                case "easeInOutBounce":
+                    easingOption = .EaseInOutBounce;
+                    break;
+                default:
+                    easingOption = .Linear;
+                }
+            }
+            
+            self.animate(xAxisDuration: xAxisDuration, yAxisDuration: yAxisDuration, easingOption: easingOption);
         }
         
     }
