@@ -53,6 +53,13 @@ var MyComponent = React.createClass({
     );
   }
 });
+
+var styles = StyleSheet.create({
+  chart: {
+    width: 200,
+    height: 200
+  }
+})
 ```
 
 # Contributing
