@@ -5,6 +5,15 @@
       location = "container:"
       name = "RNiOSCharts">
       <FileRef
+         location = "group:RNiOSCharts/RNHorizontalBarChart.m">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNHorizontalBarChartManager.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNHorizontalBarChart.swift">
+      </FileRef>
+      <FileRef
          location = "group:RNiOSCharts/RNBarChart.swift">
       </FileRef>
       <FileRef
