@@ -21,11 +21,5 @@
   "license": "MIT",
   "scripts": {
     "start": "react-native start"
-  },
-  "peerDependencies": {
-    "react-native": "^0.17.0"
-  },
-  "dependencies": {
-    "react-native": "^0.17.0"
   }
 }
