@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc(RNBarChartSwift)
+@objc(RNHorizontalBarChartSwift)
 class RNHorizontalBarChartManager : RCTViewManager {
     override func view() -> UIView! {
         return RNHorizontalBarChart();
