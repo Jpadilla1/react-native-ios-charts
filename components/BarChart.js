@@ -222,6 +222,7 @@ BarChart.propTypes = {
         'top',
         'topInside'
       ]),
+      labelRotationAngle: React.PropTypes.number,
       drawAxisLine: React.PropTypes.bool,
       drawGridLines: React.PropTypes.bool,
       drawLabels: React.PropTypes.bool,
@@ -383,6 +384,22 @@ BarChart.propTypes = {
         'easeInBounce',
         'easeOutBounce',
         'easeInOutBounce'
+      ])
+    }),
+    valueFormatter: React.PropTypes.shape({
+      type: React.PropTypes.oneOf(['regular', 'abbreviated']),
+      decimalPlaces: React.PropTypes.number,
+      numberStyle: React.PropTypes.oneOf([
+        'CurrencyAccountingStyle',
+        'CurrencyISOCodeStyle',
+        'CurrencyPluralStyle',
+        'CurrencyStyle',
+        'DecimalStyle',
+        'NoStyle',
+        'OrdinalStyle',
+        'PercentStyle',
+        'ScientificStyle',
+        'SpellOutStyle'
       ])
     }),
   })

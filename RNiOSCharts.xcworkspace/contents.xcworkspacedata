@@ -43,5 +43,8 @@
       <FileRef
          location = "group:RNiOSCharts/RCTIOSCharts-Bridging-Header.h">
       </FileRef>
+      <FileRef
+         location = "group:ABNumberFormatter.swift">
+      </FileRef>
    </Group>
 </Workspace>

@@ -19,6 +19,7 @@ class RNBarChart : BarChartView {
     var colors: [UIColor] = ChartColorTemplates.colorful();
     var legendColors: [UIColor] = ChartColorTemplates.colorful();
     var legendLabels: [String] = [];
+    var decimalPlaces : Int = 0;
     
     override init(frame: CGRect) {
         super.init(frame: frame);
@@ -117,6 +118,72 @@ class RNBarChart : BarChartView {
                     
                     if tmp["valueTextColor"].isExists() {
                         dataSet.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
+                    }
+                    
+                    if json["valueFormatter"].isExists() {
+                        if json["valueFormatter"]["decimalPlaces"].isExists() {
+                            self.decimalPlaces = json["valueFormatter"]["decimalPlaces"].intValue;
+                        }
+                        
+                        if json["valueFormatter"]["type"].isExists() {
+                            switch(json["valueFormatter"]["type"]) {
+                            case "regular":
+                                dataSet.valueFormatter = NSNumberFormatter();
+                                break;
+                            case "abbreviated":
+                                dataSet.valueFormatter = ABNumberFormatter(decimalPlaces: self.decimalPlaces);
+                                break;
+                            default:
+                                dataSet.valueFormatter = NSNumberFormatter();
+                            }
+                        }
+                        
+                        if json["valueFormatter"]["numberStyle"].isExists() {
+                            switch(json["valueFormatter"]["numberStyle"]) {
+                            case "CurrencyAccountingStyle":
+                                if #available(iOS 9.0, *) {
+                                    dataSet.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
+                                }
+                                break;
+                            case "CurrencyISOCodeStyle":
+                                if #available(iOS 9.0, *) {
+                                    dataSet.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
+                                }
+                                break;
+                            case "CurrencyPluralStyle":
+                                if #available(iOS 9.0, *) {
+                                    dataSet.valueFormatter?.numberStyle = .CurrencyPluralStyle;
+                                }
+                                break;
+                            case "CurrencyStyle":
+                                dataSet.valueFormatter?.numberStyle = .CurrencyStyle;
+                                break;
+                            case "DecimalStyle":
+                                dataSet.valueFormatter?.numberStyle = .DecimalStyle;
+                                break;
+                            case "NoStyle":
+                                dataSet.valueFormatter?.numberStyle = .NoStyle;
+                                break;
+                            case "OrdinalStyle":
+                                if #available(iOS 9.0, *) {
+                                    dataSet.valueFormatter?.numberStyle = .OrdinalStyle;
+                                }
+                                break;
+                            case "PercentStyle":
+                                dataSet.valueFormatter?.numberStyle = .PercentStyle;
+                                break;
+                            case "ScientificStyle":
+                                dataSet.valueFormatter?.numberStyle = .ScientificStyle;
+                                break;
+                            case "SpellOutStyle":
+                                dataSet.valueFormatter?.numberStyle = .SpellOutStyle;
+                                break;
+                            default:
+                                dataSet.valueFormatter?.numberStyle = .NoStyle;
+                            }
+                        }
+                        
+                        dataSet.valueFormatter?.maximumFractionDigits = self.decimalPlaces;
                     }
                     
                     sets.append(dataSet);
@@ -555,6 +622,10 @@ class RNBarChart : BarChartView {
                 }
             }
             
+            if json["xAxis"]["labelRotationAngle"].isExists() {
+                self.xAxis.labelRotationAngle = CGFloat(json["xAxis"]["labelRotationAngle"].floatValue);
+            }
+            
             if json["xAxis"]["drawLimitLinesBehindData"].isExists() {
                 self.xAxis.drawLimitLinesBehindDataEnabled = json["xAxis"]["drawLimitLinesBehindData"].boolValue;
             }
@@ -920,6 +991,26 @@ class RNBarChart : BarChartView {
             if json["rightAxis"]["drawLimitLinesBehindData"].isExists() {
                 self.rightAxis.drawLimitLinesBehindDataEnabled = json["rightAxis"]["drawLimitLinesBehindData"].boolValue;
             }
+            
+            if json["rightAxis"]["spaceTop"].isExists() {
+                self.rightAxis.spaceTop = CGFloat(json["rightAxis"]["spaceTop"].floatValue);
+            }
+            
+            if json["rightAxis"]["spaceBottom"].isExists() {
+                self.rightAxis.spaceBottom = CGFloat(json["rightAxis"]["spaceBottom"].floatValue);
+            }
+            
+            if json["rightAxis"]["startAtZero"].isExists() {
+                self.rightAxis.startAtZeroEnabled = json["rightAxis"]["startAtZeroEnabled"].boolValue;
+            }
+            
+            if json["rightAxis"]["axisMinimum"].isExists() {
+                self.rightAxis.axisMinimum = json["rightAxis"]["axisMinimum"].doubleValue;
+            }
+            
+            if json["rightAxis"]["axisMaximum"].isExists() {
+                self.rightAxis.axisMaximum = json["rightAxis"]["axisMaximum"].doubleValue;
+            }
         }
         
         if json["animation"].isExists() {
@@ -1031,6 +1122,86 @@ class RNBarChart : BarChartView {
             self.animate(xAxisDuration: xAxisDuration, yAxisDuration: yAxisDuration, easingOption: easingOption);
         }
         
+        if json["valueFormatter"].isExists() {
+            if json["valueFormatter"]["decimalPlaces"].isExists() {
+                self.decimalPlaces = json["valueFormatter"]["decimalPlaces"].intValue;
+            }
+            
+            if json["valueFormatter"]["type"].isExists() {
+                switch(json["valueFormatter"]["type"]) {
+                case "regular":
+                    self.leftAxis.valueFormatter = NSNumberFormatter();
+                    self.rightAxis.valueFormatter = NSNumberFormatter();
+                    break;
+                case "abbreviated":
+                    self.leftAxis.valueFormatter = ABNumberFormatter(decimalPlaces: self.decimalPlaces);
+                    self.rightAxis.valueFormatter = ABNumberFormatter(decimalPlaces: self.decimalPlaces);
+                    break;
+                default:
+                    self.leftAxis.valueFormatter = NSNumberFormatter();
+                    self.rightAxis.valueFormatter = NSNumberFormatter();
+                }
+            }
+            
+            if json["valueFormatter"]["numberStyle"].isExists() {
+                switch(json["valueFormatter"]["numberStyle"]) {
+                case "CurrencyAccountingStyle":
+                    if #available(iOS 9.0, *) {
+                        self.leftAxis.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
+                        self.rightAxis.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
+                    }
+                    break;
+                case "CurrencyISOCodeStyle":
+                    if #available(iOS 9.0, *) {
+                        self.leftAxis.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
+                        self.rightAxis.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
+                    }
+                    break;
+                case "CurrencyPluralStyle":
+                    if #available(iOS 9.0, *) {
+                        self.leftAxis.valueFormatter?.numberStyle = .CurrencyPluralStyle;
+                        self.rightAxis.valueFormatter?.numberStyle = .CurrencyPluralStyle;
+                    }
+                    break;
+                case "CurrencyStyle":
+                    self.leftAxis.valueFormatter?.numberStyle = .CurrencyStyle;
+                    self.rightAxis.valueFormatter?.numberStyle = .CurrencyStyle;
+                    break;
+                case "DecimalStyle":
+                    self.leftAxis.valueFormatter?.numberStyle = .DecimalStyle;
+                    self.rightAxis.valueFormatter?.numberStyle = .DecimalStyle;
+                    break;
+                case "NoStyle":
+                    self.leftAxis.valueFormatter?.numberStyle = .NoStyle;
+                    self.rightAxis.valueFormatter?.numberStyle = .NoStyle;
+                    break;
+                case "OrdinalStyle":
+                    if #available(iOS 9.0, *) {
+                        self.leftAxis.valueFormatter?.numberStyle = .OrdinalStyle
+                        self.rightAxis.valueFormatter?.numberStyle = .OrdinalStyle;
+                    }
+                    break;
+                case "PercentStyle":
+                    self.leftAxis.valueFormatter?.numberStyle = .PercentStyle;
+                    self.rightAxis.valueFormatter?.numberStyle = .PercentStyle;
+                    break;
+                case "ScientificStyle":
+                    self.leftAxis.valueFormatter?.numberStyle = .ScientificStyle;
+                    self.rightAxis.valueFormatter?.numberStyle = .ScientificStyle;
+                    break;
+                case "SpellOutStyle":
+                    self.leftAxis.valueFormatter?.numberStyle = .SpellOutStyle;
+                    self.rightAxis.valueFormatter?.numberStyle = .SpellOutStyle;
+                    break;
+                default:
+                    self.leftAxis.valueFormatter?.numberStyle = .NoStyle;
+                    self.rightAxis.valueFormatter?.numberStyle = .NoStyle;
+                }
+            }
+            
+            self.leftAxis.valueFormatter?.maximumFractionDigits = self.decimalPlaces;
+            self.rightAxis.valueFormatter?.maximumFractionDigits = self.decimalPlaces;
+        }
     }
     
 }
