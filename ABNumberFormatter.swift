@@ -1,6 +1,6 @@
 //
 //  ABNumberFormatter.swift
-//  
+//
 //
 //  Created by Jose Padilla on 2/5/16.
 //
@@ -10,10 +10,20 @@ import Foundation
 
 class ABNumberFormatter : NSNumberFormatter {
     
-    private var decimalPlaces: Int = 0;
+    private var maximumDecimalPlaces: Int = 0;
+    private var minimumDecimalPlaces: Int = 0;
     
-    init(decimalPlaces: Int) {
-        self.decimalPlaces = decimalPlaces;
+    init(minimumDecimalPlaces: Int, maximumDecimalPlaces: Int) {
+        if (minimumDecimalPlaces < 0) {
+            self.minimumDecimalPlaces = 0;
+        } else {
+            self.minimumDecimalPlaces = minimumDecimalPlaces;
+        }
+        if (maximumDecimalPlaces < 0) {
+            self.maximumDecimalPlaces = 0;
+        } else {
+            self.maximumDecimalPlaces = maximumDecimalPlaces;
+        }
         super.init();
     }
     
@@ -21,7 +31,7 @@ class ABNumberFormatter : NSNumberFormatter {
         fatalError("init(coder:) has not been implemented");
     }
     
-    func abbreviateNumber(num: Int) -> String? {
+    func abbreviateNumber(num: Int) -> String {
         var abbrevNum : String = "";
         var number : Float = Float(num);
         if (num >= 1000) {
@@ -31,10 +41,12 @@ class ABNumberFormatter : NSNumberFormatter {
                 if(size <= number) {
                     number = number/size;
                     let numberString = floatToString(number);
-                    abbrevNum = String(format:"%@%@", numberString, abbrev[i]);
+                    self.positiveSuffix = abbrev[i];
+                    abbrevNum = String(format:"%@", numberString);
                 }
             }
         } else {
+            self.positiveSuffix = "";
             abbrevNum = String(format:"%d", Int(number));
         }
         
@@ -42,7 +54,7 @@ class ABNumberFormatter : NSNumberFormatter {
     }
     
     func floatToString(val: Float) -> String {
-        var ret = String(format:"%.1f", val);
+        var ret = String(format:"%.\(self.maximumDecimalPlaces)f", val);
         var c = UniChar(String(ret.characters.last! as Character));
         while (c == 48) {
             ret = ret.substringToIndex(ret.startIndex.advancedBy(ret.characters.count - 1));
@@ -52,13 +64,17 @@ class ABNumberFormatter : NSNumberFormatter {
             }
         }
         let formatter = NSNumberFormatter();
-        formatter.minimumFractionDigits = 0;
-        formatter.maximumFractionDigits = self.decimalPlaces;
+        formatter.minimumFractionDigits = self.minimumDecimalPlaces;
+        formatter.maximumFractionDigits = self.maximumDecimalPlaces;
         return formatter.stringFromNumber(Float(ret)!)!;
     }
     
     override func stringForObjectValue(obj: AnyObject) -> String? {
+        let value = self.abbreviateNumber(obj as! Int);
+        if String(value.characters.last!) == "0" {
+            return super.stringForObjectValue(Int(value)!);
+        }
         
-        return abbreviateNumber(obj as! Int);
+        return super.stringForObjectValue(Float(value)!);
     }
 }

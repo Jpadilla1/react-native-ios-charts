@@ -388,7 +388,8 @@ HorizontalBarChart.propTypes = {
     }),
     valueFormatter: React.PropTypes.shape({
       type: React.PropTypes.oneOf(['regular', 'abbreviated']),
-      decimalPlaces: React.PropTypes.number,
+      minimumDecimalPlaces: React.PropTypes.number,
+      maximumDecimalPlaces: React.PropTypes.number,
       numberStyle: React.PropTypes.oneOf([
         'CurrencyAccountingStyle',
         'CurrencyISOCodeStyle',
