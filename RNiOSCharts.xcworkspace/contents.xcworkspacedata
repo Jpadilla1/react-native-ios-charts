@@ -5,6 +5,12 @@
       location = "container:"
       name = "RNiOSCharts">
       <FileRef
+         location = "group:RNiOSCharts/ABNumberFormatter.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNHorizontalBarChart.h">
+      </FileRef>
+      <FileRef
          location = "group:RNiOSCharts/RNHorizontalBarChart.m">
       </FileRef>
       <FileRef
@@ -18,9 +24,6 @@
       </FileRef>
       <FileRef
          location = "group:RNiOSCharts/RNLineChart.swift">
-      </FileRef>
-      <FileRef
-         location = "group:RNiOSCharts/RNBarLineChartBase.swift">
       </FileRef>
       <FileRef
          location = "group:RNiOSCharts/RNLineChartManager.swift">
@@ -44,7 +47,10 @@
          location = "group:RNiOSCharts/RCTIOSCharts-Bridging-Header.h">
       </FileRef>
       <FileRef
-         location = "group:ABNumberFormatter.swift">
+         location = "group:RNiOSCharts/ChartViewBaseExtension.swift">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/josepadilla/Documents/github/react-native-ios-charts/RNiOSCharts/BarLineChartViewBaseExtension.swift">
       </FileRef>
    </Group>
 </Workspace>
