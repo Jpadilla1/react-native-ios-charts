@@ -5,6 +5,21 @@
       location = "container:"
       name = "RNiOSCharts">
       <FileRef
+         location = "group:RNiOSCharts/RNPieChart.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNPieChartManager.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/PieRadarChartViewBaseExtension.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNPieChart.m">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNPieChart.h">
+      </FileRef>
+      <FileRef
          location = "group:RNiOSCharts/ABNumberFormatter.swift">
       </FileRef>
       <FileRef
