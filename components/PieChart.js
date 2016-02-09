@@ -82,7 +82,7 @@ PieChart.propTypes = {
     usePercentValuesEnabled: React.PropTypes.bool,
     centerTextRadiusPercent: React.PropTypes.number,
     maxAngle: React.PropTypes.number,
-    labels: React.PropTypes.arrayOf(React.PropTypes.string),
+    labels: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     backgroundColor: React.PropTypes.string,
     gridBackgroundColor: React.PropTypes.string,
     noDataText: React.PropTypes.string,

@@ -148,7 +148,7 @@ HorizontalBarChart.propTypes = {
       valueTextFontSize: React.PropTypes.number,
       valueTextColor: React.PropTypes.string
     })),
-    labels: React.PropTypes.arrayOf(React.PropTypes.string),
+    labels: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     backgroundColor: React.PropTypes.string,
     gridBackgroundColor: React.PropTypes.string,
     noDataText: React.PropTypes.string,

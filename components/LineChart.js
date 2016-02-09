@@ -139,7 +139,6 @@ var LineChart = React.createClass({
 
 LineChart.propTypes = {
   config: React.PropTypes.shape({
-    labels: React.PropTypes.arrayOf(React.PropTypes.string),
     dataSets: React.PropTypes.arrayOf(React.PropTypes.shape({
       values: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
       label: React.PropTypes.string,
@@ -170,6 +169,7 @@ LineChart.propTypes = {
       valueFontSize: React.PropTypes.number,
       valueTextColor: React.PropTypes.string
     })),
+    labels: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     backgroundColor: React.PropTypes.string,
     gridBackgroundColor: React.PropTypes.string,
     noDataText: React.PropTypes.string,
