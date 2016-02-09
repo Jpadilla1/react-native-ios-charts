@@ -11,14 +11,15 @@ The aim of this library is to provide reusable React Native components that can 
 **The minimum deployment target should be set to iOS 8.0 or greater**
 
 1. Run `npm install --save react-native-ios-charts`
-2. Add all the files under node_modules/react-native-ios-charts/RNiOSCharts, except the Libraries folder.
+2. Add all the files under node_modules/react-native-ios-charts/RNiOSCharts.
 3. When you add the files XCode should prompt you to create a bridging header if you haven't done so already. Create it and import the `RCTViewManager.h`. It should look something like this.
-  ```Objective-C
-  #import "RCTViewManager.h"
-  ```
-4. Add the SwiftyJSON.xcodeproj and Charts.xcodeproj under node_modules/react-native-ios-charts/RNiOSCharts/Libraries to your project in XCode.
-5. Under Build Phases, under `Link Binary With Libraries`, click the plus sign and add SwiftyJSON.framework and Charts.framework for iOS to your project.
-6. Add the SwiftyJSON.framework and Charts.framework to the Embedded Binaries section in your app.
+
+```Objective-C
+#import "RCTViewManager.h"
+```
+4. Install [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) and [iOS Charts](https://github.com/danielgindi/ios-charts) libraries and add the SwiftyJSON.xcodeproj and Charts.xcodeproj to your project.
+5. Under Build Phases, under `Link Binary With Libraries`, click the plus sign and add SwiftyJSON.framework and Charts.framework.
+6. Add the `SwiftyJSON.framework` and `Charts.framework` to the `Embedded Binaries` section in your app.
 7. In your project's build settings, go to build options and change the `Embedded Content Contains Swift Code` to `Yes`.
 
 # Usage
