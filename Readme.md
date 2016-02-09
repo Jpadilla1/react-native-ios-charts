@@ -14,9 +14,19 @@ The aim of this library is to provide reusable React Native components that can 
 2. Add all the files under node_modules/react-native-ios-charts/RNiOSCharts.
 3. When you add the files XCode should prompt you to create a bridging header if you haven't done so already. Create it and import the `RCTViewManager.h`. It should look something like this.
 
-```Objective-C
-#import "RCTViewManager.h"
-```
+  ```Objective-C
+  #import "RCTViewManager.h"
+  ```
+3.5. You can use [CocoaPods](https://cocoapods.org) and skip steps 4-6. Just add a `Podfile` to your ios directory with the following content. Then run `pod install` and open the generated .xcworkspace from now on in xcode.
+
+  ```
+  use_frameworks!
+
+  target 'MyApp' do
+    pod 'SwiftyJSON', '~> 2.3'
+    pod 'Charts', '~> 2.2'
+  end
+  ```
 4. Install [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) and [iOS Charts](https://github.com/danielgindi/ios-charts) libraries and add `SwiftyJSON.xcodeproj` and `Charts.xcodeproj` files to your project.
 5. Under `Build Phases`, under `Link Binary With Libraries`, click the plus sign and add `SwiftyJSON.framework` and `Charts.framework`.
 6. Add the `SwiftyJSON.framework` and `Charts.framework` to the `Embedded Binaries` section in your app.
