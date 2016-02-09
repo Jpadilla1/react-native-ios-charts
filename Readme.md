@@ -62,13 +62,12 @@ var styles = StyleSheet.create({
 })
 ```
 
-# Contributing
-
-Anyone who is willing to help developing this library is welcomed! I am not a swift guy as you may see by my code that is horrible. You may either create an issue or contact me directly.
-
 # Roadmap
 
-TODO
+- [ ] Support for all charts
+- [ ] Support for all chart properties
+- [ ] Documentation
+- [ ] Examples
 
 # License
 The MIT License (MIT)
