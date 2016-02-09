@@ -11,70 +11,70 @@ import SwiftyJSON
 import Charts
 
 extension ChartViewBase {
-    
+
     func setChartViewBaseProps(config: String!) {
         var legendColors: [UIColor] = ChartColorTemplates.colorful();
         var legendLabels: [String] = [];
-        
+
         self.descriptionText = "";
-        
+
         var json: JSON = nil;
         if let data = config.dataUsingEncoding(NSUTF8StringEncoding) {
             json = JSON(data: data);
         };
-        
+
         if json["backgroundColor"].isExists() {
             self.backgroundColor = RCTConvert.UIColor(json["backgroundColor"].intValue);
         }
-        
+
         if json["noDataText"].isExists() {
             self.noDataText = json["noDataText"].stringValue;
         }
-        
+
         if json["descriptionText"].isExists() {
             self.descriptionText = json["descriptionText"].stringValue;
         }
-        
+
         if json["descriptionFontName"].isExists() {
             self.descriptionFont = UIFont(
                 name: json["descriptionFontName"].stringValue,
                 size: self.descriptionFont!.pointSize
             );
         }
-        
+
         if json["descriptionFontSize"].isExists() {
             self.descriptionFont = self.descriptionFont?.fontWithSize(CGFloat(json["descriptionFontSize"].floatValue));
         }
-        
+
         if json["descriptionTextColor"].isExists() {
             self.descriptionTextColor = RCTConvert.UIColor(json["descriptionTextColor"].intValue);
         }
-        
+
         if json["descriptionTextPosition"].isExists() &&
             json["descriptionTextPosition"]["x"].isExists() &&
             json["descriptionTextPosition"]["y"].isExists() {
-                
+
                 self.setDescriptionTextPosition(
                     x: CGFloat(json["descriptionTextPosition"]["x"].floatValue),
                     y: CGFloat(json["descriptionTextPosition"]["y"].floatValue)
                 )
         }
-        
+
         if json["infoTextFontName"].isExists() {
             self.infoFont = UIFont(
                 name: json["infoTextFontName"].stringValue,
                 size: self.infoFont!.pointSize
             );
         }
-        
+
         if json["infoTextFontSize"].isExists() {
             self.infoFont = self.infoFont?.fontWithSize(CGFloat(json["infoTextFontSize"].floatValue));
         }
-        
+
         if json["infoTextColor"].isExists() {
             self.infoTextColor = RCTConvert.UIColor(json["infoTextColor"].intValue);
         }
-        
+
         if json["descriptionTextAlign"].isExists() {
             switch (json["descriptionTextAlign"].stringValue) {
             case "left":
@@ -93,43 +93,39 @@ extension ChartViewBase {
                 break;
             }
         }
-        
+
         if json["drawMarkers"].isExists() {
             self.drawMarkers = json["drawMarkers"].boolValue;
         }
-        
-        if json["highlightPerTap"].isExists() {
-            self.highlightPerTapEnabled = json["highlightPerTap"].boolValue;
-        }
-        
+
         if json["showLegend"].isExists() {
             self.legend.enabled = json["showLegend"].boolValue;
         }
-        
+
         if json["legend"].isExists() {
             if json["legend"]["textColor"].isExists() {
                 self.legend.textColor = RCTConvert.UIColor(json["legend"]["textColor"].intValue);
             }
-            
+
             if json["legend"]["textSize"].isExists() {
                 self.legend.font = self.legend.font.fontWithSize(CGFloat(json["legend"]["textSize"].floatValue));
             }
-            
+
             if json["legend"]["textFontName"].isExists() {
                 self.legend.font = UIFont(
                     name: json["legend"]["textFontName"].stringValue,
                     size: self.legend.font.pointSize
                     )!;
             }
-            
+
             if json["legend"]["wordWrap"].isExists() {
                 self.legend.wordWrapEnabled = json["legend"]["wordWrap"].boolValue;
             }
-            
+
             if json["legend"]["maxSizePercent"].isExists() {
                 self.legend.maxSizePercent = CGFloat(json["legend"]["maxSizePercent"].floatValue);
             }
-            
+
             if json["legend"]["position"].isExists() {
                 switch(json["legend"]["position"].stringValue) {
                 case "rightOfChart":
@@ -176,7 +172,7 @@ extension ChartViewBase {
                     break;
                 }
             }
-            
+
             if json["legend"]["form"].isExists() {
                 switch(json["legend"]["form"]) {
                 case "square":
@@ -193,23 +189,23 @@ extension ChartViewBase {
                     break;
                 }
             }
-            
+
             if json["legend"]["formSize"].isExists() {
                 self.legend.formSize = CGFloat(json["legend"]["formSize"].floatValue);
             }
-            
+
             if json["legend"]["xEntrySpace"].isExists() {
                 self.legend.xEntrySpace = CGFloat(json["legend"]["xEntrySpace"].floatValue);
             }
-            
+
             if json["legend"]["yEntrySpace"].isExists() {
                 self.legend.yEntrySpace = CGFloat(json["legend"]["yEntrySpace"].floatValue);
             }
-            
+
             if json["legend"]["formToTextSpace"].isExists() {
                 self.legend.formToTextSpace = CGFloat(json["legend"]["formToTextSpace"].floatValue);
             }
-            
+
             if json["legend"]["colors"].isExists() {
                 let arrColors = json["legend"]["colors"].arrayObject as! [Int];
                 legendColors = arrColors.map({return RCTConvert.UIColor($0)});
@@ -217,7 +213,7 @@ extension ChartViewBase {
                     legend.setCustom(colors: legendColors, labels: legendLabels);
                 }
             }
-            
+
             if json["legend"]["labels"].isExists() {
                 legendLabels = json["legend"]["labels"].arrayObject as! [String];
                 if legendLabels.count == legendColors.count {
@@ -225,20 +221,36 @@ extension ChartViewBase {
                 }
             }
         }
-        
+
+        if json["userInteractionEnabled"].isExists() {
+          self.userInteractionEnabled = json["userInteractionEnabled"].boolValue;
+        }
+
+        if json["dragDecelerationEnabled"].isExists() {
+          self.dragDecelerationEnabled = json["dragDecelerationEnabled"].boolValue;
+        }
+
+        if json["dragDecelerationFrictionCoef"].isExists() {
+          self.dragDecelerationFrictionCoef = CGFloat(json["dragDecelerationFrictionCoef"].floatValue);
+        }
+
+        if json["highlightPerTap"].isExists() {
+          self.highlightPerTapEnabled = json["highlightPerTap"].boolValue;
+        }
+
         if json["highlightValues"].isExists() {
             let highlightValues = json["highlightValues"].arrayObject as! [Int];
             self.highlightValues(highlightValues.map({return ChartHighlight(xIndex: $0, dataSetIndex: 0)}));
         }
-        
+
         if json["animation"].isExists() {
             let xAxisDuration = json["animation"]["xAxisDuration"].isExists() ?
                 json["animation"]["xAxisDuration"].doubleValue : 0;
             let yAxisDuration = json["animation"]["yAxisDuration"].isExists() ?
                 json["animation"]["yAxisDuration"].doubleValue : 0;
-            
+
             var easingOption: ChartEasingOption = .Linear;
-            
+
             if json["animation"]["easingOption"].isExists() {
                 switch(json["animation"]["easingOption"]) {
                 case "linear":
@@ -336,7 +348,7 @@ extension ChartViewBase {
                     break;
                 }
             }
-            
+
             self.animate(xAxisDuration: xAxisDuration, yAxisDuration: yAxisDuration, easingOption: easingOption);
         }
     }

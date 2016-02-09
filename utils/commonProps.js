@@ -33,6 +33,9 @@ export const globalCommonProps = {
   infoTextFontSize: React.PropTypes.number,
   infoTextColor: React.PropTypes.string,
   drawMarkers: React.PropTypes.bool,
+  userInteractionEnabled: React.PropTypes.bool,
+  dragDecelerationEnabled: React.PropTypes.bool,
+  dragDecelerationFrictionCoef: React.PropTypes.number,
   highlightPerTap: React.PropTypes.bool,
   showLegend: React.PropTypes.bool,
   legend: React.PropTypes.shape({
@@ -131,6 +134,12 @@ export const barLineCommonProps = {
   minOffset: React.PropTypes.number,
   autoScaleMinMax: React.PropTypes.bool,
   gridBackgroundColor: React.PropTypes.string,
+  dragEnabled: React.PropTypes.bool,
+  scaleXEnabled: React.PropTypes.bool,
+  scaleYEnabled: React.PropTypes.bool,
+  pinchZoomEnabled: React.PropTypes.bool,
+  doubleTapToZoomEnabled: React.PropTypes.bool,
+  highlightPerDragEnabled: React.PropTypes.bool,
   xAxis: React.PropTypes.shape({
     enabled: React.PropTypes.bool,
     position: React.PropTypes.oneOf([
