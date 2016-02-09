@@ -17,14 +17,19 @@ The aim of this library is to provide reusable React Native components that can 
 ```Objective-C
 #import "RCTViewManager.h"
 ```
-4. Install [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) and [iOS Charts](https://github.com/danielgindi/ios-charts) libraries and add the SwiftyJSON.xcodeproj and Charts.xcodeproj to your project.
-5. Under Build Phases, under `Link Binary With Libraries`, click the plus sign and add SwiftyJSON.framework and Charts.framework.
+4. Install [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) and [iOS Charts](https://github.com/danielgindi/ios-charts) libraries and add `SwiftyJSON.xcodeproj` and `Charts.xcodeproj` files to your project.
+5. Under `Build Phases`, under `Link Binary With Libraries`, click the plus sign and add `SwiftyJSON.framework` and `Charts.framework`.
 6. Add the `SwiftyJSON.framework` and `Charts.framework` to the `Embedded Binaries` section in your app.
 7. In your project's build settings, go to build options and change the `Embedded Content Contains Swift Code` to `Yes`.
 
 # Usage
 
-As of this point, BarChart and LineChart are currently supported. Support for more graphs will be coming along the way.
+Currently supported charts:
+
+- Bar
+- HorizontalBar
+- Line
+- Pie
 
 Example code:
 
