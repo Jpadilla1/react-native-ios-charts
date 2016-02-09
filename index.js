@@ -1,7 +1,7 @@
-var BarChart = require('./components/BarChart');
-var LineChart = require('./components/LineChart');
-var HorizontalBarChart = require('./components/HorizontalBarChart');
-var PieChart = require('./components/PieChart');
+import BarChart from './components/BarChart';
+import LineChart from './components/LineChart';
+import HorizontalBarChart from './components/HorizontalBarChart';
+import PieChart from './components/PieChart';
 
 module.exports = {
   BarChart,
