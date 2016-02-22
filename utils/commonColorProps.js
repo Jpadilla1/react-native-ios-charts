@@ -2,16 +2,16 @@ import { processColor } from 'react-native';
 export const processColors = (props) => {
   let config = Object.assign({}, props);
 
-  if ('dataSets' in config ) {
+  if ('dataSets' in config) {
     config.dataSets = config.dataSets.map(function(set) {
       if ('colors' in set) {
-        set.colors = processColor(set.colors);
+        set.colors = set.colors.map(color => processColor(color));
       }
       if ('barShadowColor' in set) {
         set.barShadowColor = processColor(set.barShadowColor);
       }
       if ('circleColors' in set) {
-        set.circleColors = processColor(set.circleColors);
+        set.circleColors = set.circleColors.map(color => processColor(color));
       }
       if ('circleHoleColor' in set) {
         set.circleHoleColor = processColor(set.circleHoleColor);
@@ -50,7 +50,7 @@ export const processColors = (props) => {
   }
 
   if ('legend' in config && 'colors' in config.legend) {
-    config.legend.colors = processColor(config.legend.colors);
+    config.legend.colors = config.legend.colors.map(color => processColor(color));
   }
 
   if ('xAxis' in config && 'textColor' in config.xAxis) {
