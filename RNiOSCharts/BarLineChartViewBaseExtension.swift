@@ -444,6 +444,10 @@ extension BarLineChartViewBase {
                 self.leftAxis.axisMaximum = json["leftAxis"]["axisMaximum"].doubleValue;
             }
 
+            if json["leftAxis"]["labelCount"].isExists() {
+              self.leftAxis.labelCount = json["leftAxis"]["labelCount"].intValue;
+            }
+
         }
 
         // rightAxis
@@ -631,6 +635,10 @@ extension BarLineChartViewBase {
 
             if json["rightAxis"]["axisMaximum"].isExists() {
                 self.rightAxis.axisMaximum = json["rightAxis"]["axisMaximum"].doubleValue;
+            }
+
+            if json["rightAxis"]["labelCount"].isExists() {
+              self.rightAxis.labelCount = json["rightAxis"]["labelCount"].intValue;
             }
         }
 
