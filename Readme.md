@@ -1,4 +1,6 @@
 # react-native-ios-charts
+[![npm version](https://img.shields.io/npm/v/react-native-ios-charts.svg?style=flat-square)](https://www.npmjs.com/package/react-native-ios-charts)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-ios-charts.svg?style=flat-square)](https://www.npmjs.com/package/react-native-ios-charts)
 
 Bringing [iOS Charts](https://github.com/danielgindi/ios-charts) to React Native.
 
