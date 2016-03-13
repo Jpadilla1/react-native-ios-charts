@@ -25,6 +25,21 @@ export const processColors = (props) => {
       if ('valueTextColor' in set) {
         set.valueTextColor = processColor(set.valueTextColor);
       }
+      if ('shadowColor' in set) {
+        set.shadowColor = processColor(set.shadowColor);
+      }
+      if ('neutralColor' in set) {
+        set.neutralColor = processColor(set.neutralColor);
+      }
+      if ('increasingColor' in set) {
+        set.increasingColor = processColor(set.increasingColor);
+      }
+      if ('decreasingColor' in set) {
+        set.decreasingColor = processColor(set.decreasingColor);
+      }
+      if ('scatterShapeHoleColor' in set) {
+        set.scatterShapeHoleColor = processColor(set.scatterShapeHoleColor);
+      }
       return set;
     });
   }
