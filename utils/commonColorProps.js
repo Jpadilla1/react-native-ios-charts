@@ -40,6 +40,12 @@ export const processColors = (props) => {
       if ('scatterShapeHoleColor' in set) {
         set.scatterShapeHoleColor = processColor(set.scatterShapeHoleColor);
       }
+      if ('webColor' in set) {
+        set.webColor = processColor(set.webColor);
+      }
+      if ('innerWebColor' in set) {
+        set.innerWebColor = processColor(set.innerWebColor);
+      }
       return set;
     });
   }
