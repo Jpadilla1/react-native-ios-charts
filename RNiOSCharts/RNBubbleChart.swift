@@ -9,8 +9,8 @@
 import Charts
 import SwiftyJSON
 
-@objc(RNCandleStickChart)
-class RNCandleStickChart : CandleStickChartView {
+@objc(RNBubbleChart)
+class RNBubbleChart : BubbleChartView {
   
   override init(frame: CGRect) {
     super.init(frame: frame);
@@ -40,28 +40,26 @@ class RNCandleStickChart : CandleStickChartView {
     if json["dataSets"].isExists() {
       let dataSets = json["dataSets"].arrayObject;
       
-      var sets: [CandleChartDataSet] = [];
+      var sets: [BubbleChartDataSet] = [];
       
       for set in dataSets! {
         let tmp = JSON(set);
         if tmp["values"].isExists() {
           let values = tmp["values"].arrayObject!;
           let label = tmp["label"].isExists() ? tmp["label"].stringValue : "";
-          var dataEntries: [CandleChartDataEntry] = [];
+          var dataEntries: [BubbleChartDataEntry] = [];
           
           for i in 0..<values.count {
             let object = JSON(values[i]);
-            let dataEntry = CandleChartDataEntry(
+            let dataEntry = BubbleChartDataEntry(
               xIndex: i,
-              shadowH: object["shadowH"].doubleValue,
-              shadowL: object["shadowL"].doubleValue,
-              open: object["open"].doubleValue,
-              close: object["close"].doubleValue
+              value: object["value"].doubleValue,
+              size: CGFloat(object["size"].floatValue)
             );
             dataEntries.append(dataEntry);
           }
           
-          let dataSet = CandleChartDataSet(yVals: dataEntries, label: label);
+          let dataSet = BubbleChartDataSet(yVals: dataEntries, label: label);
           
           if tmp["colors"].isExists() {
             let arrColors = tmp["colors"].arrayObject as! [Int];
@@ -74,6 +72,10 @@ class RNCandleStickChart : CandleStickChartView {
           
           if tmp["highlightEnabled"].isExists() {
             dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
+          }
+          
+          if tmp["highlightCircleWidth"].isExists() {
+            dataSet.highlightCircleWidth = CGFloat(tmp["highlightCircleWidth"].floatValue);
           }
           
           if tmp["valueTextFontName"].isExists() {
@@ -165,7 +167,7 @@ class RNCandleStickChart : CandleStickChartView {
         }
       }
       
-      let chartData = CandleChartData(xVals: labels, dataSets: sets);
+      let chartData = BubbleChartData(xVals: labels, dataSets: sets);
       self.data = chartData;
     }
     

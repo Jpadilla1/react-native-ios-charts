@@ -30,11 +30,10 @@ CandleStickChart.propTypes = {
     dataSets: React.PropTypes.arrayOf(React.PropTypes.shape({
       ...commonDataSetProps,
       values: React.PropTypes.arrayOf(React.PropTypes.shape({
-        shadowH: React.PropTypes.number,
-        shadowL: React.PropTypes.number,
-        open: React.PropTypes.number,
-        close: React.PropTypes.number,
-        value: React.PropTypes.number
+        shadowH: React.PropTypes.number.isRequired,
+        shadowL: React.PropTypes.number.isRequired,
+        open: React.PropTypes.number.isRequired,
+        close: React.PropTypes.number.isRequired
       })).isRequired,
       barSpace: React.PropTypes.number,
       showCandleBar: React.PropTypes.bool,

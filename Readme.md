@@ -39,9 +39,10 @@ The aim of this library is to provide reusable React Native components that can 
 Currently supported charts:
 
 - Bar
-- HorizontalBar
+- Horizontal Bar
 - Line
 - Pie
+- Candle Stick
 
 Example code:
 
