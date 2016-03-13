@@ -44,6 +44,8 @@ Currently supported charts:
 - Pie
 - Candle Stick
 - Bubble
+- Scatter
+- Radar
 
 Example code:
 
