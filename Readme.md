@@ -43,6 +43,7 @@ Currently supported charts:
 - Line
 - Pie
 - Candle Stick
+- Bubble
 
 Example code:
 
