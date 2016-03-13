@@ -5,6 +5,18 @@
       location = "container:"
       name = "RNiOSCharts">
       <FileRef
+         location = "group:RNiOSCharts/RNCandleStickChart.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNCandleChartManager.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNCandleStickChart.m">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNCandleStickChart.h">
+      </FileRef>
+      <FileRef
          location = "group:RNiOSCharts/RNPieChart.swift">
       </FileRef>
       <FileRef
