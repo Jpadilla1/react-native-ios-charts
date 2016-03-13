@@ -38,14 +38,14 @@ The aim of this library is to provide reusable React Native components that can 
 
 Currently supported charts:
 
-- Bar
-- Horizontal Bar
-- Line
-- Pie
-- Candle Stick
-- Bubble
-- Scatter
-- Radar
+- [Bar](https://gist.github.com/Jpadilla1/c833b91576152b4b9bb2)
+- [Horizontal Bar](https://gist.github.com/Jpadilla1/d3cb8d52b35ed825e87e)
+- [Line](https://gist.github.com/Jpadilla1/5c8f8067225fac40b370)
+- [Pie](https://gist.github.com/Jpadilla1/58f88276381b4f1ce31c)
+- [Candle Stick](https://gist.github.com/Jpadilla1/f64a4bb4cf8dfd3921d4)
+- [Bubble](https://gist.github.com/Jpadilla1/34e52658683feadbeaaa)
+- [Scatter](https://gist.github.com/Jpadilla1/abbc1e4378e5f6fd7eca)
+- [Radar](https://gist.github.com/Jpadilla1/b944cd86bdf46cb50977)
 
 Example code:
 
