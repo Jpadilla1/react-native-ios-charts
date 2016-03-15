@@ -6,6 +6,10 @@ Bringing [iOS Charts](https://github.com/danielgindi/ios-charts) to React Native
 
 ![Image of all charts](https://raw.githubusercontent.com/Jpadilla1/react-native-ios-charts/master/screenshots/all.png)
 
+Check out the ChartsExplorer in the examples folder
+
+![](http://i.imgur.com/89SXtvq.gif)
+
 # Introduction
 
 The aim of this library is to provide reusable React Native components that can graph charts like Bar, Line, Scatter, Combined, Pie, Candle, Bubble from the awesome ios-charts library.
