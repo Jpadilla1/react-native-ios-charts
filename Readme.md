@@ -95,7 +95,7 @@ var styles = StyleSheet.create({
 - [ ] Support for all charts
 - [ ] Support for all chart properties
 - [ ] Documentation
-- [ ] Examples
+- [X] Examples
 
 # License
 The MIT License (MIT)
