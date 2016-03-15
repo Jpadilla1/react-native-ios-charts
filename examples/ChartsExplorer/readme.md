@@ -6,7 +6,7 @@ The ChartsExplorer is a sample app that showcases React Native iOS Charts.
 
 Before running the app, make sure you ran:
 
-    git clone https://github.com/Jpadilla/react-native-ios-charts.git
+    git clone https://github.com/Jpadilla1/react-native-ios-charts.git
     cd react-native-ios-charts/examples/ChartsExplorer
     npm install
 
