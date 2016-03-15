@@ -1,0 +1,6 @@
+framework module Pods_ChartsExplorer {
+  umbrella header "Pods-ChartsExplorer-umbrella.h"
+
+  export *
+  module * { export * }
+}
