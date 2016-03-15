@@ -90,7 +90,7 @@ class ChartList extends Component {
     return (
       <TouchableHighlight
         onPress={handlePress}
-        underlayColor='white'
+        underlayColor='rgba(200, 200, 200, 0.3)'
       >
         <View style={styles.listItem}>
           <Text style={styles.title}>{row.title}</Text>
@@ -205,7 +205,6 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 10,
-    marginBottom: 3,
     backgroundColor: 'rgba(230, 230, 230, 0.3)',
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(100, 100, 100, 0.2)'
@@ -225,6 +224,11 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(100, 100, 100, 0.2)'
+  },
+  description: {
+    marginTop: 5,
+    fontSize: 12,
+    color: 'rgba(100, 100, 100, 0.7)'
   }
 });
 
