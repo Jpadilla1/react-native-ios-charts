@@ -6,6 +6,7 @@ import CandleStickChart from './components/CandleStickChart';
 import BubbleChart from './components/BubbleChart';
 import ScatterChart from './components/ScatterChart';
 import RadarChart from './components/RadarChart';
+import CombinedChart from './components/CombinedChart';
 
 module.exports = {
   BarChart,
@@ -15,5 +16,6 @@ module.exports = {
   CandleStickChart,
   BubbleChart,
   ScatterChart,
-  RadarChart
+  RadarChart,
+  CombinedChart
 };
