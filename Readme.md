@@ -92,10 +92,10 @@ var styles = StyleSheet.create({
 
 # Roadmap
 
-- [ ] Support for all charts
+- [X] Support for all charts
+- [X] Examples
 - [ ] Support for all chart properties
 - [ ] Documentation
-- [X] Examples
 
 # License
 The MIT License (MIT)
