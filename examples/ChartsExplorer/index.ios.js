@@ -17,6 +17,7 @@ import Bubble from './components/Bubble';
 import Scatter from './components/Scatter';
 import CandleStick from './components/CandleStick';
 import HorizontalBar from './components/HorizontalBar';
+import Combined from './components/Combined';
 
 const ds = new ListView.DataSource({
   rowHasChanged: (r1, r2) => r1 !== r2
@@ -55,6 +56,10 @@ const data = ds.cloneWithRows([
     id: 9,
     title: '<HorizontalBarChart>',
     description: 'Displays a HorizontalBarChart'
+  }, {
+    id: 10,
+    title: '<CombinedChart>',
+    description: 'Displays a CombinedChart with Bar and Line data.'
   }
 ]);
 
@@ -121,36 +126,40 @@ class ChartsExplorer extends Component {
         navText = 'ChartExplorer';
         break;
       case 2:
-        content = <Pie navigator={navigator}/>;
+        content = <Pie/>;
         navText = 'PieChart';
         break;
       case 3:
-        content = <Bar navigator={navigator}/>;
+        content = <Bar/>;
         navText = 'BarChart';
         break;
       case 4:
-        content = <Line navigator={navigator}/>;
+        content = <Line/>;
         navText = 'LineChart';
         break;
       case 5:
-        content = <Radar navigator={navigator}/>;
+        content = <Radar/>;
         navText = 'RadarChart';
         break;
       case 6:
-        content = <Bubble navigator={navigator}/>;
+        content = <Bubble/>;
         navText = 'BubbleChart';
         break;
       case 7:
-        content = <Scatter navigator={navigator}/>;
+        content = <Scatter/>;
         navText = 'ScatterChart';
         break;
       case 8:
-        content = <CandleStick navigator={navigator}/>;
+        content = <CandleStick/>;
         navText = 'CandleStickChart';
         break;
       case 9:
-        content = <HorizontalBar navigator={navigator}/>;
+        content = <HorizontalBar/>;
         navText = 'HorizontalBarChart';
+        break;
+      case 10:
+        content = <Combined/>;
+        navText = 'CombinedChart';
         break;
       default:
         content = null;

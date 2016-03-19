@@ -22,6 +22,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		98708CAF1C9DB3030086ED32 /* RNCombinedChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98708CAA1C9DB3030086ED32 /* RNCombinedChart.swift */; };
+		98708CB01C9DB3030086ED32 /* chartDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98708CAB1C9DB3030086ED32 /* chartDataHelpers.swift */; };
+		98708CB11C9DB3030086ED32 /* RNCombinedChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98708CAD1C9DB3030086ED32 /* RNCombinedChart.m */; };
+		98708CB21C9DB3030086ED32 /* RNCombinedChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98708CAE1C9DB3030086ED32 /* RNCombinedChartManager.swift */; };
 		98B3E4B41C97E4EE00200ABC /* RNRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E48F1C97E4EE00200ABC /* RNRadarChart.swift */; };
 		98B3E4B51C97E4EE00200ABC /* RNRadarChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4901C97E4EE00200ABC /* RNRadarChartManager.swift */; };
 		98B3E4B61C97E4EE00200ABC /* RNRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4911C97E4EE00200ABC /* RNRadarChart.m */; };
@@ -157,6 +161,11 @@
 		4FC7E90B0EF4099FFA816944 /* Pods-ChartsExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartsExplorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer.debug.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		98708CAA1C9DB3030086ED32 /* RNCombinedChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNCombinedChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChart.swift"; sourceTree = "<group>"; };
+		98708CAB1C9DB3030086ED32 /* chartDataHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = chartDataHelpers.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/chartDataHelpers.swift"; sourceTree = "<group>"; };
+		98708CAC1C9DB3030086ED32 /* RNCombinedChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNCombinedChart.h; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChart.h"; sourceTree = "<group>"; };
+		98708CAD1C9DB3030086ED32 /* RNCombinedChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNCombinedChart.m; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChart.m"; sourceTree = "<group>"; };
+		98708CAE1C9DB3030086ED32 /* RNCombinedChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNCombinedChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChartManager.swift"; sourceTree = "<group>"; };
 		98B3E4431C97C73800200ABC /* ChartsExplorer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChartsExplorer-Bridging-Header.h"; sourceTree = "<group>"; };
 		98B3E48F1C97E4EE00200ABC /* RNRadarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNRadarChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNRadarChart.swift"; sourceTree = "<group>"; };
 		98B3E4901C97E4EE00200ABC /* RNRadarChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNRadarChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNRadarChartManager.swift"; sourceTree = "<group>"; };
@@ -312,6 +321,11 @@
 		13B07FAE1A68108700A75B9A /* ChartsExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				98708CAA1C9DB3030086ED32 /* RNCombinedChart.swift */,
+				98708CAB1C9DB3030086ED32 /* chartDataHelpers.swift */,
+				98708CAC1C9DB3030086ED32 /* RNCombinedChart.h */,
+				98708CAD1C9DB3030086ED32 /* RNCombinedChart.m */,
+				98708CAE1C9DB3030086ED32 /* RNCombinedChartManager.swift */,
 				98B3E48F1C97E4EE00200ABC /* RNRadarChart.swift */,
 				98B3E4901C97E4EE00200ABC /* RNRadarChartManager.swift */,
 				98B3E4911C97E4EE00200ABC /* RNRadarChart.m */,
@@ -725,16 +739,20 @@
 				98B3E4C01C97E4EE00200ABC /* RNCandleStickChart.m in Sources */,
 				98B3E4C41C97E4EE00200ABC /* PieRadarChartViewBaseExtension.swift in Sources */,
 				98B3E4B41C97E4EE00200ABC /* RNRadarChart.swift in Sources */,
+				98708CAF1C9DB3030086ED32 /* RNCombinedChart.swift in Sources */,
 				98B3E4CB1C97E4EE00200ABC /* RNLineChart.m in Sources */,
 				98B3E4C61C97E4EE00200ABC /* RNBarChart.swift in Sources */,
 				98B3E4BD1C97E4EE00200ABC /* RNCandleStickChart.swift in Sources */,
 				98B3E4BC1C97E4EE00200ABC /* RNBubbleChartManager.swift in Sources */,
 				98B3E4BE1C97E4EE00200ABC /* RNPieChart.swift in Sources */,
 				98B3E4B91C97E4EE00200ABC /* RNScatterChartManager.swift in Sources */,
+				98708CB11C9DB3030086ED32 /* RNCombinedChart.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				98B3E4BF1C97E4EE00200ABC /* RNCandleChartManager.swift in Sources */,
 				98B3E4CC1C97E4EE00200ABC /* RNLineChart.swift in Sources */,
+				98708CB01C9DB3030086ED32 /* chartDataHelpers.swift in Sources */,
 				98B3E4B61C97E4EE00200ABC /* RNRadarChart.m in Sources */,
+				98708CB21C9DB3030086ED32 /* RNCombinedChartManager.swift in Sources */,
 				98B3E4C21C97E4EE00200ABC /* ChartViewBaseExtension.swift in Sources */,
 				98B3E4C31C97E4EE00200ABC /* ABNumberFormatter.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,

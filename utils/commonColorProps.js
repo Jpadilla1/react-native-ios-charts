@@ -1,7 +1,6 @@
 import { processColor } from 'react-native';
-export const processColors = (props) => {
-  let config = Object.assign({}, props);
 
+const processDataSetsColors = (config) => {
   if ('dataSets' in config) {
     config.dataSets = config.dataSets.map(function(set) {
       if ('colors' in set) {
@@ -48,6 +47,32 @@ export const processColors = (props) => {
       }
       return set;
     });
+  }
+};
+
+export const processColors = (props) => {
+  let config = Object.assign({}, props);
+
+  processDataSetsColors(config);
+
+  if ('lineData' in config) {
+    processDataSetsColors(config.lineData);
+  }
+
+  if ('barData' in config) {
+    processDataSetsColors(config.barData);
+  }
+
+  if ('bubbleData' in config) {
+    processDataSetsColors(config.bubbleData);
+  }
+
+  if ('candleData' in config) {
+    processDataSetsColors(config.candleData);
+  }
+
+  if ('scatterData' in config) {
+    processDataSetsColors(config.scatterData);
   }
 
   if ('backgroundColor' in config) {
