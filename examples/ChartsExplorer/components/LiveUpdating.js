@@ -73,10 +73,16 @@ export default class LiveUpdating extends Component {
 
   componentDidMount() {
     this.interval = setInterval(() => {
-      this.setState({
-        values: this.state.values.concat([Math.floor((Math.random() * 100) + 1)]),
-        color: (this.state.color + 1) % colors.length
-      });
+      if (this.state.values.length >= 20) {
+        this.setState({
+          values: []
+        });
+      } else {
+        this.setState({
+          values: this.state.values.concat([Math.floor((Math.random() * 100) + 1)]),
+          color: (this.state.color + 1) % colors.length
+        });
+      }
     }, 500);
   }
 
