@@ -18,6 +18,7 @@ import Scatter from './components/Scatter';
 import CandleStick from './components/CandleStick';
 import HorizontalBar from './components/HorizontalBar';
 import Combined from './components/Combined';
+import LiveUpdating from './components/LiveUpdating';
 
 const ds = new ListView.DataSource({
   rowHasChanged: (r1, r2) => r1 !== r2
@@ -60,6 +61,10 @@ const data = ds.cloneWithRows([
     id: 10,
     title: '<CombinedChart>',
     description: 'Displays a CombinedChart with Bar and Line data.'
+  }, {
+    id: 11,
+    title: 'Live Updating graph',
+    description: 'Live updating a line chart'
   }
 ]);
 
@@ -160,6 +165,10 @@ class ChartsExplorer extends Component {
       case 10:
         content = <Combined/>;
         navText = 'CombinedChart';
+        break;
+      case 11:
+        content = <LiveUpdating/>;
+        navText = 'Live Updating';
         break;
       default:
         content = null;
