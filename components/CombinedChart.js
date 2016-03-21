@@ -42,7 +42,7 @@ CombinedChart.propTypes = {
         drawHorizontalHighlightIndicator: React.PropTypes.bool,
         drawVerticalHighlightIndicator: React.PropTypes.bool,
         fillAlpha: React.PropTypes.number,
-        fillColor: React.PropTypes.number,
+        fillColor: React.PropTypes.string,
         highlightColor: React.PropTypes.string,
         highlightLineDashLengths: React.PropTypes.number,
         highlightLineDashPhase: React.PropTypes.number,
