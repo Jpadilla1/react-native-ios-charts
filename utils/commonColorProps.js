@@ -1,8 +1,9 @@
 import { processColor } from 'react-native';
 
 const processDataSetsColors = (config) => {
-  if ('dataSets' in config) {
-    config.dataSets = config.dataSets.map(function(set) {
+  const ret = JSON.parse(JSON.stringify(config));
+  if ('dataSets' in ret) {
+    ret.dataSets = ret.dataSets.map(function(set) {
       if ('colors' in set) {
         set.colors = set.colors.map(color => processColor(color));
       }
@@ -48,31 +49,32 @@ const processDataSetsColors = (config) => {
       return set;
     });
   }
+  return ret;
 };
 
 export const processColors = (props) => {
-  let config = Object.assign({}, props);
+  let config = JSON.parse(JSON.stringify(props));
 
-  processDataSetsColors(config);
+  config = processDataSetsColors(config);
 
   if ('lineData' in config) {
-    processDataSetsColors(config.lineData);
+    config.lineData = processDataSetsColors(config.lineData);
   }
 
   if ('barData' in config) {
-    processDataSetsColors(config.barData);
+    config.barData = processDataSetsColors(config.barData);
   }
 
   if ('bubbleData' in config) {
-    processDataSetsColors(config.bubbleData);
+    config.bubbleData = processDataSetsColors(config.bubbleData);
   }
 
   if ('candleData' in config) {
-    processDataSetsColors(config.candleData);
+    config.candleData = processDataSetsColors(config.candleData);
   }
 
   if ('scatterData' in config) {
-    processDataSetsColors(config.scatterData);
+    config.scatterData = processDataSetsColors(config.scatterData);
   }
 
   if ('backgroundColor' in config) {
