@@ -20,20 +20,10 @@ export default class Combined extends Component {
     const config = {
       barData: {
         dataSets: [{
-          values: [5, 40, 77, 81, 43],
-          drawValues: false,
-          colors: ['rgb(107, 243, 174)'],
-          label: 'Company A'
-        }, {
           values: [40, 5, 50, 23, 79],
           drawValues: false,
           colors: ['rgb(166, 232, 255)'],
           label: 'Company B'
-        }, {
-          values: [10, 55, 35, 90, 82],
-          drawValues: false,
-          colors: ['rgb(248, 248, 157)'],
-          label: 'Company C'
         }]
       },
       lineData: {
