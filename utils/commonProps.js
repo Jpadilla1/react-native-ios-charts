@@ -8,7 +8,8 @@ export const commonDataSetProps = {
   highlightEnabled: React.PropTypes.bool,
   valueTextFontName: React.PropTypes.string,
   valueTextFontSize: React.PropTypes.number,
-  valueTextColor: React.PropTypes.string
+  valueTextColor: React.PropTypes.string,
+  axisDependency: React.PropTypes.oneOf(['left', 'right'])
 };
 
 export const globalCommonProps = {

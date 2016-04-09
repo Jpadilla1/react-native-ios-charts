@@ -23,7 +23,8 @@ export default class Combined extends Component {
           values: [40, 5, 50, 23, 79],
           drawValues: false,
           colors: ['rgb(166, 232, 255)'],
-          label: 'Company B'
+          label: 'Company B',
+          axisDependency: 'right'
         }]
       },
       lineData: {
@@ -34,7 +35,8 @@ export default class Combined extends Component {
           label: 'Sine function',
           drawCubic: true,
           drawCircles: false,
-          lineWidth: 2
+          lineWidth: 2,
+          axisDependency: 'right'
         }, {
           values: [10, 5, 10, 5, 10],
           drawValues: false,
@@ -42,29 +44,31 @@ export default class Combined extends Component {
           label: 'Cosine function',
           drawCubic: true,
           drawCircles: false,
-          lineWidth: 2
-        }]
+          lineWidth: 2,
+          axisDependency: 'right'
+        }],
       },
       bubbleData: {
         dataSets: [{
           values: [{
             size: 23.4,
-            value: 80
+            value: 10080
           }, {
             size: 17.4,
-            value: 50
+            value: 10050
           }, {
             size: 6.0,
-            value: 60
+            value: 1060
           }, {
             size: 52.0,
-            value: 70
+            value: 7100
           }, {
             size: 40.1,
-            value: 65
+            value: 6005
           }],
           colors: ['rgba(241, 152, 174, 0.7)'],
-          label: 'Company A'
+          label: 'Company A',
+          axisDependency: 'left',
         }],
       },
       candleData: {
@@ -90,6 +94,7 @@ export default class Combined extends Component {
             open: 25,
             close: 15
           }],
+          axisDependency: 'right',
           drawValues: false,
           colors: ['red'],
           label: 'Company A'
@@ -97,23 +102,26 @@ export default class Combined extends Component {
       },
       scatterData: {
         dataSets: [{
-          values: [5, 40, 77, 81, 43],
+          values: [15, 40, 77, 81, 43],
           drawValues: false,
           colors: ['rgb(197, 36, 82)'],
           label: 'Company A',
-          scatterShape: 'Square'
+          scatterShape: 'Square',
+          axisDependency: 'right'
         }, {
           values: [40, 5, 50, 23, 79],
           drawValues: false,
           colors: ['rgb(255, 101, 0)'],
           label: 'Company B',
-          scatterShape: 'Circle'
+          scatterShape: 'Circle',
+          axisDependency: 'right'
         }, {
           values: [10, 55, 35, 90, 82],
           drawValues: false,
           colors: ['rgb(247, 198, 0)'],
           label: 'Company C',
-          scatterShape: 'Triangle'
+          scatterShape: 'Triangle',
+          axisDependency: 'right'
         }],
       },
       drawBarShadowEnabled: false,
@@ -129,7 +137,8 @@ export default class Combined extends Component {
       },
       rightAxis: {
         drawGridLines: false,
-        spaceBottom: 0.05
+        spaceBottom: 0.05,
+        axisMaximum: 100
       },
       valueFormatter: {
         type: 'regular',

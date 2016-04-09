@@ -5,6 +5,57 @@
       location = "container:"
       name = "RNiOSCharts">
       <FileRef
+         location = "group:RNiOSCharts/chartDataHelpers.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNBubbleChart.h">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNBubbleChart.m">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNBubbleChart.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNBubbleChartManager.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNCombinedChart.h">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNCombinedChart.m">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNCombinedChart.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNCombinedChartManager.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNRadarChart.h">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNRadarChart.m">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNRadarChart.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNRadarChartManager.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNScatterChart.h">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNScatterChart.m">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNScatterChart.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RNiOSCharts/RNScatterChartManager.swift">
+      </FileRef>
+      <FileRef
          location = "group:RNiOSCharts/RNCandleStickChart.swift">
       </FileRef>
       <FileRef
