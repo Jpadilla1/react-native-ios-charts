@@ -437,11 +437,11 @@ extension BarLineChartViewBase {
             }
 
             if json["leftAxis"]["axisMinimum"].isExists() {
-                self.leftAxis.axisMinimum = json["leftAxis"]["axisMinimum"].doubleValue;
+                self.leftAxis.customAxisMin = json["leftAxis"]["axisMinimum"].doubleValue;
             }
 
             if json["leftAxis"]["axisMaximum"].isExists() {
-                self.leftAxis.axisMaximum = json["leftAxis"]["axisMaximum"].doubleValue;
+                self.leftAxis.customAxisMax = json["leftAxis"]["axisMaximum"].doubleValue;
             }
 
             if json["leftAxis"]["labelCount"].isExists() {
@@ -630,11 +630,11 @@ extension BarLineChartViewBase {
             }
 
             if json["rightAxis"]["axisMinimum"].isExists() {
-                self.rightAxis.axisMinimum = json["rightAxis"]["axisMinimum"].doubleValue;
+                self.rightAxis.customAxisMin = json["rightAxis"]["axisMinimum"].doubleValue;
             }
 
             if json["rightAxis"]["axisMaximum"].isExists() {
-                self.rightAxis.axisMaximum = json["rightAxis"]["axisMaximum"].doubleValue;
+                self.rightAxis.customAxisMax = json["rightAxis"]["axisMaximum"].doubleValue;
             }
 
             if json["rightAxis"]["labelCount"].isExists() {
