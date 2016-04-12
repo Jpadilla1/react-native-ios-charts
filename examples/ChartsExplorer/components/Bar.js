@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    backgroundColor: 'transparent'
   }
 });
 
@@ -34,7 +35,6 @@ export default class Bar extends Component {
         colors: ['rgb(248, 248, 157)'],
         label: 'Company C'
       }],
-      backgroundColor: 'transparent',
       labels: ['1990', '1991', '1992', '1993', '1994'],
       legend: {
       },

@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    backgroundColor: 'transparent'
   }
 });
 
@@ -125,7 +126,6 @@ export default class Combined extends Component {
         }],
       },
       drawBarShadowEnabled: false,
-      backgroundColor: 'transparent',
       labels: ['1990', '1991', '1992', '1993', '1994'],
       showLegend: false,
       xAxis: {
@@ -138,7 +138,8 @@ export default class Combined extends Component {
       rightAxis: {
         drawGridLines: false,
         spaceBottom: 0.05,
-        axisMaximum: 100
+        axisMaximum: 100,
+        axisMaximum: 0
       },
       valueFormatter: {
         type: 'regular',

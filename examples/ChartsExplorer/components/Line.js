@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    backgroundColor: 'transparent'
   }
 });
 
@@ -36,7 +37,6 @@ export default class Line extends Component {
         drawCircles: false,
         lineWidth: 2
       }],
-      backgroundColor: 'transparent',
       labels: ['Jan', 'Feb', 'Mar'],
       minOffset: 20,
       scaleYEnabled: false,

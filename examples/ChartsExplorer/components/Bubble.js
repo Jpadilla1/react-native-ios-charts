@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    backgroundColor: 'transparent'
   }
 });
 
@@ -38,7 +39,6 @@ export default class Bubble extends Component {
         colors: ['rgba(241, 152, 174, 0.7)'],
         label: 'Company A'
       }],
-      backgroundColor: 'transparent',
       labels: ['1990', '1991', '1992', '1993', '1994'],
       legend: {
         showLegend: false

@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    backgroundColor: 'transparent'
   }
 });
 
@@ -24,7 +25,6 @@ export default class Pie extends Component {
         colors: ['rgb(197, 255, 140)', 'rgb(255, 247, 140)', 'rgb(255, 210, 141)', 'rgb(140, 235, 255)'],
         label: 'Quarter Revenues 2014'
       }],
-      backgroundColor: 'transparent',
       labels: ['Quarter 1', 'Quarter 2', 'Quarter 3', 'Quarter 4'],
       centerText: 'Quartely Revenue',
       legend: {
