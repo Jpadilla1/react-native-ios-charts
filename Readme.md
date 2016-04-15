@@ -32,7 +32,7 @@ The aim of this library is to provide reusable React Native components that can 
 
   target 'MyApp' do
     pod 'SwiftyJSON', '~> 2.3'
-    pod 'Charts', '~> 2.2'
+    pod 'Charts', '~> 2.3.3'
   end
   ```
 4. Install [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) and [iOS Charts](https://github.com/danielgindi/ios-charts) libraries and add `SwiftyJSON.xcodeproj` and `Charts.xcodeproj` files to your project.
