@@ -31,7 +31,6 @@ CombinedChart.propTypes = {
       dataSets: React.PropTypes.arrayOf(React.PropTypes.shape({
         ...commonDataSetProps,
         drawCircles: React.PropTypes.bool,
-        lineWidth: React.PropTypes.number,
         circleColors: React.PropTypes.arrayOf(React.PropTypes.string),
         circleHoleColor: React.PropTypes.string,
         circleRadius: React.PropTypes.number,
