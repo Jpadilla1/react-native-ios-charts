@@ -31,7 +31,7 @@ The aim of this library is to provide reusable React Native components that can 
   use_frameworks!
 
   target 'MyApp' do
-    pod 'SwiftyJSON', '~> 2.3'
+    pod 'SwiftyJSON', '2.3.1'
     pod 'Charts', '2.2.3'
   end
   ```
