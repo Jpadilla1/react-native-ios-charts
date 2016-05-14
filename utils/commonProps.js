@@ -277,6 +277,12 @@ export const barLineCommonProps = {
     startAtZero: React.PropTypes.bool,
     axisMinimum: React.PropTypes.number,
     axisMaximum: React.PropTypes.number
+  }),
+  viewport: React.PropTypes.shape({
+    left: React.PropTypes.number,
+    top: React.PropTypes.number,
+    right: React.PropTypes.number,
+    bottom: React.PropTypes.number
   })
 };
 

@@ -1,6 +1,6 @@
 use_frameworks!
 
 target 'ChartsExplorer' do
-  pod 'SwiftyJSON', '~> 2.3'
-  pod 'Charts', '2.2.4'
+  pod 'SwiftyJSON', '2.3.1'
+  pod 'Charts', '2.2.3'
 end

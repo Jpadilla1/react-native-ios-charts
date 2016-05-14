@@ -727,5 +727,21 @@ extension BarLineChartViewBase {
             self.leftAxis.valueFormatter?.maximumFractionDigits = maximumDecimalPlaces;
             self.rightAxis.valueFormatter?.maximumFractionDigits = maximumDecimalPlaces;
         }
+        
+        if json["viewport"].isExists() {
+            
+            if json["viewport"]["left"].isExists() &&
+                json["viewport"]["top"].isExists() &&
+                json["viewport"]["right"].isExists() &&
+                json["viewport"]["bottom"].isExists() {
+                
+                self.setViewPortOffsets(
+                    left: CGFloat(json["viewport"]["left"].floatValue),
+                    top: CGFloat(json["viewport"]["top"].floatValue),
+                    right: CGFloat(json["viewport"]["right"].floatValue),
+                    bottom: CGFloat(json["viewport"]["bottom"].floatValue)
+                )
+            }
+        }
     }
 }

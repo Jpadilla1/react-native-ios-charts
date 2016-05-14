@@ -52,6 +52,12 @@ export default class Bar extends Component {
       valueFormatter: {
         type: 'regular',
         maximumDecimalPlaces: 0
+      },
+      viewport: {
+        left: 20,
+        top: 0,
+        right: 20,
+        bottom: 50
       }
     };
     return (
