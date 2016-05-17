@@ -36,7 +36,7 @@ class ABNumberFormatter : NSNumberFormatter {
         var number : Float = Float(num);
         if (num >= 1000) {
             let abbrev = ["K", "M", "B"];
-            for (var i = abbrev.count - 1; i >= 0; i--) {
+            for i in (abbrev.count - 1).stride(to: 0, by: -1) {
                 let size = Float(pow(Double(10), Double((i+1)*3)));
                 if(size <= number) {
                     number = number/size;
