@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "react": "^0.14.5",
-    "react-native": "^0.23.1",
-    "react-native-ios-charts": "latest"
+    "react-native": "^0.25.1",
+    "react-native-ios-charts": "git+https://github.com/Jpadilla1/react-native-ios-charts.git"
   }
 }

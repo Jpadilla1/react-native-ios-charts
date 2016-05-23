@@ -1,7 +1,9 @@
-import React, {
-  Component,
-  requireNativeComponent
-} from 'react-native';
+import React, { Component } from 'react';
+import {
+  requireNativeComponent,
+  NativeModules,
+  findNodeHandle
+ } from 'react-native';
 
 import {
   globalCommonProps,
@@ -10,18 +12,24 @@ import {
 } from '../utils/commonProps';
 
 import { processColors } from '../utils/commonColorProps';
-
-let RNCandleStickChart = requireNativeComponent('RNCandleStickChartSwift', CandleStickChart);
+const RNCandleStickChartManager = NativeModules.RNCandleStickChartSwift;
 
 class CandleStickChart extends Component {
-  render() {
-    let {config, ...otherProps} = this.props;
-    config = processColors(config);
-    return <RNCandleStickChart
-      config={JSON.stringify(config)}
-      {...otherProps}/>;
+  constructor(props) {
+    super(props);
+    this.setVisibleXRangeMaximum = this.setVisibleXRangeMaximum.bind(this);
   }
-};
+  setVisibleXRangeMaximum(value) {
+    RNCandleStickChartManager.setVisibleXRangeMaximum(findNodeHandle(this), value);
+  }
+  render() {
+    let { config, ...otherProps } = this.props;
+    config = processColors(config);
+    return <RNCandleStickChart config={JSON.stringify(config)} {...otherProps} />;
+  }
+}
+
+const RNCandleStickChart = requireNativeComponent('RNCandleStickChartSwift', CandleStickChart);
 
 CandleStickChart.propTypes = {
   config: React.PropTypes.shape({

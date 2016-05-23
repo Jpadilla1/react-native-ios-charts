@@ -1,2667 +1,1015 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>008F07F21AC5B25A0029DE68</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>main.jsbundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302A71ABCB8CE00DB3ED1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.pb-project</string>
-			<key>name</key>
-			<string>RCTActionSheet.xcodeproj</string>
-			<key>path</key>
-			<string>../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302A81ABCB8CE00DB3ED1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>00C302AC1ABCB8CE00DB3ED1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302AB1ABCB8CE00DB3ED1</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>00C302A71ABCB8CE00DB3ED1</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>2</string>
-			<key>remoteGlobalIDString</key>
-			<string>134814201AA4EA6300B7C361</string>
-			<key>remoteInfo</key>
-			<string>RCTActionSheet</string>
-		</dict>
-		<key>00C302AC1ABCB8CE00DB3ED1</key>
-		<dict>
-			<key>fileType</key>
-			<string>archive.ar</string>
-			<key>isa</key>
-			<string>PBXReferenceProxy</string>
-			<key>path</key>
-			<string>libRCTActionSheet.a</string>
-			<key>remoteRef</key>
-			<string>00C302AB1ABCB8CE00DB3ED1</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>00C302B51ABCB90400DB3ED1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.pb-project</string>
-			<key>name</key>
-			<string>RCTGeolocation.xcodeproj</string>
-			<key>path</key>
-			<string>../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302B61ABCB90400DB3ED1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>00C302BA1ABCB90400DB3ED1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302B91ABCB90400DB3ED1</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>00C302B51ABCB90400DB3ED1</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>2</string>
-			<key>remoteGlobalIDString</key>
-			<string>134814201AA4EA6300B7C361</string>
-			<key>remoteInfo</key>
-			<string>RCTGeolocation</string>
-		</dict>
-		<key>00C302BA1ABCB90400DB3ED1</key>
-		<dict>
-			<key>fileType</key>
-			<string>archive.ar</string>
-			<key>isa</key>
-			<string>PBXReferenceProxy</string>
-			<key>path</key>
-			<string>libRCTGeolocation.a</string>
-			<key>remoteRef</key>
-			<string>00C302B91ABCB90400DB3ED1</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>00C302BB1ABCB91800DB3ED1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.pb-project</string>
-			<key>name</key>
-			<string>RCTImage.xcodeproj</string>
-			<key>path</key>
-			<string>../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302BC1ABCB91800DB3ED1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>00C302C01ABCB91800DB3ED1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302BF1ABCB91800DB3ED1</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>00C302BB1ABCB91800DB3ED1</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>2</string>
-			<key>remoteGlobalIDString</key>
-			<string>58B5115D1A9E6B3D00147676</string>
-			<key>remoteInfo</key>
-			<string>RCTImage</string>
-		</dict>
-		<key>00C302C01ABCB91800DB3ED1</key>
-		<dict>
-			<key>fileType</key>
-			<string>archive.ar</string>
-			<key>isa</key>
-			<string>PBXReferenceProxy</string>
-			<key>path</key>
-			<string>libRCTImage.a</string>
-			<key>remoteRef</key>
-			<string>00C302BF1ABCB91800DB3ED1</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>00C302D31ABCB9D200DB3ED1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.pb-project</string>
-			<key>name</key>
-			<string>RCTNetwork.xcodeproj</string>
-			<key>path</key>
-			<string>../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302D41ABCB9D200DB3ED1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>00C302DC1ABCB9D200DB3ED1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302DB1ABCB9D200DB3ED1</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>00C302D31ABCB9D200DB3ED1</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>2</string>
-			<key>remoteGlobalIDString</key>
-			<string>58B511DB1A9E6C8500147676</string>
-			<key>remoteInfo</key>
-			<string>RCTNetwork</string>
-		</dict>
-		<key>00C302DC1ABCB9D200DB3ED1</key>
-		<dict>
-			<key>fileType</key>
-			<string>archive.ar</string>
-			<key>isa</key>
-			<string>PBXReferenceProxy</string>
-			<key>path</key>
-			<string>libRCTNetwork.a</string>
-			<key>remoteRef</key>
-			<string>00C302DB1ABCB9D200DB3ED1</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>00C302DF1ABCB9EE00DB3ED1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.pb-project</string>
-			<key>name</key>
-			<string>RCTVibration.xcodeproj</string>
-			<key>path</key>
-			<string>../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302E01ABCB9EE00DB3ED1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>00C302E41ABCB9EE00DB3ED1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00C302E31ABCB9EE00DB3ED1</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>00C302DF1ABCB9EE00DB3ED1</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>2</string>
-			<key>remoteGlobalIDString</key>
-			<string>832C81801AAF6DEF007FA2F7</string>
-			<key>remoteInfo</key>
-			<string>RCTVibration</string>
-		</dict>
-		<key>00C302E41ABCB9EE00DB3ED1</key>
-		<dict>
-			<key>fileType</key>
-			<string>archive.ar</string>
-			<key>isa</key>
-			<string>PBXReferenceProxy</string>
-			<key>path</key>
-			<string>libRCTVibration.a</string>
-			<key>remoteRef</key>
-			<string>00C302E31ABCB9EE00DB3ED1</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>00C302E51ABCBA2D00DB3ED1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>00C302AC1ABCB8CE00DB3ED1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>00C302E71ABCBA2D00DB3ED1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>00C302BA1ABCB90400DB3ED1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>00C302E81ABCBA2D00DB3ED1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>00C302C01ABCB91800DB3ED1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>00C302E91ABCBA2D00DB3ED1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>00C302DC1ABCB9D200DB3ED1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>00C302EA1ABCBA2D00DB3ED1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>00C302E41ABCB9EE00DB3ED1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>00DD1BFF1BD5951E006B06BC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Bundle React Native code and images</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>export NODE_BINARY=node
-../node_modules/react-native/packager/react-native-xcode.sh</string>
-		</dict>
-		<key>00E356EA1AD99517003FC87E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>00E356F31AD99517003FC87E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>00E356EB1AD99517003FC87E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>00E356EC1AD99517003FC87E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>00E356ED1AD99517003FC87E</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>00E357021AD99517003FC87E</string>
-			<key>buildPhases</key>
-			<array>
-				<string>00E356EA1AD99517003FC87E</string>
-				<string>00E356EB1AD99517003FC87E</string>
-				<string>00E356EC1AD99517003FC87E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>00E356F51AD99517003FC87E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ChartsExplorerTests</string>
-			<key>productName</key>
-			<string>ChartsExplorerTests</string>
-			<key>productReference</key>
-			<string>00E356EE1AD99517003FC87E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>00E356EE1AD99517003FC87E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ChartsExplorerTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>00E356EF1AD99517003FC87E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>00E356F21AD99517003FC87E</string>
-				<string>00E356F01AD99517003FC87E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ChartsExplorerTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00E356F01AD99517003FC87E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>00E356F11AD99517003FC87E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00E356F11AD99517003FC87E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00E356F21AD99517003FC87E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ChartsExplorerTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>00E356F31AD99517003FC87E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>00E356F21AD99517003FC87E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>00E356F41AD99517003FC87E</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>83CBB9F71A601CBA00E9B192</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>13B07F861A680F5B00A75B9A</string>
-			<key>remoteInfo</key>
-			<string>ChartsExplorer</string>
-		</dict>
-		<key>00E356F51AD99517003FC87E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>13B07F861A680F5B00A75B9A</string>
-			<key>targetProxy</key>
-			<string>00E356F41AD99517003FC87E</string>
-		</dict>
-		<key>00E356F61AD99517003FC87E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ChartsExplorerTests/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.2</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/ChartsExplorer.app/ChartsExplorer</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>00E356F71AD99517003FC87E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ChartsExplorerTests/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.2</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/ChartsExplorer.app/ChartsExplorer</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>00E357021AD99517003FC87E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>00E356F61AD99517003FC87E</string>
-				<string>00E356F71AD99517003FC87E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>133E29F31AD74F7200F7D852</key>
-		<dict>
-			<key>fileRef</key>
-			<string>78C398B91ACF4ADC00677621</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>139105B61AF99BAD00B5F7CC</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.pb-project</string>
-			<key>name</key>
-			<string>RCTSettings.xcodeproj</string>
-			<key>path</key>
-			<string>../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>139105B71AF99BAD00B5F7CC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>139105C11AF99BAD00B5F7CC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>139105C01AF99BAD00B5F7CC</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>139105B61AF99BAD00B5F7CC</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>2</string>
-			<key>remoteGlobalIDString</key>
-			<string>134814201AA4EA6300B7C361</string>
-			<key>remoteInfo</key>
-			<string>RCTSettings</string>
-		</dict>
-		<key>139105C11AF99BAD00B5F7CC</key>
-		<dict>
-			<key>fileType</key>
-			<string>archive.ar</string>
-			<key>isa</key>
-			<string>PBXReferenceProxy</string>
-			<key>path</key>
-			<string>libRCTSettings.a</string>
-			<key>remoteRef</key>
-			<string>139105C01AF99BAD00B5F7CC</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>139105C61AF99C1200B5F7CC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>139105C11AF99BAD00B5F7CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>139FDEE61B06529A00C62182</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.pb-project</string>
-			<key>name</key>
-			<string>RCTWebSocket.xcodeproj</string>
-			<key>path</key>
-			<string>../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>139FDEE71B06529A00C62182</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>139FDEF41B06529B00C62182</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>139FDEF31B06529B00C62182</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>139FDEE61B06529A00C62182</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>2</string>
-			<key>remoteGlobalIDString</key>
-			<string>3C86DF461ADF2C930047B81A</string>
-			<key>remoteInfo</key>
-			<string>RCTWebSocket</string>
-		</dict>
-		<key>139FDEF41B06529B00C62182</key>
-		<dict>
-			<key>fileType</key>
-			<string>archive.ar</string>
-			<key>isa</key>
-			<string>PBXReferenceProxy</string>
-			<key>path</key>
-			<string>libRCTWebSocket.a</string>
-			<key>remoteRef</key>
-			<string>139FDEF31B06529B00C62182</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>139FDEF61B0652A700C62182</key>
-		<dict>
-			<key>fileRef</key>
-			<string>139FDEF41B06529B00C62182</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>13B07F861A680F5B00A75B9A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>13B07F931A680F5B00A75B9A</string>
-			<key>buildPhases</key>
-			<array>
-				<string>66D6E99531E5160ECE420B99</string>
-				<string>13B07F871A680F5B00A75B9A</string>
-				<string>13B07F8C1A680F5B00A75B9A</string>
-				<string>13B07F8E1A680F5B00A75B9A</string>
-				<string>00DD1BFF1BD5951E006B06BC</string>
-				<string>784B40558634D830D5DA2F47</string>
-				<string>17DACD04C3B8A7AB29DD7679</string>
-				<string>6F291D823928ED19D194BF5B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ChartsExplorer</string>
-			<key>productName</key>
-			<string>Hello World</string>
-			<key>productReference</key>
-			<string>13B07F961A680F5B00A75B9A</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>13B07F871A680F5B00A75B9A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>98B3E4C11C97E4EE00200ABC</string>
-				<string>98B3E4BB1C97E4EE00200ABC</string>
-				<string>98B3E4C81C97E4EE00200ABC</string>
-				<string>98B3E4C01C97E4EE00200ABC</string>
-				<string>98B3E4C41C97E4EE00200ABC</string>
-				<string>98B3E4B41C97E4EE00200ABC</string>
-				<string>98708CAF1C9DB3030086ED32</string>
-				<string>98B3E4CB1C97E4EE00200ABC</string>
-				<string>98B3E4C61C97E4EE00200ABC</string>
-				<string>98B3E4BD1C97E4EE00200ABC</string>
-				<string>98B3E4BC1C97E4EE00200ABC</string>
-				<string>98B3E4BE1C97E4EE00200ABC</string>
-				<string>98B3E4B91C97E4EE00200ABC</string>
-				<string>98708CB11C9DB3030086ED32</string>
-				<string>13B07FBC1A68108700A75B9A</string>
-				<string>98B3E4BF1C97E4EE00200ABC</string>
-				<string>98B3E4CC1C97E4EE00200ABC</string>
-				<string>98708CB01C9DB3030086ED32</string>
-				<string>98B3E4B61C97E4EE00200ABC</string>
-				<string>98708CB21C9DB3030086ED32</string>
-				<string>98B3E4C21C97E4EE00200ABC</string>
-				<string>98B3E4C31C97E4EE00200ABC</string>
-				<string>13B07FC11A68108700A75B9A</string>
-				<string>98B3E4CE1C97E4EE00200ABC</string>
-				<string>98B3E4B81C97E4EE00200ABC</string>
-				<string>98B3E4CD1C97E4EE00200ABC</string>
-				<string>98B3E4BA1C97E4EE00200ABC</string>
-				<string>98B3E4CF1C97E4EE00200ABC</string>
-				<string>98B3E4CA1C97E4EE00200ABC</string>
-				<string>98B3E4C71C97E4EE00200ABC</string>
-				<string>98B3E4B51C97E4EE00200ABC</string>
-				<string>98B3E4C51C97E4EE00200ABC</string>
-				<string>98B3E4C91C97E4EE00200ABC</string>
-				<string>98B3E4B71C97E4EE00200ABC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>13B07F8C1A680F5B00A75B9A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>146834051AC3E58100842450</string>
-				<string>00C302E51ABCBA2D00DB3ED1</string>
-				<string>00C302E71ABCBA2D00DB3ED1</string>
-				<string>00C302E81ABCBA2D00DB3ED1</string>
-				<string>133E29F31AD74F7200F7D852</string>
-				<string>00C302E91ABCBA2D00DB3ED1</string>
-				<string>139105C61AF99C1200B5F7CC</string>
-				<string>832341BD1AAA6AB300B99B32</string>
-				<string>00C302EA1ABCBA2D00DB3ED1</string>
-				<string>139FDEF61B0652A700C62182</string>
-				<string>CE0171FAF22990463CAC8B57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>13B07F8E1A680F5B00A75B9A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>13B07FBF1A68108700A75B9A</string>
-				<string>13B07FBD1A68108700A75B9A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>13B07F931A680F5B00A75B9A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>13B07F941A680F5B00A75B9A</string>
-				<string>13B07F951A680F5B00A75B9A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>13B07F941A680F5B00A75B9A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8E660E9617617419BAF31DD5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>DEAD_CODE_STRIPPING</key>
-				<string>NO</string>
-				<key>HEADER_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
-					<string>$(SRCROOT)/../node_modules/react-native/React/**</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ChartsExplorer/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>OTHER_LDFLAGS</key>
-				<string>-ObjC</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)</string>
-				<key>PRODUCT_NAME</key>
-				<string>ChartsExplorer</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>ChartsExplorer-Bridging-Header.h</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>13B07F951A680F5B00A75B9A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>BB04D3E071FB19C3BF8DB328</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>HEADER_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
-					<string>$(SRCROOT)/../node_modules/react-native/React/**</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ChartsExplorer/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>OTHER_LDFLAGS</key>
-				<string>-ObjC</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)</string>
-				<key>PRODUCT_NAME</key>
-				<string>ChartsExplorer</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>ChartsExplorer-Bridging-Header.h</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>13B07F961A680F5B00A75B9A</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ChartsExplorer.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>13B07FAE1A68108700A75B9A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>98708CAA1C9DB3030086ED32</string>
-				<string>98708CAB1C9DB3030086ED32</string>
-				<string>98708CAC1C9DB3030086ED32</string>
-				<string>98708CAD1C9DB3030086ED32</string>
-				<string>98708CAE1C9DB3030086ED32</string>
-				<string>98B3E48F1C97E4EE00200ABC</string>
-				<string>98B3E4901C97E4EE00200ABC</string>
-				<string>98B3E4911C97E4EE00200ABC</string>
-				<string>98B3E4921C97E4EE00200ABC</string>
-				<string>98B3E4931C97E4EE00200ABC</string>
-				<string>98B3E4941C97E4EE00200ABC</string>
-				<string>98B3E4951C97E4EE00200ABC</string>
-				<string>98B3E4961C97E4EE00200ABC</string>
-				<string>98B3E4971C97E4EE00200ABC</string>
-				<string>98B3E4981C97E4EE00200ABC</string>
-				<string>98B3E4991C97E4EE00200ABC</string>
-				<string>98B3E49A1C97E4EE00200ABC</string>
-				<string>98B3E49B1C97E4EE00200ABC</string>
-				<string>98B3E49C1C97E4EE00200ABC</string>
-				<string>98B3E49D1C97E4EE00200ABC</string>
-				<string>98B3E49E1C97E4EE00200ABC</string>
-				<string>98B3E49F1C97E4EE00200ABC</string>
-				<string>98B3E4A01C97E4EE00200ABC</string>
-				<string>98B3E4A11C97E4EE00200ABC</string>
-				<string>98B3E4A21C97E4EE00200ABC</string>
-				<string>98B3E4A31C97E4EE00200ABC</string>
-				<string>98B3E4A41C97E4EE00200ABC</string>
-				<string>98B3E4A51C97E4EE00200ABC</string>
-				<string>98B3E4A61C97E4EE00200ABC</string>
-				<string>98B3E4A71C97E4EE00200ABC</string>
-				<string>98B3E4A81C97E4EE00200ABC</string>
-				<string>98B3E4A91C97E4EE00200ABC</string>
-				<string>98B3E4AA1C97E4EE00200ABC</string>
-				<string>98B3E4AB1C97E4EE00200ABC</string>
-				<string>98B3E4AC1C97E4EE00200ABC</string>
-				<string>98B3E4AD1C97E4EE00200ABC</string>
-				<string>98B3E4AE1C97E4EE00200ABC</string>
-				<string>98B3E4AF1C97E4EE00200ABC</string>
-				<string>98B3E4B01C97E4EE00200ABC</string>
-				<string>98B3E4B11C97E4EE00200ABC</string>
-				<string>98B3E4B21C97E4EE00200ABC</string>
-				<string>98B3E4B31C97E4EE00200ABC</string>
-				<string>008F07F21AC5B25A0029DE68</string>
-				<string>13B07FAF1A68108700A75B9A</string>
-				<string>13B07FB01A68108700A75B9A</string>
-				<string>13B07FB51A68108700A75B9A</string>
-				<string>13B07FB61A68108700A75B9A</string>
-				<string>13B07FB11A68108700A75B9A</string>
-				<string>13B07FB71A68108700A75B9A</string>
-				<string>98B3E4431C97C73800200ABC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ChartsExplorer</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>13B07FAF1A68108700A75B9A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AppDelegate.h</string>
-			<key>path</key>
-			<string>ChartsExplorer/AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>13B07FB01A68108700A75B9A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AppDelegate.m</string>
-			<key>path</key>
-			<string>ChartsExplorer/AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>13B07FB11A68108700A75B9A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>13B07FB21A68108700A75B9A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>path</key>
-			<string>ChartsExplorer</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>13B07FB21A68108700A75B9A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>13B07FB51A68108700A75B9A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>name</key>
-			<string>Images.xcassets</string>
-			<key>path</key>
-			<string>ChartsExplorer/Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>13B07FB61A68108700A75B9A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>Info.plist</string>
-			<key>path</key>
-			<string>ChartsExplorer/Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>13B07FB71A68108700A75B9A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>main.m</string>
-			<key>path</key>
-			<string>ChartsExplorer/main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>13B07FBC1A68108700A75B9A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>13B07FB01A68108700A75B9A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>13B07FBD1A68108700A75B9A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>13B07FB11A68108700A75B9A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>13B07FBF1A68108700A75B9A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>13B07FB51A68108700A75B9A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>13B07FC11A68108700A75B9A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>13B07FB71A68108700A75B9A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>146833FF1AC3E56700842450</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.pb-project</string>
-			<key>name</key>
-			<string>React.xcodeproj</string>
-			<key>path</key>
-			<string>../node_modules/react-native/React/React.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>146834001AC3E56700842450</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>146834041AC3E56700842450</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>146834031AC3E56700842450</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>146833FF1AC3E56700842450</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>2</string>
-			<key>remoteGlobalIDString</key>
-			<string>83CBBA2E1A601D0E00E9B192</string>
-			<key>remoteInfo</key>
-			<string>React</string>
-		</dict>
-		<key>146834041AC3E56700842450</key>
-		<dict>
-			<key>fileType</key>
-			<string>archive.ar</string>
-			<key>isa</key>
-			<string>PBXReferenceProxy</string>
-			<key>path</key>
-			<string>libReact.a</string>
-			<key>remoteRef</key>
-			<string>146834031AC3E56700842450</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>146834051AC3E58100842450</key>
-		<dict>
-			<key>fileRef</key>
-			<string>146834041AC3E56700842450</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>17DACD04C3B8A7AB29DD7679</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>66D6E99531E5160ECE420B99</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>6F291D823928ED19D194BF5B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>784B40558634D830D5DA2F47</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>78C398B01ACF4ADC00677621</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.pb-project</string>
-			<key>name</key>
-			<string>RCTLinking.xcodeproj</string>
-			<key>path</key>
-			<string>../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>78C398B11ACF4ADC00677621</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>78C398B91ACF4ADC00677621</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>78C398B81ACF4ADC00677621</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>78C398B01ACF4ADC00677621</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>2</string>
-			<key>remoteGlobalIDString</key>
-			<string>134814201AA4EA6300B7C361</string>
-			<key>remoteInfo</key>
-			<string>RCTLinking</string>
-		</dict>
-		<key>78C398B91ACF4ADC00677621</key>
-		<dict>
-			<key>fileType</key>
-			<string>archive.ar</string>
-			<key>isa</key>
-			<string>PBXReferenceProxy</string>
-			<key>path</key>
-			<string>libRCTLinking.a</string>
-			<key>remoteRef</key>
-			<string>78C398B81ACF4ADC00677621</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>832341AE1AAA6A7D00B99B32</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>146833FF1AC3E56700842450</string>
-				<string>00C302A71ABCB8CE00DB3ED1</string>
-				<string>00C302B51ABCB90400DB3ED1</string>
-				<string>00C302BB1ABCB91800DB3ED1</string>
-				<string>78C398B01ACF4ADC00677621</string>
-				<string>00C302D31ABCB9D200DB3ED1</string>
-				<string>139105B61AF99BAD00B5F7CC</string>
-				<string>832341B01AAA6A8300B99B32</string>
-				<string>00C302DF1ABCB9EE00DB3ED1</string>
-				<string>139FDEE61B06529A00C62182</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Libraries</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>832341B01AAA6A8300B99B32</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.pb-project</string>
-			<key>name</key>
-			<string>RCTText.xcodeproj</string>
-			<key>path</key>
-			<string>../node_modules/react-native/Libraries/Text/RCTText.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>832341B11AAA6A8300B99B32</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>832341B51AAA6A8300B99B32</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>832341B41AAA6A8300B99B32</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>832341B01AAA6A8300B99B32</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>2</string>
-			<key>remoteGlobalIDString</key>
-			<string>58B5119B1A9E6C1200147676</string>
-			<key>remoteInfo</key>
-			<string>RCTText</string>
-		</dict>
-		<key>832341B51AAA6A8300B99B32</key>
-		<dict>
-			<key>fileType</key>
-			<string>archive.ar</string>
-			<key>isa</key>
-			<string>PBXReferenceProxy</string>
-			<key>path</key>
-			<string>libRCTText.a</string>
-			<key>remoteRef</key>
-			<string>832341B41AAA6A8300B99B32</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>832341BD1AAA6AB300B99B32</key>
-		<dict>
-			<key>fileRef</key>
-			<string>832341B51AAA6A8300B99B32</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>83CBB9F61A601CBA00E9B192</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>13B07FAE1A68108700A75B9A</string>
-				<string>832341AE1AAA6A7D00B99B32</string>
-				<string>00E356EF1AD99517003FC87E</string>
-				<string>83CBBA001A601CBA00E9B192</string>
-				<string>F70BCC61EB386B863C602F49</string>
-				<string>A43CF55AE5B3774E0D1CAB4F</string>
-			</array>
-			<key>indentWidth</key>
-			<string>2</string>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>tabWidth</key>
-			<string>2</string>
-		</dict>
-		<key>83CBB9F71A601CBA00E9B192</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0720</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Facebook</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>00E356ED1AD99517003FC87E</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.2</string>
-						<key>TestTargetID</key>
-						<string>13B07F861A680F5B00A75B9A</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>83CBB9FA1A601CBA00E9B192</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>83CBB9F61A601CBA00E9B192</string>
-			<key>productRefGroup</key>
-			<string>83CBBA001A601CBA00E9B192</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array>
-				<dict>
-					<key>ProductGroup</key>
-					<string>00C302A81ABCB8CE00DB3ED1</string>
-					<key>ProjectRef</key>
-					<string>00C302A71ABCB8CE00DB3ED1</string>
-				</dict>
-				<dict>
-					<key>ProductGroup</key>
-					<string>00C302B61ABCB90400DB3ED1</string>
-					<key>ProjectRef</key>
-					<string>00C302B51ABCB90400DB3ED1</string>
-				</dict>
-				<dict>
-					<key>ProductGroup</key>
-					<string>00C302BC1ABCB91800DB3ED1</string>
-					<key>ProjectRef</key>
-					<string>00C302BB1ABCB91800DB3ED1</string>
-				</dict>
-				<dict>
-					<key>ProductGroup</key>
-					<string>78C398B11ACF4ADC00677621</string>
-					<key>ProjectRef</key>
-					<string>78C398B01ACF4ADC00677621</string>
-				</dict>
-				<dict>
-					<key>ProductGroup</key>
-					<string>00C302D41ABCB9D200DB3ED1</string>
-					<key>ProjectRef</key>
-					<string>00C302D31ABCB9D200DB3ED1</string>
-				</dict>
-				<dict>
-					<key>ProductGroup</key>
-					<string>139105B71AF99BAD00B5F7CC</string>
-					<key>ProjectRef</key>
-					<string>139105B61AF99BAD00B5F7CC</string>
-				</dict>
-				<dict>
-					<key>ProductGroup</key>
-					<string>832341B11AAA6A8300B99B32</string>
-					<key>ProjectRef</key>
-					<string>832341B01AAA6A8300B99B32</string>
-				</dict>
-				<dict>
-					<key>ProductGroup</key>
-					<string>00C302E01ABCB9EE00DB3ED1</string>
-					<key>ProjectRef</key>
-					<string>00C302DF1ABCB9EE00DB3ED1</string>
-				</dict>
-				<dict>
-					<key>ProductGroup</key>
-					<string>139FDEE71B06529A00C62182</string>
-					<key>ProjectRef</key>
-					<string>139FDEE61B06529A00C62182</string>
-				</dict>
-				<dict>
-					<key>ProductGroup</key>
-					<string>146834001AC3E56700842450</string>
-					<key>ProjectRef</key>
-					<string>146833FF1AC3E56700842450</string>
-				</dict>
-			</array>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>13B07F861A680F5B00A75B9A</string>
-				<string>00E356ED1AD99517003FC87E</string>
-			</array>
-		</dict>
-		<key>83CBB9FA1A601CBA00E9B192</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>83CBBA201A601CBA00E9B192</string>
-				<string>83CBBA211A601CBA00E9B192</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>83CBBA001A601CBA00E9B192</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>13B07F961A680F5B00A75B9A</string>
-				<string>00E356EE1AD99517003FC87E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>83CBBA201A601CBA00E9B192</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>HEADER_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
-					<string>$(SRCROOT)/../node_modules/react-native/React/**</string>
-				</array>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>83CBBA211A601CBA00E9B192</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>HEADER_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
-					<string>$(SRCROOT)/../node_modules/react-native/React/**</string>
-				</array>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8E660E9617617419BAF31DD5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ChartsExplorer.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98708CAA1C9DB3030086ED32</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNCombinedChart.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChart.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98708CAB1C9DB3030086ED32</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>chartDataHelpers.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/chartDataHelpers.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98708CAC1C9DB3030086ED32</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RNCombinedChart.h</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChart.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98708CAD1C9DB3030086ED32</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RNCombinedChart.m</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChart.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98708CAE1C9DB3030086ED32</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNCombinedChartManager.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChartManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98708CAF1C9DB3030086ED32</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98708CAA1C9DB3030086ED32</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98708CB01C9DB3030086ED32</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98708CAB1C9DB3030086ED32</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98708CB11C9DB3030086ED32</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98708CAD1C9DB3030086ED32</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98708CB21C9DB3030086ED32</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98708CAE1C9DB3030086ED32</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4431C97C73800200ABC</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ChartsExplorer-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E48F1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNRadarChart.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNRadarChart.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4901C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNRadarChartManager.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNRadarChartManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4911C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RNRadarChart.m</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNRadarChart.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4921C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RNRadarChart.h</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNRadarChart.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4931C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNScatterChart.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNScatterChart.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4941C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RNScatterChart.h</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNScatterChart.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4951C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RNScatterChart.m</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNScatterChart.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4961C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNScatterChartManager.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNScatterChartManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4971C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNBubbleChart.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNBubbleChart.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4981C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RNBubbleChart.h</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNBubbleChart.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4991C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RNBubbleChart.m</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNBubbleChart.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E49A1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNBubbleChartManager.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNBubbleChartManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E49B1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNCandleStickChart.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNCandleStickChart.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E49C1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNPieChart.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNPieChart.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E49D1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNCandleChartManager.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNCandleChartManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E49E1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RNCandleStickChart.m</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNCandleStickChart.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E49F1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RNCandleStickChart.h</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNCandleStickChart.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4A01C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>BarLineChartViewBaseExtension.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/BarLineChartViewBaseExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4A11C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ChartViewBaseExtension.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/ChartViewBaseExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4A21C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ABNumberFormatter.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/ABNumberFormatter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4A31C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>PieRadarChartViewBaseExtension.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/PieRadarChartViewBaseExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4A41C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RCTIOSCharts-Bridging-Header.h</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RCTIOSCharts-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4A51C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RNBarChart.h</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNBarChart.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4A61C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RNBarChart.m</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNBarChart.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4A71C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNBarChart.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNBarChart.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4A81C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNBarChartManager.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNBarChartManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4A91C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RNHorizontalBarChart.h</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNHorizontalBarChart.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4AA1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RNHorizontalBarChart.m</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNHorizontalBarChart.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4AB1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNHorizontalBarChart.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNHorizontalBarChart.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4AC1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNHorizontalBarChartManager.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNHorizontalBarChartManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4AD1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RNLineChart.h</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNLineChart.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4AE1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RNLineChart.m</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNLineChart.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4AF1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNLineChart.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNLineChart.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4B01C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNLineChartManager.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNLineChartManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4B11C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RNPieChart.h</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNPieChart.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4B21C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RNPieChart.m</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNPieChart.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4B31C97E4EE00200ABC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RNPieChartManager.swift</string>
-			<key>path</key>
-			<string>../node_modules/react-native-ios-charts/RNiOSCharts/RNPieChartManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98B3E4B41C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E48F1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4B51C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4901C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4B61C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4911C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4B71C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4931C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4B81C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4951C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4B91C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4961C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4BA1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4971C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4BB1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4991C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4BC1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E49A1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4BD1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E49B1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4BE1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E49C1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4BF1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E49D1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4C01C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E49E1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4C11C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4A01C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4C21C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4A11C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4C31C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4A21C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4C41C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4A31C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4C51C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4A61C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4C61C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4A71C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4C71C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4A81C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4C81C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4AA1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4C91C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4AB1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4CA1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4AC1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4CB1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4AE1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4CC1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4AF1C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4CD1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4B01C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4CE1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4B21C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98B3E4CF1C97E4EE00200ABC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98B3E4B31C97E4EE00200ABC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A43CF55AE5B3774E0D1CAB4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A908DB634AAFB548B504B30D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A908DB634AAFB548B504B30D</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_ChartsExplorer.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>BB04D3E071FB19C3BF8DB328</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ChartsExplorer.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CE0171FAF22990463CAC8B57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A908DB634AAFB548B504B30D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F70BCC61EB386B863C602F49</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8E660E9617617419BAF31DD5</string>
-				<string>BB04D3E071FB19C3BF8DB328</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>83CBB9F71A601CBA00E9B192</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
+		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
+		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
+		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
+		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
+		00E356F31AD99517003FC87E /* ChartsExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ChartsExplorerTests.m */; };
+		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
+		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
+		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		98708CAF1C9DB3030086ED32 /* RNCombinedChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98708CAA1C9DB3030086ED32 /* RNCombinedChart.swift */; };
+		98708CB01C9DB3030086ED32 /* chartDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98708CAB1C9DB3030086ED32 /* chartDataHelpers.swift */; };
+		98708CB11C9DB3030086ED32 /* RNCombinedChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98708CAD1C9DB3030086ED32 /* RNCombinedChart.m */; };
+		98708CB21C9DB3030086ED32 /* RNCombinedChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98708CAE1C9DB3030086ED32 /* RNCombinedChartManager.swift */; };
+		98B3E4B41C97E4EE00200ABC /* RNRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E48F1C97E4EE00200ABC /* RNRadarChart.swift */; };
+		98B3E4B51C97E4EE00200ABC /* RNRadarChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4901C97E4EE00200ABC /* RNRadarChartManager.swift */; };
+		98B3E4B61C97E4EE00200ABC /* RNRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4911C97E4EE00200ABC /* RNRadarChart.m */; };
+		98B3E4B71C97E4EE00200ABC /* RNScatterChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4931C97E4EE00200ABC /* RNScatterChart.swift */; };
+		98B3E4B81C97E4EE00200ABC /* RNScatterChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4951C97E4EE00200ABC /* RNScatterChart.m */; };
+		98B3E4B91C97E4EE00200ABC /* RNScatterChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4961C97E4EE00200ABC /* RNScatterChartManager.swift */; };
+		98B3E4BA1C97E4EE00200ABC /* RNBubbleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4971C97E4EE00200ABC /* RNBubbleChart.swift */; };
+		98B3E4BB1C97E4EE00200ABC /* RNBubbleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4991C97E4EE00200ABC /* RNBubbleChart.m */; };
+		98B3E4BC1C97E4EE00200ABC /* RNBubbleChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E49A1C97E4EE00200ABC /* RNBubbleChartManager.swift */; };
+		98B3E4BD1C97E4EE00200ABC /* RNCandleStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E49B1C97E4EE00200ABC /* RNCandleStickChart.swift */; };
+		98B3E4BE1C97E4EE00200ABC /* RNPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E49C1C97E4EE00200ABC /* RNPieChart.swift */; };
+		98B3E4BF1C97E4EE00200ABC /* RNCandleChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E49D1C97E4EE00200ABC /* RNCandleChartManager.swift */; };
+		98B3E4C01C97E4EE00200ABC /* RNCandleStickChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E49E1C97E4EE00200ABC /* RNCandleStickChart.m */; };
+		98B3E4C11C97E4EE00200ABC /* BarLineChartViewBaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4A01C97E4EE00200ABC /* BarLineChartViewBaseExtension.swift */; };
+		98B3E4C21C97E4EE00200ABC /* ChartViewBaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4A11C97E4EE00200ABC /* ChartViewBaseExtension.swift */; };
+		98B3E4C31C97E4EE00200ABC /* ABNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4A21C97E4EE00200ABC /* ABNumberFormatter.swift */; };
+		98B3E4C41C97E4EE00200ABC /* PieRadarChartViewBaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4A31C97E4EE00200ABC /* PieRadarChartViewBaseExtension.swift */; };
+		98B3E4C51C97E4EE00200ABC /* RNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4A61C97E4EE00200ABC /* RNBarChart.m */; };
+		98B3E4C61C97E4EE00200ABC /* RNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4A71C97E4EE00200ABC /* RNBarChart.swift */; };
+		98B3E4C71C97E4EE00200ABC /* RNBarChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4A81C97E4EE00200ABC /* RNBarChartManager.swift */; };
+		98B3E4C81C97E4EE00200ABC /* RNHorizontalBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4AA1C97E4EE00200ABC /* RNHorizontalBarChart.m */; };
+		98B3E4C91C97E4EE00200ABC /* RNHorizontalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4AB1C97E4EE00200ABC /* RNHorizontalBarChart.swift */; };
+		98B3E4CA1C97E4EE00200ABC /* RNHorizontalBarChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4AC1C97E4EE00200ABC /* RNHorizontalBarChartManager.swift */; };
+		98B3E4CB1C97E4EE00200ABC /* RNLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4AE1C97E4EE00200ABC /* RNLineChart.m */; };
+		98B3E4CC1C97E4EE00200ABC /* RNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4AF1C97E4EE00200ABC /* RNLineChart.swift */; };
+		98B3E4CD1C97E4EE00200ABC /* RNLineChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4B01C97E4EE00200ABC /* RNLineChartManager.swift */; };
+		98B3E4CE1C97E4EE00200ABC /* RNPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4B21C97E4EE00200ABC /* RNPieChart.m */; };
+		98B3E4CF1C97E4EE00200ABC /* RNPieChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E4B31C97E4EE00200ABC /* RNPieChartManager.swift */; };
+		CE0171FAF22990463CAC8B57 /* Pods_ChartsExplorer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908DB634AAFB548B504B30D /* Pods_ChartsExplorer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTActionSheet;
+		};
+		00C302B91ABCB90400DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTGeolocation;
+		};
+		00C302BF1ABCB91800DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RCTImage;
+		};
+		00C302DB1ABCB9D200DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B511DB1A9E6C8500147676;
+			remoteInfo = RCTNetwork;
+		};
+		00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 832C81801AAF6DEF007FA2F7;
+			remoteInfo = RCTVibration;
+		};
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = ChartsExplorer;
+		};
+		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTSettings;
+		};
+		139FDEF31B06529B00C62182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C86DF461ADF2C930047B81A;
+			remoteInfo = RCTWebSocket;
+		};
+		146834031AC3E56700842450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTLinking;
+		};
+		832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
+			remoteInfo = RCTText;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
+		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
+		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
+		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
+		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
+		00E356EE1AD99517003FC87E /* ChartsExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChartsExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ChartsExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartsExplorerTests.m; sourceTree = "<group>"; };
+		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
+		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ChartsExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartsExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ChartsExplorer/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ChartsExplorer/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ChartsExplorer/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ChartsExplorer/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ChartsExplorer/main.m; sourceTree = "<group>"; };
+		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8E660E9617617419BAF31DD5 /* Pods-ChartsExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartsExplorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer.debug.xcconfig"; sourceTree = "<group>"; };
+		98708CAA1C9DB3030086ED32 /* RNCombinedChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNCombinedChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChart.swift"; sourceTree = "<group>"; };
+		98708CAB1C9DB3030086ED32 /* chartDataHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = chartDataHelpers.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/chartDataHelpers.swift"; sourceTree = "<group>"; };
+		98708CAC1C9DB3030086ED32 /* RNCombinedChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNCombinedChart.h; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChart.h"; sourceTree = "<group>"; };
+		98708CAD1C9DB3030086ED32 /* RNCombinedChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNCombinedChart.m; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChart.m"; sourceTree = "<group>"; };
+		98708CAE1C9DB3030086ED32 /* RNCombinedChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNCombinedChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCombinedChartManager.swift"; sourceTree = "<group>"; };
+		98B3E4431C97C73800200ABC /* ChartsExplorer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChartsExplorer-Bridging-Header.h"; sourceTree = "<group>"; };
+		98B3E48F1C97E4EE00200ABC /* RNRadarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNRadarChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNRadarChart.swift"; sourceTree = "<group>"; };
+		98B3E4901C97E4EE00200ABC /* RNRadarChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNRadarChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNRadarChartManager.swift"; sourceTree = "<group>"; };
+		98B3E4911C97E4EE00200ABC /* RNRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNRadarChart.m; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNRadarChart.m"; sourceTree = "<group>"; };
+		98B3E4921C97E4EE00200ABC /* RNRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNRadarChart.h; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNRadarChart.h"; sourceTree = "<group>"; };
+		98B3E4931C97E4EE00200ABC /* RNScatterChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNScatterChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNScatterChart.swift"; sourceTree = "<group>"; };
+		98B3E4941C97E4EE00200ABC /* RNScatterChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNScatterChart.h; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNScatterChart.h"; sourceTree = "<group>"; };
+		98B3E4951C97E4EE00200ABC /* RNScatterChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNScatterChart.m; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNScatterChart.m"; sourceTree = "<group>"; };
+		98B3E4961C97E4EE00200ABC /* RNScatterChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNScatterChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNScatterChartManager.swift"; sourceTree = "<group>"; };
+		98B3E4971C97E4EE00200ABC /* RNBubbleChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNBubbleChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNBubbleChart.swift"; sourceTree = "<group>"; };
+		98B3E4981C97E4EE00200ABC /* RNBubbleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNBubbleChart.h; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNBubbleChart.h"; sourceTree = "<group>"; };
+		98B3E4991C97E4EE00200ABC /* RNBubbleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNBubbleChart.m; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNBubbleChart.m"; sourceTree = "<group>"; };
+		98B3E49A1C97E4EE00200ABC /* RNBubbleChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNBubbleChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNBubbleChartManager.swift"; sourceTree = "<group>"; };
+		98B3E49B1C97E4EE00200ABC /* RNCandleStickChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNCandleStickChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCandleStickChart.swift"; sourceTree = "<group>"; };
+		98B3E49C1C97E4EE00200ABC /* RNPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNPieChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNPieChart.swift"; sourceTree = "<group>"; };
+		98B3E49D1C97E4EE00200ABC /* RNCandleChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNCandleChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCandleChartManager.swift"; sourceTree = "<group>"; };
+		98B3E49E1C97E4EE00200ABC /* RNCandleStickChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNCandleStickChart.m; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCandleStickChart.m"; sourceTree = "<group>"; };
+		98B3E49F1C97E4EE00200ABC /* RNCandleStickChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNCandleStickChart.h; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNCandleStickChart.h"; sourceTree = "<group>"; };
+		98B3E4A01C97E4EE00200ABC /* BarLineChartViewBaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarLineChartViewBaseExtension.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/BarLineChartViewBaseExtension.swift"; sourceTree = "<group>"; };
+		98B3E4A11C97E4EE00200ABC /* ChartViewBaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartViewBaseExtension.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/ChartViewBaseExtension.swift"; sourceTree = "<group>"; };
+		98B3E4A21C97E4EE00200ABC /* ABNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ABNumberFormatter.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/ABNumberFormatter.swift"; sourceTree = "<group>"; };
+		98B3E4A31C97E4EE00200ABC /* PieRadarChartViewBaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PieRadarChartViewBaseExtension.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/PieRadarChartViewBaseExtension.swift"; sourceTree = "<group>"; };
+		98B3E4A41C97E4EE00200ABC /* RCTIOSCharts-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RCTIOSCharts-Bridging-Header.h"; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RCTIOSCharts-Bridging-Header.h"; sourceTree = "<group>"; };
+		98B3E4A51C97E4EE00200ABC /* RNBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNBarChart.h; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNBarChart.h"; sourceTree = "<group>"; };
+		98B3E4A61C97E4EE00200ABC /* RNBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNBarChart.m; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNBarChart.m"; sourceTree = "<group>"; };
+		98B3E4A71C97E4EE00200ABC /* RNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNBarChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNBarChart.swift"; sourceTree = "<group>"; };
+		98B3E4A81C97E4EE00200ABC /* RNBarChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNBarChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNBarChartManager.swift"; sourceTree = "<group>"; };
+		98B3E4A91C97E4EE00200ABC /* RNHorizontalBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNHorizontalBarChart.h; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNHorizontalBarChart.h"; sourceTree = "<group>"; };
+		98B3E4AA1C97E4EE00200ABC /* RNHorizontalBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNHorizontalBarChart.m; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNHorizontalBarChart.m"; sourceTree = "<group>"; };
+		98B3E4AB1C97E4EE00200ABC /* RNHorizontalBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNHorizontalBarChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNHorizontalBarChart.swift"; sourceTree = "<group>"; };
+		98B3E4AC1C97E4EE00200ABC /* RNHorizontalBarChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNHorizontalBarChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNHorizontalBarChartManager.swift"; sourceTree = "<group>"; };
+		98B3E4AD1C97E4EE00200ABC /* RNLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNLineChart.h; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNLineChart.h"; sourceTree = "<group>"; };
+		98B3E4AE1C97E4EE00200ABC /* RNLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNLineChart.m; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNLineChart.m"; sourceTree = "<group>"; };
+		98B3E4AF1C97E4EE00200ABC /* RNLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNLineChart.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNLineChart.swift"; sourceTree = "<group>"; };
+		98B3E4B01C97E4EE00200ABC /* RNLineChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNLineChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNLineChartManager.swift"; sourceTree = "<group>"; };
+		98B3E4B11C97E4EE00200ABC /* RNPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNPieChart.h; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNPieChart.h"; sourceTree = "<group>"; };
+		98B3E4B21C97E4EE00200ABC /* RNPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNPieChart.m; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNPieChart.m"; sourceTree = "<group>"; };
+		98B3E4B31C97E4EE00200ABC /* RNPieChartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNPieChartManager.swift; path = "../node_modules/react-native-ios-charts/RNiOSCharts/RNPieChartManager.swift"; sourceTree = "<group>"; };
+		A908DB634AAFB548B504B30D /* Pods_ChartsExplorer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartsExplorer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB04D3E071FB19C3BF8DB328 /* Pods-ChartsExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartsExplorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146834051AC3E58100842450 /* libReact.a in Frameworks */,
+				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
+				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
+				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
+				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
+				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
+				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
+				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				CE0171FAF22990463CAC8B57 /* Pods_ChartsExplorer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00C302A81ABCB8CE00DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302B61ABCB90400DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302BC1ABCB91800DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302C01ABCB91800DB3ED1 /* libRCTImage.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302D41ABCB9D200DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302E01ABCB9EE00DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00E356EF1AD99517003FC87E /* ChartsExplorerTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* ChartsExplorerTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = ChartsExplorerTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		139105B71AF99BAD00B5F7CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139105C11AF99BAD00B5F7CC /* libRCTSettings.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		139FDEE71B06529A00C62182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139FDEF41B06529B00C62182 /* libRCTWebSocket.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* ChartsExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				98708CAA1C9DB3030086ED32 /* RNCombinedChart.swift */,
+				98708CAB1C9DB3030086ED32 /* chartDataHelpers.swift */,
+				98708CAC1C9DB3030086ED32 /* RNCombinedChart.h */,
+				98708CAD1C9DB3030086ED32 /* RNCombinedChart.m */,
+				98708CAE1C9DB3030086ED32 /* RNCombinedChartManager.swift */,
+				98B3E48F1C97E4EE00200ABC /* RNRadarChart.swift */,
+				98B3E4901C97E4EE00200ABC /* RNRadarChartManager.swift */,
+				98B3E4911C97E4EE00200ABC /* RNRadarChart.m */,
+				98B3E4921C97E4EE00200ABC /* RNRadarChart.h */,
+				98B3E4931C97E4EE00200ABC /* RNScatterChart.swift */,
+				98B3E4941C97E4EE00200ABC /* RNScatterChart.h */,
+				98B3E4951C97E4EE00200ABC /* RNScatterChart.m */,
+				98B3E4961C97E4EE00200ABC /* RNScatterChartManager.swift */,
+				98B3E4971C97E4EE00200ABC /* RNBubbleChart.swift */,
+				98B3E4981C97E4EE00200ABC /* RNBubbleChart.h */,
+				98B3E4991C97E4EE00200ABC /* RNBubbleChart.m */,
+				98B3E49A1C97E4EE00200ABC /* RNBubbleChartManager.swift */,
+				98B3E49B1C97E4EE00200ABC /* RNCandleStickChart.swift */,
+				98B3E49C1C97E4EE00200ABC /* RNPieChart.swift */,
+				98B3E49D1C97E4EE00200ABC /* RNCandleChartManager.swift */,
+				98B3E49E1C97E4EE00200ABC /* RNCandleStickChart.m */,
+				98B3E49F1C97E4EE00200ABC /* RNCandleStickChart.h */,
+				98B3E4A01C97E4EE00200ABC /* BarLineChartViewBaseExtension.swift */,
+				98B3E4A11C97E4EE00200ABC /* ChartViewBaseExtension.swift */,
+				98B3E4A21C97E4EE00200ABC /* ABNumberFormatter.swift */,
+				98B3E4A31C97E4EE00200ABC /* PieRadarChartViewBaseExtension.swift */,
+				98B3E4A41C97E4EE00200ABC /* RCTIOSCharts-Bridging-Header.h */,
+				98B3E4A51C97E4EE00200ABC /* RNBarChart.h */,
+				98B3E4A61C97E4EE00200ABC /* RNBarChart.m */,
+				98B3E4A71C97E4EE00200ABC /* RNBarChart.swift */,
+				98B3E4A81C97E4EE00200ABC /* RNBarChartManager.swift */,
+				98B3E4A91C97E4EE00200ABC /* RNHorizontalBarChart.h */,
+				98B3E4AA1C97E4EE00200ABC /* RNHorizontalBarChart.m */,
+				98B3E4AB1C97E4EE00200ABC /* RNHorizontalBarChart.swift */,
+				98B3E4AC1C97E4EE00200ABC /* RNHorizontalBarChartManager.swift */,
+				98B3E4AD1C97E4EE00200ABC /* RNLineChart.h */,
+				98B3E4AE1C97E4EE00200ABC /* RNLineChart.m */,
+				98B3E4AF1C97E4EE00200ABC /* RNLineChart.swift */,
+				98B3E4B01C97E4EE00200ABC /* RNLineChartManager.swift */,
+				98B3E4B11C97E4EE00200ABC /* RNPieChart.h */,
+				98B3E4B21C97E4EE00200ABC /* RNPieChart.m */,
+				98B3E4B31C97E4EE00200ABC /* RNPieChartManager.swift */,
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				13B07FB71A68108700A75B9A /* main.m */,
+				98B3E4431C97C73800200ABC /* ChartsExplorer-Bridging-Header.h */,
+			);
+			name = ChartsExplorer;
+			sourceTree = "<group>";
+		};
+		146834001AC3E56700842450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				146834041AC3E56700842450 /* libReact.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C398B11ACF4ADC00677621 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C398B91ACF4ADC00677621 /* libRCTLinking.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				146833FF1AC3E56700842450 /* React.xcodeproj */,
+				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
+				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
+				00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */,
+				78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */,
+				00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */,
+				139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */,
+				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
+				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
+				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		832341B11AAA6A8300B99B32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				832341B51AAA6A8300B99B32 /* libRCTText.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* ChartsExplorer */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* ChartsExplorerTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				F70BCC61EB386B863C602F49 /* Pods */,
+				A43CF55AE5B3774E0D1CAB4F /* Frameworks */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* ChartsExplorer.app */,
+				00E356EE1AD99517003FC87E /* ChartsExplorerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A43CF55AE5B3774E0D1CAB4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A908DB634AAFB548B504B30D /* Pods_ChartsExplorer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F70BCC61EB386B863C602F49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E660E9617617419BAF31DD5 /* Pods-ChartsExplorer.debug.xcconfig */,
+				BB04D3E071FB19C3BF8DB328 /* Pods-ChartsExplorer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* ChartsExplorerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ChartsExplorerTests" */;
+			buildPhases = (
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = ChartsExplorerTests;
+			productName = ChartsExplorerTests;
+			productReference = 00E356EE1AD99517003FC87E /* ChartsExplorerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* ChartsExplorer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ChartsExplorer" */;
+			buildPhases = (
+				66D6E99531E5160ECE420B99 /* 📦 Check Pods Manifest.lock */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				784B40558634D830D5DA2F47 /* 📦 Embed Pods Frameworks */,
+				17DACD04C3B8A7AB29DD7679 /* 📦 Copy Pods Resources */,
+				6F291D823928ED19D194BF5B /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChartsExplorer;
+			productName = "Hello World";
+			productReference = 13B07F961A680F5B00A75B9A /* ChartsExplorer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ChartsExplorer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
+					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
+					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302BC1ABCB91800DB3ED1 /* Products */;
+					ProjectRef = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C398B11ACF4ADC00677621 /* Products */;
+					ProjectRef = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
+					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
+					ProjectRef = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+				},
+				{
+					ProductGroup = 832341B11AAA6A8300B99B32 /* Products */;
+					ProjectRef = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302E01ABCB9EE00DB3ED1 /* Products */;
+					ProjectRef = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+				},
+				{
+					ProductGroup = 139FDEE71B06529A00C62182 /* Products */;
+					ProjectRef = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+				},
+				{
+					ProductGroup = 146834001AC3E56700842450 /* Products */;
+					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* ChartsExplorer */,
+				00E356ED1AD99517003FC87E /* ChartsExplorerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTActionSheet.a;
+			remoteRef = 00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTGeolocation.a;
+			remoteRef = 00C302B91ABCB90400DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302C01ABCB91800DB3ED1 /* libRCTImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTImage.a;
+			remoteRef = 00C302BF1ABCB91800DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTNetwork.a;
+			remoteRef = 00C302DB1ABCB9D200DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTVibration.a;
+			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTSettings.a;
+			remoteRef = 139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		139FDEF41B06529B00C62182 /* libRCTWebSocket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTWebSocket.a;
+			remoteRef = 139FDEF31B06529B00C62182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		146834041AC3E56700842450 /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTLinking.a;
+			remoteRef = 78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		832341B51AAA6A8300B99B32 /* libRCTText.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTText.a;
+			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
+		};
+		17DACD04C3B8A7AB29DD7679 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66D6E99531E5160ECE420B99 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6F291D823928ED19D194BF5B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		784B40558634D830D5DA2F47 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChartsExplorer/Pods-ChartsExplorer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* ChartsExplorerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98B3E4C11C97E4EE00200ABC /* BarLineChartViewBaseExtension.swift in Sources */,
+				98B3E4BB1C97E4EE00200ABC /* RNBubbleChart.m in Sources */,
+				98B3E4C81C97E4EE00200ABC /* RNHorizontalBarChart.m in Sources */,
+				98B3E4C01C97E4EE00200ABC /* RNCandleStickChart.m in Sources */,
+				98B3E4C41C97E4EE00200ABC /* PieRadarChartViewBaseExtension.swift in Sources */,
+				98B3E4B41C97E4EE00200ABC /* RNRadarChart.swift in Sources */,
+				98708CAF1C9DB3030086ED32 /* RNCombinedChart.swift in Sources */,
+				98B3E4CB1C97E4EE00200ABC /* RNLineChart.m in Sources */,
+				98B3E4C61C97E4EE00200ABC /* RNBarChart.swift in Sources */,
+				98B3E4BD1C97E4EE00200ABC /* RNCandleStickChart.swift in Sources */,
+				98B3E4BC1C97E4EE00200ABC /* RNBubbleChartManager.swift in Sources */,
+				98B3E4BE1C97E4EE00200ABC /* RNPieChart.swift in Sources */,
+				98B3E4B91C97E4EE00200ABC /* RNScatterChartManager.swift in Sources */,
+				98708CB11C9DB3030086ED32 /* RNCombinedChart.m in Sources */,
+				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				98B3E4BF1C97E4EE00200ABC /* RNCandleChartManager.swift in Sources */,
+				98B3E4CC1C97E4EE00200ABC /* RNLineChart.swift in Sources */,
+				98708CB01C9DB3030086ED32 /* chartDataHelpers.swift in Sources */,
+				98B3E4B61C97E4EE00200ABC /* RNRadarChart.m in Sources */,
+				98708CB21C9DB3030086ED32 /* RNCombinedChartManager.swift in Sources */,
+				98B3E4C21C97E4EE00200ABC /* ChartViewBaseExtension.swift in Sources */,
+				98B3E4C31C97E4EE00200ABC /* ABNumberFormatter.swift in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				98B3E4CE1C97E4EE00200ABC /* RNPieChart.m in Sources */,
+				98B3E4B81C97E4EE00200ABC /* RNScatterChart.m in Sources */,
+				98B3E4CD1C97E4EE00200ABC /* RNLineChartManager.swift in Sources */,
+				98B3E4BA1C97E4EE00200ABC /* RNBubbleChart.swift in Sources */,
+				98B3E4CF1C97E4EE00200ABC /* RNPieChartManager.swift in Sources */,
+				98B3E4CA1C97E4EE00200ABC /* RNHorizontalBarChartManager.swift in Sources */,
+				98B3E4C71C97E4EE00200ABC /* RNBarChartManager.swift in Sources */,
+				98B3E4B51C97E4EE00200ABC /* RNRadarChartManager.swift in Sources */,
+				98B3E4C51C97E4EE00200ABC /* RNBarChart.m in Sources */,
+				98B3E4C91C97E4EE00200ABC /* RNHorizontalBarChart.swift in Sources */,
+				98B3E4B71C97E4EE00200ABC /* RNScatterChart.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* ChartsExplorer */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B07FB21A68108700A75B9A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = ChartsExplorer;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChartsExplorerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChartsExplorer.app/ChartsExplorer";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChartsExplorerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChartsExplorer.app/ChartsExplorer";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E660E9617617419BAF31DD5 /* Pods-ChartsExplorer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+				);
+				INFOPLIST_FILE = ChartsExplorer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = ChartsExplorer;
+				SWIFT_OBJC_BRIDGING_HEADER = "ChartsExplorer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB04D3E071FB19C3BF8DB328 /* Pods-ChartsExplorer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+				);
+				INFOPLIST_FILE = ChartsExplorer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = ChartsExplorer;
+				SWIFT_OBJC_BRIDGING_HEADER = "ChartsExplorer-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ChartsExplorerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ChartsExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ChartsExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

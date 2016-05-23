@@ -1,7 +1,5 @@
-import React, {
-  Component,
-  requireNativeComponent
-} from 'react-native';
+import React, { Component } from 'react';
+import { requireNativeComponent } from 'react-native';
 
 import {
   globalCommonProps,

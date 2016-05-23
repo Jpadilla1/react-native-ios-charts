@@ -1,6 +1,8 @@
-import React, {
-  Component,
-  requireNativeComponent
+import React, { Component } from 'react';
+import {
+  requireNativeComponent,
+  NativeModules,
+  findNodeHandle
 } from 'react-native';
 
 import {
@@ -10,18 +12,24 @@ import {
 } from '../utils/commonProps';
 
 import { processColors } from '../utils/commonColorProps';
-
-let RNBarChart = requireNativeComponent('RNBarChartSwift', BarChart);
+const RNBarChartManager = NativeModules.RNBarChartSwift;
 
 class BarChart extends Component {
-  render() {
-    let {config, ...otherProps} = this.props;
-    config = processColors(config);
-    return <RNBarChart
-      config={JSON.stringify(config)}
-      {...otherProps}/>;
+  constructor(props) {
+    super(props);
+    this.setVisibleXRangeMaximum = this.setVisibleXRangeMaximum.bind(this);
   }
-};
+  setVisibleXRangeMaximum(value) {
+    RNBarChartManager.setVisibleXRangeMaximum(findNodeHandle(this), value);
+  }
+  render() {
+    let { config, ...otherProps } = this.props;
+    config = JSON.stringify(processColors(config));
+    return <RNBarChart config={config} {...otherProps} />;
+  }
+}
+
+const RNBarChart = requireNativeComponent('RNBarChartSwift', BarChart);
 
 BarChart.propTypes = {
   config: React.PropTypes.shape({
@@ -40,7 +48,7 @@ BarChart.propTypes = {
     })),
     drawValueAboveBar: React.PropTypes.bool,
     drawHighlightArrow: React.PropTypes.bool,
-    drawBarShadow: React.PropTypes.bool,
+    drawBarShadow: React.PropTypes.bool
   })
 };
 

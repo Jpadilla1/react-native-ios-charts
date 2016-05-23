@@ -1,7 +1,5 @@
-import React, {
-  Component,
-  StyleSheet
-} from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet } from 'react-native';
 
 import { ScatterChart } from 'react-native-ios-charts';
 

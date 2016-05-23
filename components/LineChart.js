@@ -1,7 +1,8 @@
-import React, {
-  Component,
+import React, { Component } from 'react';
+import {
   requireNativeComponent,
-  processColor
+  NativeModules,
+  findNodeHandle
 } from 'react-native';
 
 import {
@@ -11,18 +12,24 @@ import {
 } from '../utils/commonProps';
 
 import { processColors } from '../utils/commonColorProps';
-
-let RNLineChart = requireNativeComponent('RNLineChartSwift', LineChart);
+const RNLineChartManager = NativeModules.RNLineChartSwift;
 
 class LineChart extends Component {
-  render() {
-    let { config, ...otherProps} = this.props;
-    config = processColors(config);
-    return <RNLineChart
-      config={JSON.stringify(config)}
-      {...otherProps}/>;
+  constructor(props) {
+    super(props);
+    this.setVisibleXRangeMaximum = this.setVisibleXRangeMaximum.bind(this);
   }
-};
+  setVisibleXRangeMaximum(value) {
+    RNLineChartManager.setVisibleXRangeMaximum(findNodeHandle(this), value);
+  }
+  render() {
+    let { config, ...otherProps } = this.props;
+    config = JSON.stringify(processColors(config));
+    return <RNLineChart config={config} {...otherProps} />;
+  }
+}
+
+const RNLineChart = requireNativeComponent('RNLineChartSwift', LineChart);
 
 LineChart.propTypes = {
   config: React.PropTypes.shape({
@@ -48,7 +55,7 @@ LineChart.propTypes = {
       highlightLineWidth: React.PropTypes.number,
       lineDashLengths: React.PropTypes.number,
       lineDashPhase: React.PropTypes.number,
-      lineWidth: React.PropTypes.number,
+      lineWidth: React.PropTypes.number
     }))
   })
 };

@@ -1,4 +1,4 @@
-import React from 'react-native';
+import React from 'react';
 
 export const commonDataSetProps = {
   values: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
