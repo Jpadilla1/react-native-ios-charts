@@ -13,4 +13,11 @@ class RNBarChartManager : RCTViewManager {
   override func view() -> UIView! {
     return RNBarChart();
   }
+    
+  @objc func setVisibleXRangeMaximum(reactTag: NSNumber, value: CGFloat) {
+    self.bridge.uiManager.addUIBlock { (uiManager: RCTUIManager!, viewRegistry:[NSNumber : UIView]!) in
+      let view: RNBarChart = viewRegistry[reactTag] as! RNBarChart;
+        view.setVisibleXRangeMaximum(value);
+      }
+  }
 }
