@@ -13,6 +13,7 @@ import {
 
 import { processColors } from '../utils/commonColorProps';
 const RNCandleStickChartManager = NativeModules.RNCandleStickChartSwift;
+const RNCandleStickChart = requireNativeComponent('RNCandleStickChartSwift', CandleStickChart);
 
 class CandleStickChart extends Component {
   constructor(props) {
@@ -53,7 +54,5 @@ CandleStickChart.propTypes = {
     }))
   })
 };
-
-const RNCandleStickChart = requireNativeComponent('RNCandleStickChartSwift', CandleStickChart);
 
 export default CandleStickChart;

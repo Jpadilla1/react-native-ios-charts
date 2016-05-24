@@ -13,6 +13,7 @@ import {
 
 import { processColors } from '../utils/commonColorProps';
 const RNBarChartManager = NativeModules.RNBarChartSwift;
+const RNBarChart = requireNativeComponent('RNBarChartSwift', BarChart);
 
 class BarChart extends Component {
   constructor(props) {
@@ -49,7 +50,5 @@ BarChart.propTypes = {
     drawBarShadow: React.PropTypes.bool
   })
 };
-
-const RNBarChart = requireNativeComponent('RNBarChartSwift', BarChart);
 
 export default BarChart;

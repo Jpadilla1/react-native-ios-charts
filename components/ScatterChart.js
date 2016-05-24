@@ -13,6 +13,7 @@ import {
 
 import { processColors } from '../utils/commonColorProps';
 const RNScatterChartManager = NativeModules.RNScatterChartSwift;
+const RNScatterChart = requireNativeComponent('RNScatterChartSwift', ScatterChart);
 
 class ScatterChart extends Component {
   constructor(props) {
@@ -48,7 +49,5 @@ ScatterChart.propTypes = {
     }))
   })
 };
-
-const RNScatterChart = requireNativeComponent('RNScatterChartSwift', ScatterChart);
 
 export default ScatterChart;

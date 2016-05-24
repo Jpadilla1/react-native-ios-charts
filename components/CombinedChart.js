@@ -8,6 +8,7 @@ import {
 } from '../utils/commonProps';
 
 import { processColors } from '../utils/commonColorProps';
+const RNCombinedChart = requireNativeComponent('RNCombinedChartSwift', CombinedChart);
 
 class CombinedChart extends Component {
   render() {
@@ -109,7 +110,5 @@ CombinedChart.propTypes = {
     drawBarShadow: React.PropTypes.bool,
   })
 };
-
-const RNCombinedChart = requireNativeComponent('RNCombinedChartSwift', CombinedChart);
 
 export default CombinedChart;

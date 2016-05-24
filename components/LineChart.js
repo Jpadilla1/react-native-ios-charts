@@ -13,6 +13,7 @@ import {
 
 import { processColors } from '../utils/commonColorProps';
 const RNLineChartManager = NativeModules.RNLineChartSwift;
+const RNLineChart = requireNativeComponent('RNLineChartSwift', LineChart);
 
 class LineChart extends Component {
   constructor(props) {
@@ -57,7 +58,5 @@ LineChart.propTypes = {
     }))
   })
 };
-
-const RNLineChart = requireNativeComponent('RNLineChartSwift', LineChart);
 
 export default LineChart;

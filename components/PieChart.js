@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
-  requireNativeComponent,
-  processColor
+  requireNativeComponent
 } from 'react-native';
 
 import {
@@ -11,6 +10,8 @@ import {
 } from '../utils/commonProps';
 
 import { processColors } from '../utils/commonColorProps';
+const RNPieChart = requireNativeComponent('RNPieChartSwift', PieChart);
+
 
 class PieChart extends Component {
   render() {
@@ -44,7 +45,5 @@ PieChart.propTypes = {
     maxAngle: React.PropTypes.number
   })
 };
-
-const RNPieChart = requireNativeComponent('RNPieChartSwift', PieChart);
 
 export default PieChart;

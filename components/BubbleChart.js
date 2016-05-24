@@ -8,6 +8,7 @@ import {
 } from '../utils/commonProps';
 
 import { processColors } from '../utils/commonColorProps';
+const RNBubbleChart = requireNativeComponent('RNBubbleChartSwift', BubbleChart);
 
 class BubbleChart extends Component {
   render() {
@@ -31,7 +32,5 @@ BubbleChart.propTypes = {
     }))
   })
 };
-
-const RNBubbleChart = requireNativeComponent('RNBubbleChartSwift', BubbleChart);
 
 export default BubbleChart;

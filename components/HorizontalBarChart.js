@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
-  requireNativeComponent,
-  processColor
+  requireNativeComponent
 } from 'react-native';
 
 import {
@@ -11,6 +10,7 @@ import {
 } from '../utils/commonProps';
 
 import { processColors } from '../utils/commonColorProps';
+const RNHorizontalBarChart = requireNativeComponent('RNHorizontalBarChartSwift', HorizontalBarChart);
 
 class HorizontalBarChart extends Component {
   render() {
@@ -37,10 +37,8 @@ HorizontalBarChart.propTypes = {
     })),
     drawValueAboveBar: React.PropTypes.bool,
     drawHighlightArrow: React.PropTypes.bool,
-    drawBarShadow: React.PropTypes.bool,
+    drawBarShadow: React.PropTypes.bool
   })
 };
-
-const RNHorizontalBarChart = requireNativeComponent('RNHorizontalBarChartSwift', HorizontalBarChart);
 
 export default HorizontalBarChart;

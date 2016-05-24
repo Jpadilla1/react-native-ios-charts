@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
-  requireNativeComponent,
-  processColor
+  requireNativeComponent
 } from 'react-native';
 
 import {
@@ -11,6 +10,7 @@ import {
 } from '../utils/commonProps';
 
 import { processColors } from '../utils/commonColorProps';
+const RNRadarChart = requireNativeComponent('RNRadarChartSwift', RadarChart);
 
 class RadarChart extends Component {
   render() {
@@ -40,7 +40,5 @@ RadarChart.propTypes = {
     skipWebLineCount: React.PropTypes.number
   })
 };
-
-const RNRadarChart = requireNativeComponent('RNRadarChartSwift', RadarChart);
 
 export default RadarChart;
