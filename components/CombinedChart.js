@@ -9,17 +9,13 @@ import {
 
 import { processColors } from '../utils/commonColorProps';
 
-let RNCombinedChart = requireNativeComponent('RNCombinedChartSwift', CombinedChart);
-
 class CombinedChart extends Component {
   render() {
-    let {config, ...otherProps} = this.props;
-    config = processColors(config);
-    return <RNCombinedChart
-      config={JSON.stringify(config)}
-      {...otherProps}/>;
+    let { config, ...otherProps } = this.props;
+    config = JSON.stringify(processColors(config));
+    return <RNCombinedChart config={config} {...otherProps} />;
   }
-};
+}
 
 CombinedChart.propTypes = {
   config: React.PropTypes.shape({
@@ -113,5 +109,7 @@ CombinedChart.propTypes = {
     drawBarShadow: React.PropTypes.bool,
   })
 };
+
+const RNCombinedChart = requireNativeComponent('RNCombinedChartSwift', CombinedChart);
 
 export default CombinedChart;

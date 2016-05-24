@@ -29,8 +29,6 @@ class ScatterChart extends Component {
   }
 }
 
-const RNScatterChart = requireNativeComponent('RNScatterChartSwift', ScatterChart);
-
 ScatterChart.propTypes = {
   config: React.PropTypes.shape({
     ...globalCommonProps,
@@ -50,5 +48,7 @@ ScatterChart.propTypes = {
     }))
   })
 };
+
+const RNScatterChart = requireNativeComponent('RNScatterChartSwift', ScatterChart);
 
 export default ScatterChart;

@@ -28,9 +28,6 @@ class CandleStickChart extends Component {
     return <RNCandleStickChart config={JSON.stringify(config)} {...otherProps} />;
   }
 }
-
-const RNCandleStickChart = requireNativeComponent('RNCandleStickChartSwift', CandleStickChart);
-
 CandleStickChart.propTypes = {
   config: React.PropTypes.shape({
     ...globalCommonProps,
@@ -56,5 +53,7 @@ CandleStickChart.propTypes = {
     }))
   })
 };
+
+const RNCandleStickChart = requireNativeComponent('RNCandleStickChartSwift', CandleStickChart);
 
 export default CandleStickChart;

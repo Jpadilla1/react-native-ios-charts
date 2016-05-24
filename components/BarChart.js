@@ -29,8 +29,6 @@ class BarChart extends Component {
   }
 }
 
-const RNBarChart = requireNativeComponent('RNBarChartSwift', BarChart);
-
 BarChart.propTypes = {
   config: React.PropTypes.shape({
     ...globalCommonProps,
@@ -51,5 +49,7 @@ BarChart.propTypes = {
     drawBarShadow: React.PropTypes.bool
   })
 };
+
+const RNBarChart = requireNativeComponent('RNBarChartSwift', BarChart);
 
 export default BarChart;

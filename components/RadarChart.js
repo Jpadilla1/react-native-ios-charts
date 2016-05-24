@@ -12,17 +12,13 @@ import {
 
 import { processColors } from '../utils/commonColorProps';
 
-let RNRadarChart = requireNativeComponent('RNRadarChartSwift', RadarChart);
-
 class RadarChart extends Component {
   render() {
-    let {config, ...otherProps} = this.props;
-    config = processColors(config);
-    return <RNRadarChart
-      config={JSON.stringify(config)}
-      {...otherProps}/>;
+    let { config, ...otherProps } = this.props;
+    config = JSON.stringify(processColors(config));
+    return <RNRadarChart config={config} {...otherProps} />;
   }
-};
+}
 
 RadarChart.propTypes = {
   config: React.PropTypes.shape({
@@ -44,5 +40,7 @@ RadarChart.propTypes = {
     skipWebLineCount: React.PropTypes.number
   })
 };
+
+const RNRadarChart = requireNativeComponent('RNRadarChartSwift', RadarChart);
 
 export default RadarChart;

@@ -12,17 +12,13 @@ import {
 
 import { processColors } from '../utils/commonColorProps';
 
-let RNHorizontalBarChart = requireNativeComponent('RNHorizontalBarChartSwift', HorizontalBarChart);
-
 class HorizontalBarChart extends Component {
   render() {
-    let {config, ...otherProps} = this.props;
-    config = processColors(config);
-    return <RNHorizontalBarChart
-      config={JSON.stringify(config)}
-      {...otherProps}/>;
+    let { config, ...otherProps } = this.props;
+    config = JSON.stringify(processColors(config));
+    return <RNHorizontalBarChart config={config} {...otherProps} />;
   }
-};
+}
 
 HorizontalBarChart.propTypes = {
   config: React.PropTypes.shape({
@@ -44,5 +40,7 @@ HorizontalBarChart.propTypes = {
     drawBarShadow: React.PropTypes.bool,
   })
 };
+
+const RNHorizontalBarChart = requireNativeComponent('RNHorizontalBarChartSwift', HorizontalBarChart);
 
 export default HorizontalBarChart;

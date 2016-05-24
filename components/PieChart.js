@@ -12,17 +12,13 @@ import {
 
 import { processColors } from '../utils/commonColorProps';
 
-let RNPieChart = requireNativeComponent('RNPieChartSwift', PieChart);
-
 class PieChart extends Component {
   render() {
-    let {config, ...otherProps} = this.props;
-    config = processColors(config);
-    return <RNPieChart
-      config={JSON.stringify(config)}
-      {...otherProps}/>;
+    let { config, ...otherProps } = this.props;
+    config = JSON.stringify(processColors(config));
+    return <RNPieChart config={config} {...otherProps} />;
   }
-};
+}
 
 PieChart.propTypes = {
   config: React.PropTypes.shape({
@@ -48,5 +44,7 @@ PieChart.propTypes = {
     maxAngle: React.PropTypes.number
   })
 };
+
+const RNPieChart = requireNativeComponent('RNPieChartSwift', PieChart);
 
 export default PieChart;

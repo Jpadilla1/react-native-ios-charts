@@ -9,17 +9,13 @@ import {
 
 import { processColors } from '../utils/commonColorProps';
 
-let RNBubbleChart = requireNativeComponent('RNBubbleChartSwift', BubbleChart);
-
 class BubbleChart extends Component {
   render() {
-    let {config, ...otherProps} = this.props;
-    config = processColors(config);
-    return <RNBubbleChart
-      config={JSON.stringify(config)}
-      {...otherProps}/>;
+    let { config, ...otherProps } = this.props;
+    config = JSON.stringify(processColors(config));
+    return <RNBubbleChart config={config} {...otherProps} />;
   }
-};
+}
 
 BubbleChart.propTypes = {
   config: React.PropTypes.shape({
@@ -35,5 +31,7 @@ BubbleChart.propTypes = {
     }))
   })
 };
+
+const RNBubbleChart = requireNativeComponent('RNBubbleChartSwift', BubbleChart);
 
 export default BubbleChart;

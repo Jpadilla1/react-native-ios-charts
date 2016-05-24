@@ -29,8 +29,6 @@ class LineChart extends Component {
   }
 }
 
-const RNLineChart = requireNativeComponent('RNLineChartSwift', LineChart);
-
 LineChart.propTypes = {
   config: React.PropTypes.shape({
     ...globalCommonProps,
@@ -59,4 +57,7 @@ LineChart.propTypes = {
     }))
   })
 };
+
+const RNLineChart = requireNativeComponent('RNLineChartSwift', LineChart);
+
 export default LineChart;
