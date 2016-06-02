@@ -6,8 +6,8 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
-    "react": "^0.14.5",
-    "react-native": "^0.25.1",
+    "react": "15.0.2",
+    "react-native": "0.26.3",
     "react-native-ios-charts": "git+https://github.com/Jpadilla1/react-native-ios-charts.git"
   }
 }
