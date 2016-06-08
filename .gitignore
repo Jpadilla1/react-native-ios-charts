@@ -30,7 +30,7 @@ local.properties
 
 # node.js
 #
-node_modules/
+node_modules
 npm-debug.log
-build/
-Pods/
+build
+Pods
