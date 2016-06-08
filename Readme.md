@@ -23,7 +23,10 @@ The aim of this library is to provide reusable React Native components that can 
 3. When you add the files XCode should prompt you to create a bridging header if you haven't done so already. Create it and import the `RCTViewManager.h`. It should look something like this.
 
   ```Objective-C
+  #import "RCTBridge.h"
   #import "RCTViewManager.h"
+  #import "RCTUIManager.h"
+  #import "UIView+React.h"
   ```
 3.5. You can use [CocoaPods](https://cocoapods.org) and skip steps 4-6. Just add a `Podfile` to your ios directory with the following content. Then run `pod install` and open the generated .xcworkspace from now on in xcode.
 
