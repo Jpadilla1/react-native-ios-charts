@@ -44,5 +44,9 @@ class RNLineChart : LineChartView {
         if json["drawMarkers"].isExists() {
           self.drawMarkers = json["drawMarkers"].boolValue;
         }
+        
+        if json["leftAxis"]["startAtZero"].isExists() {
+            self.leftAxis.startAtZeroEnabled = json["leftAxis"]["startAtZero"].boolValue;
+        }
     }
 }
