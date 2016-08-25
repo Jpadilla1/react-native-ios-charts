@@ -19,7 +19,7 @@ The aim of this library is to provide reusable React Native components that can 
 **The minimum deployment target should be set to iOS 8.0 or greater**
 
 1. Run `npm install --save react-native-ios-charts`
-2. Add all the files under node_modules/react-native-ios-charts/RNiOSCharts.
+2. Add all the files under node_modules/react-native-ios-charts/RNiOSCharts. (In Xcode: File -> Add files to "App Name")
 3. When you add the files XCode should prompt you to create a bridging header if you haven't done so already. Create it and import the `RCTViewManager.h`. It should look something like this.
 
   ```Objective-C
