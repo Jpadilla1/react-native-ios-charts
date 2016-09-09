@@ -781,6 +781,46 @@ func getCandleStickData(labels: [String], json: JSON!) -> CandleChartData {
                     dataSet.axisDependency = .Right;
                 }
             }
+
+            if tmp["barSpace"].isExists() {
+                dataSet.barSpace = CGFloat(tmp["barSpace"].floatValue);
+            }
+
+            if tmp["showCandleBar"].isExists() {
+                dataSet.showCandleBar = tmp["showCandleBar"].boolValue;
+            }
+
+            if tmp["shadowWidth"].isExists() {
+                dataSet.shadowWidth = CGFloat(tmp["shadowWidth"].floatValue);
+            }
+
+            if tmp["shadowColor"].isExists() {
+                dataSet.shadowColor = RCTConvert.UIColor(tmp["shadowColor"].intValue);
+            }
+
+            if tmp["shadowColorSameAsCandle"].isExists() {
+                dataSet.shadowColorSameAsCandle = tmp["shadowColorSameAsCandle"].boolValue;
+            }
+
+            if tmp["neutralColor"].isExists() {
+                dataSet.neutralColor = RCTConvert.UIColor(tmp["neutralColor"].intValue);
+            }
+
+            if tmp["increasingColor"].isExists() {
+                dataSet.increasingColor = RCTConvert.UIColor(tmp["increasingColor"].intValue);
+            }
+
+            if tmp["decreasingColor"].isExists() {
+                dataSet.decreasingColor = RCTConvert.UIColor(tmp["decreasingColor"].intValue);
+            }
+
+            if tmp["increasingFilled"].isExists() {
+                dataSet.increasingFilled = tmp["increasingFilled"].boolValue;
+            }
+
+            if tmp["decreasingFilled"].isExists() {
+                dataSet.decreasingFilled = tmp["decreasingFilled"].boolValue;
+            }
             
             if json["valueFormatter"].isExists() {
                 if json["valueFormatter"]["minimumDecimalPlaces"].isExists() {
