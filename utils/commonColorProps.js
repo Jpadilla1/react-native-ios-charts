@@ -93,6 +93,14 @@ export const processColors = (props) => {
     config.infoTextColor = processColor(config.infoTextColor);
   }
 
+  if ('marker' in config && 'markerColor' in config.marker) {
+    config.marker.markerColor = processColor(config.marker.markerColor);
+  }
+
+  if ('marker' in config && 'markerTextColor' in config.marker) {
+    config.marker.markerTextColor = processColor(config.marker.markerTextColor);
+  }
+
   if ('legend' in config && 'textColor' in config.legend) {
     config.legend.textColor = processColor(config.legend.textColor);
   }

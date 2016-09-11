@@ -34,6 +34,12 @@ export const globalCommonProps = {
   infoTextFontSize: React.PropTypes.number,
   infoTextColor: React.PropTypes.string,
   drawMarkers: React.PropTypes.bool,
+  marker: React.PropTypes.shape({
+    markerColor: React.PropTypes.string.isRequired,
+    markerTextColor: React.PropTypes.string.isRequired,
+    markerFontName: React.PropTypes.string,
+    markerFontSize: React.PropTypes.number,
+  }),
   userInteractionEnabled: React.PropTypes.bool,
   dragDecelerationEnabled: React.PropTypes.bool,
   dragDecelerationFrictionCoef: React.PropTypes.number,

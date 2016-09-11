@@ -38,6 +38,12 @@ export default class Line extends Component {
       labels: ['Jan', 'Feb', 'Mar'],
       minOffset: 20,
       scaleYEnabled: false,
+      drawMarkers: true,
+      marker: {
+        markerColor: 'grey',
+        markerTextColor: 'white',
+        markerFontSize: 14,
+      },
       legend: {
         textSize: 12
       },
