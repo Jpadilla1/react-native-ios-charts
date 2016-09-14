@@ -15,8 +15,8 @@ class RNBarChartManager : RCTViewManager {
   }
 
   @objc func setVisibleXRangeMaximum(_ reactTag: NSNumber, value: CGFloat) {
-    self.bridge!.uiManager.addUIBlock { (uiManager: RCTUIManager!, viewRegistry:[NSNumber : UIView]!) in
-      let view: RNBarChart = viewRegistry[reactTag] as! RNBarChart;
+    self.bridge!.uiManager.addUIBlock { (uiManager: RCTUIManager?, viewRegistry:[NSNumber : UIView]?) in
+      let view: RNBarChart = viewRegistry![reactTag] as! RNBarChart;
         view.setVisibleXRangeMaximum(value);
       }
   }
