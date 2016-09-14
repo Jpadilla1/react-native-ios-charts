@@ -66,7 +66,8 @@ class ABNumberFormatter : NumberFormatter {
         let formatter = NumberFormatter();
         formatter.minimumFractionDigits = self.minimumDecimalPlaces;
         formatter.maximumFractionDigits = self.maximumDecimalPlaces;
-        return formatter.string(from: NSNumber(Float(ret)!))!;
+        let floatValue = (ret as NSString).floatValue
+        return formatter.string(from: NSNumber(value: floatValue))!;
     }
     
     override func string(for obj: Any?) -> String? {
