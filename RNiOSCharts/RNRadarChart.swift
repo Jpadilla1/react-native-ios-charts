@@ -21,7 +21,7 @@ class RNRadarChart : RadarChartView {
     fatalError("init(coder:) has not been implemented");
   }
   
-  func setConfig(config: String!) {
+  func setConfig(_ config: String!) {
     setPieRadarChartViewBaseProps(config);
     
     var maximumDecimalPlaces: Int = 0;
@@ -29,24 +29,24 @@ class RNRadarChart : RadarChartView {
     var labels: [String] = [];
     
     var json: JSON = nil;
-    if let data = config.dataUsingEncoding(NSUTF8StringEncoding) {
+    if let data = config.data(using: String.Encoding.utf8) {
       json = JSON(data: data);
     };
     
-    if json["labels"].isExists() {
+    if json["labels"].exists() {
       labels = json["labels"].arrayObject as! [String];
     }
     
-    if json["dataSets"].isExists() {
+    if json["dataSets"].exists() {
       let dataSets = json["dataSets"].arrayObject;
       
       var sets: [RadarChartDataSet] = [];
       
       for set in dataSets! {
         let tmp = JSON(set);
-        if tmp["values"].isExists() {
+        if tmp["values"].exists() {
           let values = tmp["values"].arrayObject as! [Double];
-          let label = tmp["label"].isExists() ? tmp["label"].stringValue : "";
+          let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
           var dataEntries: [ChartDataEntry] = [];
           
           for i in 0..<values.count {
@@ -56,59 +56,59 @@ class RNRadarChart : RadarChartView {
           
           let dataSet = RadarChartDataSet(yVals: dataEntries, label: label);
           
-          if tmp["colors"].isExists() {
+          if tmp["colors"].exists() {
             let arrColors = tmp["colors"].arrayObject as! [Int];
             dataSet.colors = arrColors.map({return RCTConvert.UIColor($0)});
           }
           
-          if tmp["drawValues"].isExists() {
+          if tmp["drawValues"].exists() {
             dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
           }
           
-          if tmp["highlightEnabled"].isExists() {
+          if tmp["highlightEnabled"].exists() {
             dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
           }
           
-          if tmp["fillColor"].isExists() {
+          if tmp["fillColor"].exists() {
             dataSet.fillColor = RCTConvert.UIColor(tmp["fillColor"].intValue);
           }
           
-          if tmp["fillAlpha"].isExists() {
+          if tmp["fillAlpha"].exists() {
             dataSet.fillAlpha = CGFloat(tmp["fillAlpha"].floatValue);
           }
           
-          if tmp["lineWidth"].isExists() {
+          if tmp["lineWidth"].exists() {
             dataSet.lineWidth = CGFloat(tmp["lineWidth"].floatValue);
           }
           
-          if tmp["drawFilledEnabled"].isExists() {
+          if tmp["drawFilledEnabled"].exists() {
             dataSet.drawFilledEnabled = tmp["drawFilledEnabled"].boolValue;
           }
           
-          if tmp["valueTextFontName"].isExists() {
+          if tmp["valueTextFontName"].exists() {
             dataSet.valueFont = UIFont(
               name: tmp["valueTextFontName"].stringValue,
               size: dataSet.valueFont.pointSize
               )!;
           }
           
-          if tmp["valueTextFontSize"].isExists() {
+          if tmp["valueTextFontSize"].exists() {
             dataSet.valueFont = dataSet.valueFont.fontWithSize(CGFloat(tmp["valueTextFontSize"].floatValue))
           }
           
-          if tmp["valueTextColor"].isExists() {
+          if tmp["valueTextColor"].exists() {
             dataSet.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
           }
           
-          if json["valueFormatter"].isExists() {
-            if json["valueFormatter"]["minimumDecimalPlaces"].isExists() {
+          if json["valueFormatter"].exists() {
+            if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
               minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
             }
-            if json["valueFormatter"]["maximumDecimalPlaces"].isExists() {
+            if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
               maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
             }
             
-            if json["valueFormatter"]["type"].isExists() {
+            if json["valueFormatter"]["type"].exists() {
               switch(json["valueFormatter"]["type"]) {
               case "regular":
                 dataSet.valueFormatter = NSNumberFormatter();
@@ -121,7 +121,7 @@ class RNRadarChart : RadarChartView {
               }
             }
             
-            if json["valueFormatter"]["numberStyle"].isExists() {
+            if json["valueFormatter"]["numberStyle"].exists() {
               switch(json["valueFormatter"]["numberStyle"]) {
               case "CurrencyAccountingStyle":
                 if #available(iOS 9.0, *) {
@@ -177,31 +177,31 @@ class RNRadarChart : RadarChartView {
       let chartData = RadarChartData(xVals: labels, dataSets: sets);
       self.data = chartData;
       
-      if json["webLineWidth"].isExists() {
+      if json["webLineWidth"].exists() {
         self.webLineWidth = CGFloat(json["webLineWidth"].floatValue);
       }
       
-      if json["innerWebLineWidth"].isExists() {
+      if json["innerWebLineWidth"].exists() {
         self.innerWebLineWidth = CGFloat(json["innerWebLineWidth"].floatValue);
       }
 
-      if json["webColor"].isExists() {
-        self.webColor = RCTConvert.UIColor(json["webColor"].intValue);
+      if json["webColor"].exists() {
+        self.webColor = RCTConvert.uiColor(json["webColor"].intValue);
       }
       
-      if json["innerWebColor"].isExists() {
-        self.innerWebColor = RCTConvert.UIColor(json["innerWebColor"].intValue);
+      if json["innerWebColor"].exists() {
+        self.innerWebColor = RCTConvert.uiColor(json["innerWebColor"].intValue);
       }
       
-      if json["webAlpha"].isExists() {
+      if json["webAlpha"].exists() {
         self.webAlpha = CGFloat(json["webAlpha"].floatValue);
       }
       
-      if json["drawWeb"].isExists() {
+      if json["drawWeb"].exists() {
         self.drawWeb = json["drawWeb"].boolValue;
       }
       
-      if json["skipWebLineCount"].isExists() {
+      if json["skipWebLineCount"].exists() {
         self.skipWebLineCount = json["skipWebLineCount"].intValue;
       }
       

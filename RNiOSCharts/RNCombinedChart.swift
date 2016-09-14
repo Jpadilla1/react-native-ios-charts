@@ -21,69 +21,69 @@ class RNCombinedChart : CombinedChartView {
     fatalError("init(coder:) has not been implemented");
   }
   
-  func setConfig(config: String!) {
+  func setConfig(_ config: String!) {
     setBarLineChartViewBaseProps(config);
     
     var labels: [String] = [];
     
     var json: JSON = nil;
-    if let data = config.dataUsingEncoding(NSUTF8StringEncoding) {
+    if let data = config.data(using: String.Encoding.utf8) {
       json = JSON(data: data);
     };
     
-    if json["labels"].isExists() {
+    if json["labels"].exists() {
       labels = json["labels"].arrayObject as! [String];
     }
     
     let data = CombinedChartData(xVals: labels);
     
-    if json["lineData"].isExists() {
+    if json["lineData"].exists() {
       data.lineData = getLineData(labels, json: json["lineData"]);
     }
 
-    if json["barData"].isExists() {
+    if json["barData"].exists() {
       data.barData = getBarData(labels, json: json["barData"]);
     }
     
-    if json["bubbleData"].isExists() {
+    if json["bubbleData"].exists() {
       data.bubbleData = getBubbleData(labels, json: json["bubbleData"]);
     }
     
-    if json["scatterData"].isExists() {
+    if json["scatterData"].exists() {
       data.scatterData = getScatterData(labels, json: json["scatterData"]);
     }
     
-    if json["candleData"].isExists() {
+    if json["candleData"].exists() {
       data.candleData = getCandleStickData(labels, json: json["candleData"]);
     }
     
-    if json["drawHighlightArrowEnabled"].isExists() {
+    if json["drawHighlightArrowEnabled"].exists() {
       self.drawHighlightArrowEnabled = json["drawHighlightArrowEnabled"].boolValue;
     }
     
-    if json["drawValueAboveBarEnabled"].isExists() {
+    if json["drawValueAboveBarEnabled"].exists() {
       self.drawValueAboveBarEnabled = json["drawValueAboveBarEnabled"].boolValue;
     }
     
-    if json["drawBarShadowEnabled"].isExists() {
+    if json["drawBarShadowEnabled"].exists() {
       self.drawBarShadowEnabled = json["drawBarShadowEnabled"].boolValue;
     }
     
-    if json["drawOrder"].isExists() {
+    if json["drawOrder"].exists() {
       self.drawOrder = json["drawOrder"].map({
-        if (String($0) == "Bar") {
-          return CombinedChartDrawOrder.Bar.rawValue;
+        if (String(describing: $0) == "Bar") {
+          return DrawOrder.Bar.rawValue;
         }
-        if (String($0) == "Bubble") {
-          return CombinedChartDrawOrder.Bubble.rawValue;
+        if (String(describing: $0) == "Bubble") {
+          return DrawOrder.Bubble.rawValue;
         }
-        if (String($0) == "Line") {
-          return CombinedChartDrawOrder.Line.rawValue;
+        if (String(describing: $0) == "Line") {
+          return DrawOrder.Line.rawValue;
         }
-        if (String($0) == "Candle") {
-          return CombinedChartDrawOrder.Candle.rawValue;
+        if (String(describing: $0) == "Candle") {
+          return DrawOrder.Candle.rawValue;
         }
-        return CombinedChartDrawOrder.Scatter.rawValue;
+        return DrawOrder.Scatter.rawValue;
       });
     }
     

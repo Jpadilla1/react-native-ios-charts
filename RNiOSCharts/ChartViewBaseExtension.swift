@@ -12,7 +12,7 @@ import Charts
 
 extension ChartViewBase {
 
-    func setChartViewBaseProps(config: String!) {
+    func setChartViewBaseProps(_ config: String!) {
         var legendColors: [UIColor] = ChartColorTemplates.colorful();
         var legendLabels: [String] = [];
 
@@ -20,12 +20,12 @@ extension ChartViewBase {
         self.backgroundColor = UIColor(red: 255.0, green: 255.0, blue: 255.0, alpha: 0.0);
 
         var json: JSON = nil;
-        if let data = config.dataUsingEncoding(NSUTF8StringEncoding) {
+        if let data = config.data(using: String.Encoding.utf8) {
             json = JSON(data: data);
         };
 
         if json["backgroundColor"].isExists() {
-            self.backgroundColor = RCTConvert.UIColor(json["backgroundColor"].intValue);
+            self.backgroundColor = RCTConvert.uiColor(json["backgroundColor"].intValue);
         }
 
         if json["noDataText"].isExists() {
@@ -44,11 +44,11 @@ extension ChartViewBase {
         }
 
         if json["descriptionFontSize"].isExists() {
-            self.descriptionFont = self.descriptionFont?.fontWithSize(CGFloat(json["descriptionFontSize"].floatValue));
+            self.descriptionFont = self.descriptionFont?.withSize(CGFloat(json["descriptionFontSize"].floatValue));
         }
 
         if json["descriptionTextColor"].isExists() {
-            self.descriptionTextColor = RCTConvert.UIColor(json["descriptionTextColor"].intValue);
+            self.descriptionTextColor = RCTConvert.uiColor(json["descriptionTextColor"].intValue);
         }
 
         if json["descriptionTextPosition"].isExists() &&
@@ -69,26 +69,26 @@ extension ChartViewBase {
         }
 
         if json["infoTextFontSize"].isExists() {
-            self.infoFont = self.infoFont?.fontWithSize(CGFloat(json["infoTextFontSize"].floatValue));
+            self.infoFont = self.infoFont?.withSize(CGFloat(json["infoTextFontSize"].floatValue));
         }
 
         if json["infoTextColor"].isExists() {
-            self.infoTextColor = RCTConvert.UIColor(json["infoTextColor"].intValue);
+            self.infoTextColor = RCTConvert.uiColor(json["infoTextColor"].intValue);
         }
 
         if json["descriptionTextAlign"].isExists() {
             switch (json["descriptionTextAlign"].stringValue) {
             case "left":
-                self.descriptionTextAlign = NSTextAlignment.Left;
+                self.descriptionTextAlign = NSTextAlignment.left;
                 break;
             case "center":
-                self.descriptionTextAlign = NSTextAlignment.Center;
+                self.descriptionTextAlign = NSTextAlignment.center;
                 break;
             case "right":
-                self.descriptionTextAlign = NSTextAlignment.Right;
+                self.descriptionTextAlign = NSTextAlignment.right;
                 break;
             case "justified":
-                self.descriptionTextAlign = NSTextAlignment.Justified;
+                self.descriptionTextAlign = NSTextAlignment.justified;
                 break;
             default:
                 break;
@@ -105,11 +105,11 @@ extension ChartViewBase {
 
         if json["legend"].isExists() {
             if json["legend"]["textColor"].isExists() {
-                self.legend.textColor = RCTConvert.UIColor(json["legend"]["textColor"].intValue);
+                self.legend.textColor = RCTConvert.uiColor(json["legend"]["textColor"].intValue);
             }
 
             if json["legend"]["textSize"].isExists() {
-                self.legend.font = self.legend.font.fontWithSize(CGFloat(json["legend"]["textSize"].floatValue));
+                self.legend.font = self.legend.font.withSize(CGFloat(json["legend"]["textSize"].floatValue));
             }
 
             if json["legend"]["textFontName"].isExists() {
@@ -209,7 +209,7 @@ extension ChartViewBase {
 
             if json["legend"]["colors"].isExists() {
                 let arrColors = json["legend"]["colors"].arrayObject as! [Int];
-                legendColors = arrColors.map({return RCTConvert.UIColor($0)});
+                legendColors = arrColors.map({return RCTConvert.uiColor($0)});
                 if legendLabels.count == legendColors.count {
                     legend.setCustom(colors: legendColors, labels: legendLabels);
                 }
@@ -224,7 +224,7 @@ extension ChartViewBase {
         }
 
         if json["userInteractionEnabled"].isExists() {
-          self.userInteractionEnabled = json["userInteractionEnabled"].boolValue;
+          self.isUserInteractionEnabled = json["userInteractionEnabled"].boolValue;
         }
 
         if json["dragDecelerationEnabled"].isExists() {

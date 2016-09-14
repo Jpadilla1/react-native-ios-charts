@@ -14,7 +14,7 @@ import SwiftyJSON
 var maximumDecimalPlaces: Int = 0;
 var minimumDecimalPlaces: Int = 0;
 
-func getLineData(labels: [String], json: JSON!) -> LineChartData {
+func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
     if !json["dataSets"].isExists() {
         return LineChartData();
     }
@@ -231,7 +231,7 @@ func getLineData(labels: [String], json: JSON!) -> LineChartData {
 }
 
 
-func getBarData(labels: [String], json: JSON!) -> BarChartData {
+func getBarData(_ labels: [String], json: JSON!) -> BarChartData {
     if !json["dataSets"].isExists() {
         return BarChartData();
     }
@@ -399,7 +399,7 @@ func getBarData(labels: [String], json: JSON!) -> BarChartData {
 }
 
 
-func getBubbleData(labels: [String], json: JSON!) -> BubbleChartData {
+func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
     if !json["dataSets"].isExists() {
         return BubbleChartData();
     }
@@ -544,7 +544,7 @@ func getBubbleData(labels: [String], json: JSON!) -> BubbleChartData {
     return BubbleChartData(xVals: labels, dataSets: sets);
 }
 
-func getScatterData(labels: [String], json: JSON!) -> ScatterChartData {
+func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
     if !json["dataSets"].isExists() {
         return ScatterChartData();
     }
@@ -715,7 +715,7 @@ func getScatterData(labels: [String], json: JSON!) -> ScatterChartData {
     return ScatterChartData(xVals: labels, dataSets: sets);
 }
 
-func getCandleStickData(labels: [String], json: JSON!) -> CandleChartData {
+func getCandleStickData(_ labels: [String], json: JSON!) -> CandleChartData {
     if !json["dataSets"].isExists() {
         return CandleChartData();
     }

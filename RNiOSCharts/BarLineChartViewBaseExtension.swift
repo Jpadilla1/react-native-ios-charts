@@ -11,130 +11,130 @@ import Charts
 
 extension BarLineChartViewBase {
 
-    func setBarLineChartViewBaseProps(config: String!) {
+    func setBarLineChartViewBaseProps(_ config: String!) {
         setChartViewBaseProps(config);
 
         var maximumDecimalPlaces: Int = 0;
         var minimumDecimalPlaces: Int = 0;
 
         var json: JSON = nil;
-        if let data = config.dataUsingEncoding(NSUTF8StringEncoding) {
+        if let data = config.data(using: String.Encoding.utf8) {
             json = JSON(data: data);
         };
 
-        if json["gridBackgroundColor"].isExists() {
-            self.gridBackgroundColor = RCTConvert.UIColor(json["gridBackgroundColor"].intValue);
+        if json["gridBackgroundColor"].exists() {
+            self.gridBackgroundColor = RCTConvert.uiColor(json["gridBackgroundColor"].intValue);
         }
 
-        if json["drawBorders"].isExists() {
+        if json["drawBorders"].exists() {
             self.drawBordersEnabled = json["drawBorders"].boolValue;
         }
 
-        if json["borderColor"].isExists() {
-            self.borderColor = RCTConvert.UIColor(json["borderColor"].intValue);
+        if json["borderColor"].exists() {
+            self.borderColor = RCTConvert.uiColor(json["borderColor"].intValue);
         }
 
-        if json["borderLineWidth"].isExists() {
+        if json["borderLineWidth"].exists() {
             self.borderLineWidth = CGFloat(json["borderLineWidth"].floatValue);
         }
 
-        if json["minOffset"].isExists() {
+        if json["minOffset"].exists() {
             self.minOffset = CGFloat(json["minOffset"].floatValue);
         }
 
-        if json["autoScaleMinMax"].isExists() {
+        if json["autoScaleMinMax"].exists() {
             self.autoScaleMinMaxEnabled = json["autoScaleMinMax"].boolValue;
         }
 
-        if json["dragEnabled"].isExists() {
+        if json["dragEnabled"].exists() {
           self.dragEnabled = json["dragEnabled"].boolValue;
         }
 
-        if json["scaleXEnabled"].isExists() {
+        if json["scaleXEnabled"].exists() {
           self.scaleXEnabled = json["scaleXEnabled"].boolValue;
         }
 
-        if json["scaleYEnabled"].isExists() {
+        if json["scaleYEnabled"].exists() {
           self.scaleYEnabled = json["scaleYEnabled"].boolValue;
         }
 
-        if json["pinchZoomEnabled"].isExists() {
+        if json["pinchZoomEnabled"].exists() {
           self.pinchZoomEnabled = json["pinchZoomEnabled"].boolValue;
         }
 
-        if json["doubleTapToZoomEnabled"].isExists() {
+        if json["doubleTapToZoomEnabled"].exists() {
           self.doubleTapToZoomEnabled = json["doubleTapToZoomEnabled"].boolValue;
         }
 
-        if json["highlightPerDragEnabled"].isExists() {
+        if json["highlightPerDragEnabled"].exists() {
           self.highlightPerDragEnabled = json["highlightPerDragEnabled"].boolValue;
         }
 
         // xAxis
 
-        if json["xAxis"].isExists() {
-            if json["xAxis"]["enabled"].isExists() {
+        if json["xAxis"].exists() {
+            if json["xAxis"]["enabled"].exists() {
                 self.xAxis.enabled = json["xAxis"]["enabled"].boolValue;
             }
 
-            if json["xAxis"]["drawAxisLine"].isExists() {
+            if json["xAxis"]["drawAxisLine"].exists() {
                 self.xAxis.drawAxisLineEnabled = json["xAxis"]["drawAxisLine"].boolValue;
             }
 
-            if json["xAxis"]["drawGridLines"].isExists() {
+            if json["xAxis"]["drawGridLines"].exists() {
                 self.xAxis.drawGridLinesEnabled = json["xAxis"]["drawGridLines"].boolValue;
             }
 
-            if json["xAxis"]["drawLabels"].isExists() {
+            if json["xAxis"]["drawLabels"].exists() {
                 self.xAxis.drawLabelsEnabled = json["xAxis"]["drawLabels"].boolValue;
             }
 
-            if json["xAxis"]["textColor"].isExists() {
-                self.xAxis.labelTextColor = RCTConvert.UIColor(json["xAxis"]["textColor"].intValue);
+            if json["xAxis"]["textColor"].exists() {
+                self.xAxis.labelTextColor = RCTConvert.uiColor(json["xAxis"]["textColor"].intValue);
             }
 
-            if json["xAxis"]["textFontName"].isExists() {
+            if json["xAxis"]["textFontName"].exists() {
                 self.xAxis.labelFont = UIFont(
                     name: json["xAxis"]["textFontName"].stringValue,
                     size: self.xAxis.labelFont.pointSize
                     )!;
             }
 
-            if json["xAxis"]["textSize"].isExists() {
-                self.xAxis.labelFont = self.xAxis.labelFont.fontWithSize(CGFloat(json["xAxis"]["textSize"].floatValue));
+            if json["xAxis"]["textSize"].exists() {
+                self.xAxis.labelFont = self.xAxis.labelFont.withSize(CGFloat(json["xAxis"]["textSize"].floatValue));
             }
 
-            if json["xAxis"]["gridColor"].isExists() {
-                self.xAxis.gridColor = RCTConvert.UIColor(json["xAxis"]["gridColor"].intValue);
+            if json["xAxis"]["gridColor"].exists() {
+                self.xAxis.gridColor = RCTConvert.uiColor(json["xAxis"]["gridColor"].intValue);
             }
 
-            if json["xAxis"]["gridLineWidth"].isExists() {
+            if json["xAxis"]["gridLineWidth"].exists() {
                 self.xAxis.gridLineWidth = CGFloat(json["xAxis"]["gridLineWidth"].floatValue);
             }
 
-            if json["xAxis"]["axisLineColor"].isExists() {
-                self.xAxis.axisLineColor = RCTConvert.UIColor(json["xAxis"]["axisLineColor"].intValue);
+            if json["xAxis"]["axisLineColor"].exists() {
+                self.xAxis.axisLineColor = RCTConvert.uiColor(json["xAxis"]["axisLineColor"].intValue);
             }
 
-            if json["xAxis"]["axisLineWidth"].isExists() {
+            if json["xAxis"]["axisLineWidth"].exists() {
                 self.xAxis.axisLineWidth = CGFloat(json["xAxis"]["axisLineWidth"].floatValue);
             }
 
-            if json["xAxis"]["gridDashedLine"].isExists() {
+            if json["xAxis"]["gridDashedLine"].exists() {
 
-                if json["xAxis"]["gridDashedLine"]["lineLength"].isExists() {
+                if json["xAxis"]["gridDashedLine"]["lineLength"].exists() {
                     self.xAxis.gridLineDashLengths = [CGFloat(
                         json["xAxis"]["gridDashedLine"]["lineLength"].floatValue
                         )];
                 }
 
-                if json["xAxis"]["gridDashedLine"]["spaceLength"].isExists() {
+                if json["xAxis"]["gridDashedLine"]["spaceLength"].exists() {
                     self.xAxis.gridLineWidth = CGFloat(
                         json["xAxis"]["gridDashedLine"]["spaceLength"].floatValue
                     );
                 }
 
-                if json["xAxis"]["gridDashedLine"]["phase"].isExists() {
+                if json["xAxis"]["gridDashedLine"]["phase"].exists() {
                     self.xAxis.gridLineDashPhase = CGFloat(
                         json["xAxis"]["gridDashedLine"]["phase"].floatValue
                     );
@@ -142,20 +142,20 @@ extension BarLineChartViewBase {
 
             }
 
-            if json["xAxis"]["limitLines"].isExists() {
+            if json["xAxis"]["limitLines"].exists() {
                 let limitLines = json["xAxis"]["limitLines"].arrayObject;
                 for l in limitLines! {
                     let tmp = JSON(l);
 
-                    if tmp["limit"].isExists() &&
-                        tmp["label"].isExists() {
+                    if tmp["limit"].exists() &&
+                        tmp["label"].exists() {
 
                             let line = ChartLimitLine(
                                 limit: tmp["limit"].doubleValue,
                                 label: tmp["label"].stringValue
                             );
 
-                            if tmp["position"].isExists() {
+                            if tmp["position"].exists() {
                                 switch(tmp["position"]) {
                                 case "leftBottom":
                                     line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftBottom;
@@ -175,43 +175,43 @@ extension BarLineChartViewBase {
                                 }
                             }
 
-                            if tmp["lineColor"].isExists() {
-                                line.lineColor = RCTConvert.UIColor(tmp["lineColor"].intValue);
+                            if tmp["lineColor"].exists() {
+                                line.lineColor = RCTConvert.uiColor(tmp["lineColor"].intValue);
                             }
 
-                            if tmp["lineDashLengths"].isExists() {
+                            if tmp["lineDashLengths"].exists() {
                                 line.lineDashLengths = [CGFloat(tmp["lineDashLengths"].floatValue)];
                             }
 
-                            if tmp["lineDashPhase"].isExists() {
+                            if tmp["lineDashPhase"].exists() {
                                 line.lineDashPhase = CGFloat(tmp["lineDashPhase"].floatValue);
                             }
 
-                            if tmp["lineWidth"].isExists() {
+                            if tmp["lineWidth"].exists() {
                                 line.lineWidth = CGFloat(tmp["lineWidth"].floatValue);
                             }
 
-                            if tmp["valueTextColor"].isExists() {
-                                line.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
+                            if tmp["valueTextColor"].exists() {
+                                line.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
                             }
 
-                            if tmp["xOffset"].isExists() {
+                            if tmp["xOffset"].exists() {
                                 line.xOffset = CGFloat(tmp["xOffset"].floatValue);
                             }
 
-                            if tmp["yOffset"].isExists() {
+                            if tmp["yOffset"].exists() {
                                 line.yOffset = CGFloat(tmp["yOffset"].floatValue);
                             }
 
-                            if tmp["textFontName"].isExists() {
+                            if tmp["textFontName"].exists() {
                                 line.valueFont = UIFont(
                                     name: tmp["textFontName"].stringValue,
                                     size: line.valueFont.pointSize
                                     )!;
                             }
 
-                            if tmp["textSize"].isExists() {
-                                line.valueFont = line.valueFont.fontWithSize(CGFloat(tmp["textSize"].floatValue));
+                            if tmp["textSize"].exists() {
+                                line.valueFont = line.valueFont.withSize(CGFloat(tmp["textSize"].floatValue));
                             }
 
 
@@ -220,7 +220,7 @@ extension BarLineChartViewBase {
                 }
             }
 
-            if json["xAxis"]["position"].isExists() {
+            if json["xAxis"]["position"].exists() {
                 switch(json["xAxis"]["position"].stringValue) {
                 case "bothSided":
                     self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.BothSided;
@@ -243,15 +243,15 @@ extension BarLineChartViewBase {
                 }
             }
 
-            if json["xAxis"]["labelRotationAngle"].isExists() {
+            if json["xAxis"]["labelRotationAngle"].exists() {
                 self.xAxis.labelRotationAngle = CGFloat(json["xAxis"]["labelRotationAngle"].floatValue);
             }
 
-            if json["xAxis"]["drawLimitLinesBehindData"].isExists() {
+            if json["xAxis"]["drawLimitLinesBehindData"].exists() {
                 self.xAxis.drawLimitLinesBehindDataEnabled = json["xAxis"]["drawLimitLinesBehindData"].boolValue;
             }
 
-            if json["xAxis"]["spaceBetweenLabels"].isExists() {
+            if json["xAxis"]["spaceBetweenLabels"].exists() {
                 self.xAxis.spaceBetweenLabels = json["xAxis"]["spaceBetweenLabels"].intValue;
             }
 
@@ -259,69 +259,69 @@ extension BarLineChartViewBase {
 
         // leftAxis
 
-        if json["leftAxis"].isExists() {
-            if json["leftAxis"]["enabled"].isExists() {
+        if json["leftAxis"].exists() {
+            if json["leftAxis"]["enabled"].exists() {
                 self.leftAxis.enabled = json["leftAxis"]["enabled"].boolValue;
             }
 
-            if json["leftAxis"]["drawAxisLine"].isExists() {
+            if json["leftAxis"]["drawAxisLine"].exists() {
                 self.leftAxis.drawAxisLineEnabled = json["leftAxis"]["drawAxisLine"].boolValue;
             }
 
-            if json["leftAxis"]["drawGridLines"].isExists() {
+            if json["leftAxis"]["drawGridLines"].exists() {
                 self.leftAxis.drawGridLinesEnabled = json["leftAxis"]["drawGridLines"].boolValue;
             }
 
-            if json["leftAxis"]["drawLabels"].isExists() {
+            if json["leftAxis"]["drawLabels"].exists() {
                 self.leftAxis.drawLabelsEnabled = json["leftAxis"]["drawLabels"].boolValue;
             }
 
-            if json["leftAxis"]["textColor"].isExists() {
-                self.leftAxis.labelTextColor = RCTConvert.UIColor(json["leftAxis"]["textColor"].intValue);
+            if json["leftAxis"]["textColor"].exists() {
+                self.leftAxis.labelTextColor = RCTConvert.uiColor(json["leftAxis"]["textColor"].intValue);
             }
 
-            if json["leftAxis"]["textFontName"].isExists() {
+            if json["leftAxis"]["textFontName"].exists() {
                 self.leftAxis.labelFont = UIFont(
                     name: json["leftAxis"]["textFontName"].stringValue,
                     size: self.leftAxis.labelFont.pointSize
                     )!;
             }
 
-            if json["leftAxis"]["textSize"].isExists() {
-                self.leftAxis.labelFont = self.leftAxis.labelFont.fontWithSize(CGFloat(json["leftAxis"]["textSize"].floatValue));
+            if json["leftAxis"]["textSize"].exists() {
+                self.leftAxis.labelFont = self.leftAxis.labelFont.withSize(CGFloat(json["leftAxis"]["textSize"].floatValue));
             }
 
-            if json["leftAxis"]["gridColor"].isExists() {
-                self.leftAxis.gridColor = RCTConvert.UIColor(json["leftAxis"]["gridColor"].intValue);
+            if json["leftAxis"]["gridColor"].exists() {
+                self.leftAxis.gridColor = RCTConvert.uiColor(json["leftAxis"]["gridColor"].intValue);
             }
 
-            if json["leftAxis"]["gridLineWidth"].isExists() {
+            if json["leftAxis"]["gridLineWidth"].exists() {
                 self.leftAxis.gridLineWidth = CGFloat(json["leftAxis"]["gridLineWidth"].floatValue);
             }
 
-            if json["leftAxis"]["axisLineColor"].isExists() {
-                self.leftAxis.axisLineColor = RCTConvert.UIColor(json["leftAxis"]["axisLineColor"].intValue);
+            if json["leftAxis"]["axisLineColor"].exists() {
+                self.leftAxis.axisLineColor = RCTConvert.uiColor(json["leftAxis"]["axisLineColor"].intValue);
             }
 
-            if json["leftAxis"]["axisLineWidth"].isExists() {
+            if json["leftAxis"]["axisLineWidth"].exists() {
                 self.leftAxis.axisLineWidth = CGFloat(json["leftAxis"]["axisLineWidth"].floatValue);
             }
 
-            if json["leftAxis"]["gridDashedLine"].isExists() {
+            if json["leftAxis"]["gridDashedLine"].exists() {
 
-                if json["leftAxis"]["gridDashedLine"]["lineLength"].isExists() {
+                if json["leftAxis"]["gridDashedLine"]["lineLength"].exists() {
                     self.leftAxis.gridLineDashLengths = [CGFloat(
                         json["leftAxis"]["gridDashedLine"]["lineLength"].floatValue
                         )];
                 }
 
-                if json["leftAxis"]["gridDashedLine"]["spaceLength"].isExists() {
+                if json["leftAxis"]["gridDashedLine"]["spaceLength"].exists() {
                     self.leftAxis.gridLineWidth = CGFloat(
                         json["leftAxis"]["gridDashedLine"]["spaceLength"].floatValue
                     );
                 }
 
-                if json["leftAxis"]["gridDashedLine"]["phase"].isExists() {
+                if json["leftAxis"]["gridDashedLine"]["phase"].exists() {
                     self.leftAxis.gridLineDashPhase = CGFloat(
                         json["leftAxis"]["gridDashedLine"]["phase"].floatValue
                     );
@@ -329,20 +329,20 @@ extension BarLineChartViewBase {
 
             }
 
-            if json["leftAxis"]["limitLines"].isExists() {
+            if json["leftAxis"]["limitLines"].exists() {
                 let limitLines = json["leftAxis"]["limitLines"].arrayObject;
                 for l in limitLines! {
                     let tmp = JSON(l);
 
-                    if tmp["limit"].isExists() &&
-                        tmp["label"].isExists() {
+                    if tmp["limit"].exists() &&
+                        tmp["label"].exists() {
 
                             let line = ChartLimitLine(
                                 limit: tmp["limit"].doubleValue,
                                 label: tmp["label"].stringValue
                             );
 
-                            if tmp["position"].isExists() {
+                            if tmp["position"].exists() {
                                 switch(tmp["position"]) {
                                 case "leftBottom":
                                     line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftBottom;
@@ -362,43 +362,43 @@ extension BarLineChartViewBase {
                                 }
                             }
 
-                            if tmp["lineColor"].isExists() {
-                                line.lineColor = RCTConvert.UIColor(tmp["lineColor"].intValue);
+                            if tmp["lineColor"].exists() {
+                                line.lineColor = RCTConvert.uiColor(tmp["lineColor"].intValue);
                             }
 
-                            if tmp["lineDashLengths"].isExists() {
+                            if tmp["lineDashLengths"].exists() {
                                 line.lineDashLengths = [CGFloat(tmp["lineDashLengths"].floatValue)];
                             }
 
-                            if tmp["lineDashPhase"].isExists() {
+                            if tmp["lineDashPhase"].exists() {
                                 line.lineDashPhase = CGFloat(tmp["lineDashPhase"].floatValue);
                             }
 
-                            if tmp["lineWidth"].isExists() {
+                            if tmp["lineWidth"].exists() {
                                 line.lineWidth = CGFloat(tmp["lineWidth"].floatValue);
                             }
 
-                            if tmp["valueTextColor"].isExists() {
-                                line.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
+                            if tmp["valueTextColor"].exists() {
+                                line.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
                             }
 
-                            if tmp["xOffset"].isExists() {
+                            if tmp["xOffset"].exists() {
                                 line.xOffset = CGFloat(tmp["xOffset"].floatValue);
                             }
 
-                            if tmp["yOffset"].isExists() {
+                            if tmp["yOffset"].exists() {
                                 line.yOffset = CGFloat(tmp["yOffset"].floatValue);
                             }
 
-                            if tmp["textFontName"].isExists() {
+                            if tmp["textFontName"].exists() {
                                 line.valueFont = UIFont(
                                     name: tmp["textFontName"].stringValue,
                                     size: line.valueFont.pointSize
                                     )!;
                             }
 
-                            if tmp["textSize"].isExists() {
-                                line.valueFont = line.valueFont.fontWithSize(CGFloat(tmp["textSize"].floatValue));
+                            if tmp["textSize"].exists() {
+                                line.valueFont = line.valueFont.withSize(CGFloat(tmp["textSize"].floatValue));
                             }
 
                             self.leftAxis.addLimitLine(line);
@@ -406,7 +406,7 @@ extension BarLineChartViewBase {
                 }
             }
 
-            if json["leftAxis"]["position"].isExists() {
+            if json["leftAxis"]["position"].exists() {
                 switch(json["leftAxis"]["position"].stringValue) {
                 case "inside":
                     self.leftAxis.labelPosition = ChartYAxis.YAxisLabelPosition.InsideChart;
@@ -420,31 +420,31 @@ extension BarLineChartViewBase {
                 }
             }
 
-            if json["leftAxis"]["drawLimitLinesBehindData"].isExists() {
+            if json["leftAxis"]["drawLimitLinesBehindData"].exists() {
                 self.leftAxis.drawLimitLinesBehindDataEnabled = json["leftAxis"]["drawLimitLinesBehindData"].boolValue;
             }
 
-            if json["leftAxis"]["spaceTop"].isExists() {
+            if json["leftAxis"]["spaceTop"].exists() {
                 self.leftAxis.spaceTop = CGFloat(json["leftAxis"]["spaceTop"].floatValue);
             }
 
-            if json["leftAxis"]["spaceBottom"].isExists() {
+            if json["leftAxis"]["spaceBottom"].exists() {
                 self.leftAxis.spaceBottom = CGFloat(json["leftAxis"]["spaceBottom"].floatValue);
             }
 
-            if json["leftAxis"]["startAtZero"].isExists() {
+            if json["leftAxis"]["startAtZero"].exists() {
                 self.leftAxis.startAtZeroEnabled = json["leftAxis"]["startAtZeroEnabled"].boolValue;
             }
 
-            if json["leftAxis"]["axisMinimum"].isExists() {
+            if json["leftAxis"]["axisMinimum"].exists() {
                 self.leftAxis.customAxisMin = json["leftAxis"]["axisMinimum"].doubleValue;
             }
 
-            if json["leftAxis"]["axisMaximum"].isExists() {
+            if json["leftAxis"]["axisMaximum"].exists() {
                 self.leftAxis.customAxisMax = json["leftAxis"]["axisMaximum"].doubleValue;
             }
 
-            if json["leftAxis"]["labelCount"].isExists() {
+            if json["leftAxis"]["labelCount"].exists() {
               self.leftAxis.labelCount = json["leftAxis"]["labelCount"].intValue;
             }
 
@@ -452,69 +452,69 @@ extension BarLineChartViewBase {
 
         // rightAxis
 
-        if json["rightAxis"].isExists() {
-            if json["rightAxis"]["enabled"].isExists() {
+        if json["rightAxis"].exists() {
+            if json["rightAxis"]["enabled"].exists() {
                 self.rightAxis.enabled = json["rightAxis"]["enabled"].boolValue;
             }
 
-            if json["rightAxis"]["drawAxisLine"].isExists() {
+            if json["rightAxis"]["drawAxisLine"].exists() {
                 self.rightAxis.drawAxisLineEnabled = json["rightAxis"]["drawAxisLine"].boolValue;
             }
 
-            if json["rightAxis"]["drawGridLines"].isExists() {
+            if json["rightAxis"]["drawGridLines"].exists() {
                 self.rightAxis.drawGridLinesEnabled = json["rightAxis"]["drawGridLines"].boolValue;
             }
 
-            if json["rightAxis"]["drawLabels"].isExists() {
+            if json["rightAxis"]["drawLabels"].exists() {
                 self.rightAxis.drawLabelsEnabled = json["rightAxis"]["drawLabels"].boolValue;
             }
 
-            if json["rightAxis"]["textColor"].isExists() {
-                self.rightAxis.labelTextColor = RCTConvert.UIColor(json["rightAxis"]["textColor"].intValue);
+            if json["rightAxis"]["textColor"].exists() {
+                self.rightAxis.labelTextColor = RCTConvert.uiColor(json["rightAxis"]["textColor"].intValue);
             }
 
-            if json["rightAxis"]["textFontName"].isExists() {
+            if json["rightAxis"]["textFontName"].exists() {
                 self.rightAxis.labelFont = UIFont(
                     name: json["rightAxis"]["textFontName"].stringValue,
                     size: self.rightAxis.labelFont.pointSize
                     )!;
             }
 
-            if json["rightAxis"]["textSize"].isExists() {
-                self.rightAxis.labelFont = self.rightAxis.labelFont.fontWithSize(CGFloat(json["rightAxis"]["textSize"].floatValue));
+            if json["rightAxis"]["textSize"].exists() {
+                self.rightAxis.labelFont = self.rightAxis.labelFont.withSize(CGFloat(json["rightAxis"]["textSize"].floatValue));
             }
 
-            if json["rightAxis"]["gridColor"].isExists() {
-                self.rightAxis.gridColor = RCTConvert.UIColor(json["rightAxis"]["gridColor"].intValue);
+            if json["rightAxis"]["gridColor"].exists() {
+                self.rightAxis.gridColor = RCTConvert.uiColor(json["rightAxis"]["gridColor"].intValue);
             }
 
-            if json["rightAxis"]["gridLineWidth"].isExists() {
+            if json["rightAxis"]["gridLineWidth"].exists() {
                 self.rightAxis.gridLineWidth = CGFloat(json["rightAxis"]["gridLineWidth"].floatValue);
             }
 
-            if json["rightAxis"]["axisLineColor"].isExists() {
-                self.rightAxis.axisLineColor = RCTConvert.UIColor(json["rightAxis"]["axisLineColor"].intValue);
+            if json["rightAxis"]["axisLineColor"].exists() {
+                self.rightAxis.axisLineColor = RCTConvert.uiColor(json["rightAxis"]["axisLineColor"].intValue);
             }
 
-            if json["rightAxis"]["axisLineWidth"].isExists() {
+            if json["rightAxis"]["axisLineWidth"].exists() {
                 self.rightAxis.axisLineWidth = CGFloat(json["rightAxis"]["axisLineWidth"].floatValue);
             }
 
-            if json["rightAxis"]["gridDashedLine"].isExists() {
+            if json["rightAxis"]["gridDashedLine"].exists() {
 
-                if json["rightAxis"]["gridDashedLine"]["lineLength"].isExists() {
+                if json["rightAxis"]["gridDashedLine"]["lineLength"].exists() {
                     self.rightAxis.gridLineDashLengths = [CGFloat(
                         json["rightAxis"]["gridDashedLine"]["lineLength"].floatValue
                         )];
                 }
 
-                if json["rightAxis"]["gridDashedLine"]["spaceLength"].isExists() {
+                if json["rightAxis"]["gridDashedLine"]["spaceLength"].exists() {
                     self.rightAxis.gridLineWidth = CGFloat(
                         json["rightAxis"]["gridDashedLine"]["spaceLength"].floatValue
                     );
                 }
 
-                if json["rightAxis"]["gridDashedLine"]["phase"].isExists() {
+                if json["rightAxis"]["gridDashedLine"]["phase"].exists() {
                     self.rightAxis.gridLineDashPhase = CGFloat(
                         json["rightAxis"]["gridDashedLine"]["phase"].floatValue
                     );
@@ -522,20 +522,20 @@ extension BarLineChartViewBase {
 
             }
 
-            if json["rightAxis"]["limitLines"].isExists() {
+            if json["rightAxis"]["limitLines"].exists() {
                 let limitLines = json["rightAxis"]["limitLines"].arrayObject;
                 for l in limitLines! {
                     let tmp = JSON(l);
 
-                    if tmp["limit"].isExists() &&
-                        tmp["label"].isExists() {
+                    if tmp["limit"].exists() &&
+                        tmp["label"].exists() {
 
                             let line = ChartLimitLine(
                                 limit: tmp["limit"].doubleValue,
                                 label: tmp["label"].stringValue
                             );
 
-                            if tmp["position"].isExists() {
+                            if tmp["position"].exists() {
                                 switch(tmp["position"]) {
                                 case "leftBottom":
                                     line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftBottom;
@@ -555,43 +555,43 @@ extension BarLineChartViewBase {
                                 }
                             }
 
-                            if tmp["lineColor"].isExists() {
-                                line.lineColor = RCTConvert.UIColor(tmp["lineColor"].intValue);
+                            if tmp["lineColor"].exists() {
+                                line.lineColor = RCTConvert.uiColor(tmp["lineColor"].intValue);
                             }
 
-                            if tmp["lineDashLengths"].isExists() {
+                            if tmp["lineDashLengths"].exists() {
                                 line.lineDashLengths = [CGFloat(tmp["lineDashLengths"].floatValue)];
                             }
 
-                            if tmp["lineDashPhase"].isExists() {
+                            if tmp["lineDashPhase"].exists() {
                                 line.lineDashPhase = CGFloat(tmp["lineDashPhase"].floatValue);
                             }
 
-                            if tmp["lineWidth"].isExists() {
+                            if tmp["lineWidth"].exists() {
                                 line.lineWidth = CGFloat(tmp["lineWidth"].floatValue);
                             }
 
-                            if tmp["valueTextColor"].isExists() {
-                                line.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
+                            if tmp["valueTextColor"].exists() {
+                                line.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
                             }
 
-                            if tmp["xOffset"].isExists() {
+                            if tmp["xOffset"].exists() {
                                 line.xOffset = CGFloat(tmp["xOffset"].floatValue);
                             }
 
-                            if tmp["yOffset"].isExists() {
+                            if tmp["yOffset"].exists() {
                                 line.yOffset = CGFloat(tmp["yOffset"].floatValue);
                             }
 
-                            if tmp["textFontName"].isExists() {
+                            if tmp["textFontName"].exists() {
                                 line.valueFont = UIFont(
                                     name: tmp["textFontName"].stringValue,
                                     size: line.valueFont.pointSize
                                     )!;
                             }
 
-                            if tmp["textSize"].isExists() {
-                                line.valueFont = line.valueFont.fontWithSize(CGFloat(tmp["textSize"].floatValue));
+                            if tmp["textSize"].exists() {
+                                line.valueFont = line.valueFont.withSize(CGFloat(tmp["textSize"].floatValue));
                             }
 
                             self.rightAxis.addLimitLine(line);
@@ -599,7 +599,7 @@ extension BarLineChartViewBase {
                 }
             }
 
-            if json["rightAxis"]["position"].isExists() {
+            if json["rightAxis"]["position"].exists() {
                 switch(json["rightAxis"]["position"].stringValue) {
                 case "inside":
                     self.rightAxis.labelPosition = ChartYAxis.YAxisLabelPosition.InsideChart;
@@ -613,60 +613,60 @@ extension BarLineChartViewBase {
                 }
             }
 
-            if json["rightAxis"]["drawLimitLinesBehindData"].isExists() {
+            if json["rightAxis"]["drawLimitLinesBehindData"].exists() {
                 self.rightAxis.drawLimitLinesBehindDataEnabled = json["rightAxis"]["drawLimitLinesBehindData"].boolValue;
             }
 
-            if json["rightAxis"]["spaceTop"].isExists() {
+            if json["rightAxis"]["spaceTop"].exists() {
                 self.rightAxis.spaceTop = CGFloat(json["rightAxis"]["spaceTop"].floatValue);
             }
 
-            if json["rightAxis"]["spaceBottom"].isExists() {
+            if json["rightAxis"]["spaceBottom"].exists() {
                 self.rightAxis.spaceBottom = CGFloat(json["rightAxis"]["spaceBottom"].floatValue);
             }
 
-            if json["rightAxis"]["startAtZero"].isExists() {
+            if json["rightAxis"]["startAtZero"].exists() {
                 self.rightAxis.startAtZeroEnabled = json["rightAxis"]["startAtZeroEnabled"].boolValue;
             }
 
-            if json["rightAxis"]["axisMinimum"].isExists() {
+            if json["rightAxis"]["axisMinimum"].exists() {
                 self.rightAxis.customAxisMin = json["rightAxis"]["axisMinimum"].doubleValue;
             }
 
-            if json["rightAxis"]["axisMaximum"].isExists() {
+            if json["rightAxis"]["axisMaximum"].exists() {
                 self.rightAxis.customAxisMax = json["rightAxis"]["axisMaximum"].doubleValue;
             }
 
-            if json["rightAxis"]["labelCount"].isExists() {
+            if json["rightAxis"]["labelCount"].exists() {
               self.rightAxis.labelCount = json["rightAxis"]["labelCount"].intValue;
             }
         }
 
-        if json["valueFormatter"].isExists() {
-            if json["valueFormatter"]["minimumDecimalPlaces"].isExists() {
+        if json["valueFormatter"].exists() {
+            if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                 minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
             }
-            if json["valueFormatter"]["maximumDecimalPlaces"].isExists() {
+            if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                 maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
             }
 
-            if json["valueFormatter"]["type"].isExists() {
+            if json["valueFormatter"]["type"].exists() {
                 switch(json["valueFormatter"]["type"]) {
                 case "regular":
-                    self.leftAxis.valueFormatter = NSNumberFormatter();
-                    self.rightAxis.valueFormatter = NSNumberFormatter();
+                    self.leftAxis.valueFormatter = NumberFormatter();
+                    self.rightAxis.valueFormatter = NumberFormatter();
                     break;
                 case "abbreviated":
                     self.leftAxis.valueFormatter = ABNumberFormatter(minimumDecimalPlaces: minimumDecimalPlaces, maximumDecimalPlaces: maximumDecimalPlaces);
                     self.rightAxis.valueFormatter = ABNumberFormatter(minimumDecimalPlaces: minimumDecimalPlaces, maximumDecimalPlaces: maximumDecimalPlaces);
                     break;
                 default:
-                    self.leftAxis.valueFormatter = NSNumberFormatter();
-                    self.rightAxis.valueFormatter = NSNumberFormatter();
+                    self.leftAxis.valueFormatter = NumberFormatter();
+                    self.rightAxis.valueFormatter = NumberFormatter();
                 }
             }
 
-            if json["valueFormatter"]["numberStyle"].isExists() {
+            if json["valueFormatter"]["numberStyle"].exists() {
                 switch(json["valueFormatter"]["numberStyle"]) {
                 case "CurrencyAccountingStyle":
                     if #available(iOS 9.0, *) {
@@ -728,12 +728,12 @@ extension BarLineChartViewBase {
             self.rightAxis.valueFormatter?.maximumFractionDigits = maximumDecimalPlaces;
         }
         
-        if json["viewport"].isExists() {
+        if json["viewport"].exists() {
             
-            if json["viewport"]["left"].isExists() &&
-                json["viewport"]["top"].isExists() &&
-                json["viewport"]["right"].isExists() &&
-                json["viewport"]["bottom"].isExists() {
+            if json["viewport"]["left"].exists() &&
+                json["viewport"]["top"].exists() &&
+                json["viewport"]["right"].exists() &&
+                json["viewport"]["bottom"].exists() {
                 
                 self.setViewPortOffsets(
                     left: CGFloat(json["viewport"]["left"].floatValue),

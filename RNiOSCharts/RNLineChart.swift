@@ -23,7 +23,7 @@ class RNLineChart : LineChartView {
         fatalError("init(coder:) has not been implemented");
     }
     
-    func setConfig(config: String!) {
+    func setConfig(_ config: String!) {
         self.descriptionText = "";
         
         setBarLineChartViewBaseProps(config);
@@ -31,7 +31,7 @@ class RNLineChart : LineChartView {
         var labels: [String] = [];
         
         var json: JSON = nil;
-        if let data = config.dataUsingEncoding(NSUTF8StringEncoding) {
+        if let data = config.data(using: String.Encoding.utf8) {
             json = JSON(data: data);
         };
         
