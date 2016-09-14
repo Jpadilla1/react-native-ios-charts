@@ -15,7 +15,7 @@ var maximumDecimalPlaces: Int = 0;
 var minimumDecimalPlaces: Int = 0;
 
 func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
-    if !json["dataSets"].isExists() {
+    if !json["dataSets"].exists() {
         return LineChartData();
     }
     
@@ -24,9 +24,9 @@ func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
     
     for set in dataSets! {
         let tmp = JSON(set);
-        if tmp["values"].isExists() {
+        if tmp["values"].exists() {
             let values = tmp["values"].arrayObject as! [Double];
-            let label = tmp["label"].isExists() ? tmp["label"].stringValue : "";
+            let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [ChartDataEntry] = [];
             
             for i in 0..<values.count {
@@ -36,187 +36,187 @@ func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
             
             let dataSet = LineChartDataSet(yVals: dataEntries, label: label);
             
-            if tmp["colors"].isExists() {
+            if tmp["colors"].exists() {
                 let arrColors = tmp["colors"].arrayObject as! [Int];
-                dataSet.colors = arrColors.map({return RCTConvert.UIColor($0)});
+                dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
             }
             
-            if tmp["drawCircles"].isExists() {
+            if tmp["drawCircles"].exists() {
                 dataSet.drawCirclesEnabled = tmp["drawCircles"].boolValue;
             }
             
-            if tmp["lineWidth"].isExists() {
+            if tmp["lineWidth"].exists() {
                 dataSet.lineWidth = CGFloat(tmp["lineWidth"].floatValue);
             }
             
-            if tmp["circleColors"].isExists() {
+            if tmp["circleColors"].exists() {
                 let arrColors = tmp["circleColors"].arrayObject as! [Int];
-                dataSet.circleColors = arrColors.map({return RCTConvert.UIColor($0)});
+                dataSet.circleColors = arrColors.map({return RCTConvert.uiColor($0)});
             }
             
-            if tmp["circleHoleColor"].isExists() {
-                dataSet.circleHoleColor = RCTConvert.UIColor(tmp["circleHoleColor"].intValue);
+            if tmp["circleHoleColor"].exists() {
+                dataSet.circleHoleColor = RCTConvert.uiColor(tmp["circleHoleColor"].intValue);
             }
             
-            if tmp["circleRadius"].isExists() {
+            if tmp["circleRadius"].exists() {
                 dataSet.circleRadius = CGFloat(tmp["circleRadius"].floatValue);
             }
             
-            if tmp["cubicIntensity"].isExists() {
+            if tmp["cubicIntensity"].exists() {
                 dataSet.cubicIntensity = CGFloat(tmp["cubicIntensity"].floatValue);
             }
             
-            if tmp["drawCircleHole"].isExists() {
+            if tmp["drawCircleHole"].exists() {
                 dataSet.drawCircleHoleEnabled = tmp["drawCircleHole"].boolValue;
             }
             
-            if tmp["drawCubic"].isExists() {
+            if tmp["drawCubic"].exists() {
                 dataSet.drawCubicEnabled = tmp["drawCubic"].boolValue;
             }
             
-            if tmp["drawFilled"].isExists() {
+            if tmp["drawFilled"].exists() {
                 dataSet.drawFilledEnabled = tmp["drawFilled"].boolValue;
             }
             
-            if tmp["drawHorizontalHighlightIndicator"].isExists() {
+            if tmp["drawHorizontalHighlightIndicator"].exists() {
                 dataSet.drawHorizontalHighlightIndicatorEnabled = tmp["drawHorizontalHighlightIndicator"].boolValue;
             }
             
-            if tmp["drawVerticalHighlightIndicator"].isExists() {
+            if tmp["drawVerticalHighlightIndicator"].exists() {
                 dataSet.drawVerticalHighlightIndicatorEnabled = tmp["drawVerticalHighlightIndicator"].boolValue;
             }
             
-            if tmp["drawValues"].isExists() {
+            if tmp["drawValues"].exists() {
                 dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
             }
             
-            if tmp["fillAlpha"].isExists() {
+            if tmp["fillAlpha"].exists() {
                 dataSet.fillAlpha = CGFloat(tmp["fillAlpha"].floatValue);
             }
             
-            if tmp["fillColor"].isExists() {
-                dataSet.fillColor = RCTConvert.UIColor(tmp["fillColor"].intValue);
+            if tmp["fillColor"].exists() {
+                dataSet.fillColor = RCTConvert.uiColor(tmp["fillColor"].intValue);
             }
             
-            if tmp["highlightColor"].isExists() {
-                dataSet.highlightColor = RCTConvert.UIColor(tmp["highlightColor"].intValue);
+            if tmp["highlightColor"].exists() {
+                dataSet.highlightColor = RCTConvert.uiColor(tmp["highlightColor"].intValue);
             }
             
-            if tmp["highlightEnabled"].isExists() {
+            if tmp["highlightEnabled"].exists() {
                 dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
             }
             
-            if tmp["highlightLineDashLengths"].isExists() {
+            if tmp["highlightLineDashLengths"].exists() {
                 dataSet.highlightLineDashLengths = [CGFloat(tmp["highlightLineDashLengths"].floatValue)];
             }
             
-            if tmp["highlightLineDashPhase"].isExists() {
+            if tmp["highlightLineDashPhase"].exists() {
                 dataSet.highlightLineDashPhase = CGFloat(tmp["highlightLineDashPhase"].floatValue);
             }
             
-            if tmp["highlightLineWidth"].isExists() {
+            if tmp["highlightLineWidth"].exists() {
                 dataSet.highlightLineWidth = CGFloat(tmp["highlightLineWidth"].floatValue);
             }
             
-            if tmp["lineDashLengths"].isExists() {
+            if tmp["lineDashLengths"].exists() {
                 dataSet.lineDashLengths = [CGFloat(tmp["lineDashLengths"].floatValue)];
             }
             
-            if tmp["lineDashPhase"].isExists() {
+            if tmp["lineDashPhase"].exists() {
                 dataSet.lineDashPhase = CGFloat(tmp["lineDashPhase"].floatValue);
             }
             
-            if tmp["lineWidth"].isExists() {
+            if tmp["lineWidth"].exists() {
                 dataSet.lineWidth = CGFloat(tmp["lineWidth"].floatValue);
             }
             
-            if tmp["axisDependency"].isExists() {
+            if tmp["axisDependency"].exists() {
                 let value = tmp["axisDependency"].stringValue;
                 if value == "left" {
-                    dataSet.axisDependency = .Left;
+                    dataSet.axisDependency = .left;
                 } else if value == "right" {
-                    dataSet.axisDependency = .Right;
+                    dataSet.axisDependency = .right;
                 }
             }
             
-            if tmp["valueTextFontName"].isExists() {
+            if tmp["valueTextFontName"].exists() {
                 dataSet.valueFont = UIFont(
                     name: tmp["valueTextFontName"].stringValue,
                     size: dataSet.valueFont.pointSize
                     )!;
             }
             
-            if tmp["valueTextFontSize"].isExists() {
-                dataSet.valueFont = dataSet.valueFont.fontWithSize(CGFloat(tmp["valueTextFontSize"].floatValue));
+            if tmp["valueTextFontSize"].exists() {
+                dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue));
             }
             
-            if tmp["valueTextColor"].isExists() {
-                dataSet.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
+            if tmp["valueTextColor"].exists() {
+                dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
             }
             
-            if json["valueFormatter"].isExists() {
-                if json["valueFormatter"]["minimumDecimalPlaces"].isExists() {
+            if json["valueFormatter"].exists() {
+                if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                     minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
                 }
-                if json["valueFormatter"]["maximumDecimalPlaces"].isExists() {
+                if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                     maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
                 }
                 
-                if json["valueFormatter"]["type"].isExists() {
+                if json["valueFormatter"]["type"].exists() {
                     switch(json["valueFormatter"]["type"]) {
                     case "regular":
-                        dataSet.valueFormatter = NSNumberFormatter();
+                        dataSet.valueFormatter = NumberFormatter();
                         break;
                     case "abbreviated":
                         dataSet.valueFormatter = ABNumberFormatter(minimumDecimalPlaces: minimumDecimalPlaces, maximumDecimalPlaces: maximumDecimalPlaces);
                         break;
                     default:
-                        dataSet.valueFormatter = NSNumberFormatter();
+                        dataSet.valueFormatter = NumberFormatter();
                     }
                 }
                 
-                if json["valueFormatter"]["numberStyle"].isExists() {
+                if json["valueFormatter"]["numberStyle"].exists() {
                     switch(json["valueFormatter"]["numberStyle"]) {
                     case "CurrencyAccountingStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyAccounting;
                         }
                         break;
                     case "CurrencyISOCodeStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyISOCode;
                         }
                         break;
                     case "CurrencyPluralStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyPluralStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyPlural;
                         }
                         break;
                     case "CurrencyStyle":
-                        dataSet.valueFormatter?.numberStyle = .CurrencyStyle;
+                        dataSet.valueFormatter?.numberStyle = .currency;
                         break;
                     case "DecimalStyle":
-                        dataSet.valueFormatter?.numberStyle = .DecimalStyle;
+                        dataSet.valueFormatter?.numberStyle = .decimal;
                         break;
                     case "NoStyle":
-                        dataSet.valueFormatter?.numberStyle = .NoStyle;
+                        dataSet.valueFormatter?.numberStyle = .none;
                         break;
                     case "OrdinalStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .OrdinalStyle;
+                            dataSet.valueFormatter?.numberStyle = .ordinal;
                         }
                         break;
                     case "PercentStyle":
-                        dataSet.valueFormatter?.numberStyle = .PercentStyle;
+                        dataSet.valueFormatter?.numberStyle = .percent;
                         break;
                     case "ScientificStyle":
-                        dataSet.valueFormatter?.numberStyle = .ScientificStyle;
+                        dataSet.valueFormatter?.numberStyle = .scientific;
                         break;
                     case "SpellOutStyle":
-                        dataSet.valueFormatter?.numberStyle = .SpellOutStyle;
+                        dataSet.valueFormatter?.numberStyle = .spellOut;
                         break;
                     default:
-                        dataSet.valueFormatter?.numberStyle = .NoStyle;
+                        dataSet.valueFormatter?.numberStyle = .none;
                     }
                 }
                 
@@ -232,7 +232,7 @@ func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
 
 
 func getBarData(_ labels: [String], json: JSON!) -> BarChartData {
-    if !json["dataSets"].isExists() {
+    if !json["dataSets"].exists() {
         return BarChartData();
     }
     
@@ -241,9 +241,9 @@ func getBarData(_ labels: [String], json: JSON!) -> BarChartData {
     
     for set in dataSets! {
         let tmp = JSON(set);
-        if tmp["values"].isExists() {
+        if tmp["values"].exists() {
             let values = tmp["values"].arrayObject as! [Double];
-            let label = tmp["label"].isExists() ? tmp["label"].stringValue : "";
+            let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [BarChartDataEntry] = [];
             
             for i in 0..<values.count {
@@ -253,138 +253,138 @@ func getBarData(_ labels: [String], json: JSON!) -> BarChartData {
             
             let dataSet = BarChartDataSet(yVals: dataEntries, label: label);
             
-            if tmp["barShadowColor"].isExists() {
-                dataSet.barShadowColor = RCTConvert.UIColor(tmp["barShadowColor"].intValue);
+            if tmp["barShadowColor"].exists() {
+                dataSet.barShadowColor = RCTConvert.uiColor(tmp["barShadowColor"].intValue);
             }
             
-            if tmp["barSpace"].isExists() {
+            if tmp["barSpace"].exists() {
                 dataSet.barSpace = CGFloat(tmp["barSpace"].floatValue);
             }
             
-            if tmp["highlightAlpha"].isExists() {
+            if tmp["highlightAlpha"].exists() {
                 dataSet.highlightAlpha = CGFloat(tmp["highlightAlpha"].floatValue);
             }
             
-            if tmp["highlightColor"].isExists() {
-                dataSet.highlightColor = RCTConvert.UIColor(tmp["highlightColor"].intValue);
+            if tmp["highlightColor"].exists() {
+                dataSet.highlightColor = RCTConvert.uiColor(tmp["highlightColor"].intValue);
             }
             
-            if tmp["highlightLineDashLengths"].isExists() {
+            if tmp["highlightLineDashLengths"].exists() {
                 dataSet.highlightLineDashLengths = [CGFloat(tmp["highlightLineDashLengths"].floatValue)];
             }
             
-            if tmp["highlightLineDashPhase"].isExists() {
+            if tmp["highlightLineDashPhase"].exists() {
                 dataSet.highlightLineDashPhase = CGFloat(tmp["highlightLineDashPhase"].floatValue);
             }
             
-            if tmp["highlightLineWidth"].isExists() {
+            if tmp["highlightLineWidth"].exists() {
                 dataSet.highlightLineWidth = CGFloat(tmp["highlightLineWidth"].floatValue);
             }
             
-            if tmp["stackLabels"].isExists() {
+            if tmp["stackLabels"].exists() {
                 dataSet.stackLabels = tmp["stackLabels"].arrayObject as! [String];
             }
             
-            if tmp["colors"].isExists() {
+            if tmp["colors"].exists() {
                 let arrColors = tmp["colors"].arrayObject as! [Int];
-                dataSet.colors = arrColors.map({return RCTConvert.UIColor($0)});
+                dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
             }
             
-            if tmp["drawValues"].isExists() {
+            if tmp["drawValues"].exists() {
                 dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
             }
             
-            if tmp["highlightEnabled"].isExists() {
+            if tmp["highlightEnabled"].exists() {
                 dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
             }
             
-            if tmp["valueTextFontName"].isExists() {
+            if tmp["valueTextFontName"].exists() {
                 dataSet.valueFont = UIFont(
                     name: tmp["valueTextFontName"].stringValue,
                     size: dataSet.valueFont.pointSize
                     )!;
             }
             
-            if tmp["valueTextFontSize"].isExists() {
-                dataSet.valueFont = dataSet.valueFont.fontWithSize(CGFloat(tmp["valueTextFontSize"].floatValue))
+            if tmp["valueTextFontSize"].exists() {
+                dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue))
             }
             
-            if tmp["valueTextColor"].isExists() {
-                dataSet.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
+            if tmp["valueTextColor"].exists() {
+                dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
             }
             
-            if tmp["axisDependency"].isExists() {
+            if tmp["axisDependency"].exists() {
                 let value = tmp["axisDependency"].stringValue;
                 if value == "left" {
-                    dataSet.axisDependency = .Left;
+                    dataSet.axisDependency = .left;
                 } else if value == "right" {
-                    dataSet.axisDependency = .Right;
+                    dataSet.axisDependency = .right;
                 }
             }
             
-            if json["valueFormatter"].isExists() {
-                if json["valueFormatter"]["minimumDecimalPlaces"].isExists() {
+            if json["valueFormatter"].exists() {
+                if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                     minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
                 }
-                if json["valueFormatter"]["maximumDecimalPlaces"].isExists() {
+                if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                     maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
                 }
                 
-                if json["valueFormatter"]["type"].isExists() {
+                if json["valueFormatter"]["type"].exists() {
                     switch(json["valueFormatter"]["type"]) {
                     case "regular":
-                        dataSet.valueFormatter = NSNumberFormatter();
+                        dataSet.valueFormatter = NumberFormatter();
                         break;
                     case "abbreviated":
                         dataSet.valueFormatter = ABNumberFormatter(minimumDecimalPlaces: minimumDecimalPlaces, maximumDecimalPlaces: maximumDecimalPlaces);
                         break;
                     default:
-                        dataSet.valueFormatter = NSNumberFormatter();
+                        dataSet.valueFormatter = NumberFormatter();
                     }
                 }
                 
-                if json["valueFormatter"]["numberStyle"].isExists() {
+                if json["valueFormatter"]["numberStyle"].exists() {
                     switch(json["valueFormatter"]["numberStyle"]) {
                     case "CurrencyAccountingStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyAccounting;
                         }
                         break;
                     case "CurrencyISOCodeStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyISOCode;
                         }
                         break;
                     case "CurrencyPluralStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyPluralStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyPlural;
                         }
                         break;
                     case "CurrencyStyle":
-                        dataSet.valueFormatter?.numberStyle = .CurrencyStyle;
+                        dataSet.valueFormatter?.numberStyle = .currency;
                         break;
                     case "DecimalStyle":
-                        dataSet.valueFormatter?.numberStyle = .DecimalStyle;
+                        dataSet.valueFormatter?.numberStyle = .decimal;
                         break;
                     case "NoStyle":
-                        dataSet.valueFormatter?.numberStyle = .NoStyle;
+                        dataSet.valueFormatter?.numberStyle = .none;
                         break;
                     case "OrdinalStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .OrdinalStyle;
+                            dataSet.valueFormatter?.numberStyle = .ordinal;
                         }
                         break;
                     case "PercentStyle":
-                        dataSet.valueFormatter?.numberStyle = .PercentStyle;
+                        dataSet.valueFormatter?.numberStyle = .percent;
                         break;
                     case "ScientificStyle":
-                        dataSet.valueFormatter?.numberStyle = .ScientificStyle;
+                        dataSet.valueFormatter?.numberStyle = .scientific;
                         break;
                     case "SpellOutStyle":
-                        dataSet.valueFormatter?.numberStyle = .SpellOutStyle;
+                        dataSet.valueFormatter?.numberStyle = .spellOut;
                         break;
                     default:
-                        dataSet.valueFormatter?.numberStyle = .NoStyle;
+                        dataSet.valueFormatter?.numberStyle = .none;
                     }
                 }
                 
@@ -400,7 +400,7 @@ func getBarData(_ labels: [String], json: JSON!) -> BarChartData {
 
 
 func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
-    if !json["dataSets"].isExists() {
+    if !json["dataSets"].exists() {
         return BubbleChartData();
     }
     
@@ -410,9 +410,9 @@ func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
     
     for set in dataSets! {
         let tmp = JSON(set);
-        if tmp["values"].isExists() {
+        if tmp["values"].exists() {
             let values = tmp["values"].arrayObject!;
-            let label = tmp["label"].isExists() ? tmp["label"].stringValue : "";
+            let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [BubbleChartDataEntry] = [];
             
             for i in 0..<values.count {
@@ -427,110 +427,110 @@ func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
             
             let dataSet = BubbleChartDataSet(yVals: dataEntries, label: label);
             
-            if tmp["colors"].isExists() {
+            if tmp["colors"].exists() {
                 let arrColors = tmp["colors"].arrayObject as! [Int];
-                dataSet.colors = arrColors.map({return RCTConvert.UIColor($0)});
+                dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
             }
             
-            if tmp["drawValues"].isExists() {
+            if tmp["drawValues"].exists() {
                 dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
             }
             
-            if tmp["highlightEnabled"].isExists() {
+            if tmp["highlightEnabled"].exists() {
                 dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
             }
             
-            if tmp["highlightCircleWidth"].isExists() {
+            if tmp["highlightCircleWidth"].exists() {
                 dataSet.highlightCircleWidth = CGFloat(tmp["highlightCircleWidth"].floatValue);
             }
             
-            if tmp["valueTextFontName"].isExists() {
+            if tmp["valueTextFontName"].exists() {
                 dataSet.valueFont = UIFont(
                     name: tmp["valueTextFontName"].stringValue,
                     size: dataSet.valueFont.pointSize
                     )!;
             }
             
-            if tmp["axisDependency"].isExists() {
+            if tmp["axisDependency"].exists() {
                 let value = tmp["axisDependency"].stringValue;
                 if value == "left" {
-                    dataSet.axisDependency = .Left;
+                    dataSet.axisDependency = .left;
                 } else if value == "right" {
-                    dataSet.axisDependency = .Right;
+                    dataSet.axisDependency = .right;
                 }
             }
             
-            if tmp["valueTextFontSize"].isExists() {
-                dataSet.valueFont = dataSet.valueFont.fontWithSize(CGFloat(tmp["valueTextFontSize"].floatValue))
+            if tmp["valueTextFontSize"].exists() {
+                dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue))
             }
             
-            if tmp["valueTextColor"].isExists() {
-                dataSet.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
+            if tmp["valueTextColor"].exists() {
+                dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
             }
             
-            if json["valueFormatter"].isExists() {
-                if json["valueFormatter"]["minimumDecimalPlaces"].isExists() {
+            if json["valueFormatter"].exists() {
+                if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                     minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
                 }
-                if json["valueFormatter"]["maximumDecimalPlaces"].isExists() {
+                if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                     maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
                 }
                 
-                if json["valueFormatter"]["type"].isExists() {
+                if json["valueFormatter"]["type"].exists() {
                     switch(json["valueFormatter"]["type"]) {
                     case "regular":
-                        dataSet.valueFormatter = NSNumberFormatter();
+                        dataSet.valueFormatter = NumberFormatter();
                         break;
                     case "abbreviated":
                         dataSet.valueFormatter = ABNumberFormatter(minimumDecimalPlaces: minimumDecimalPlaces, maximumDecimalPlaces: maximumDecimalPlaces);
                         break;
                     default:
-                        dataSet.valueFormatter = NSNumberFormatter();
+                        dataSet.valueFormatter = NumberFormatter();
                     }
                 }
                 
-                if json["valueFormatter"]["numberStyle"].isExists() {
+                if json["valueFormatter"]["numberStyle"].exists() {
                     switch(json["valueFormatter"]["numberStyle"]) {
                     case "CurrencyAccountingStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyAccounting;
                         }
                         break;
                     case "CurrencyISOCodeStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyISOCode;
                         }
                         break;
                     case "CurrencyPluralStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyPluralStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyPlural;
                         }
                         break;
                     case "CurrencyStyle":
-                        dataSet.valueFormatter?.numberStyle = .CurrencyStyle;
+                        dataSet.valueFormatter?.numberStyle = .currency;
                         break;
                     case "DecimalStyle":
-                        dataSet.valueFormatter?.numberStyle = .DecimalStyle;
+                        dataSet.valueFormatter?.numberStyle = .decimal;
                         break;
                     case "NoStyle":
-                        dataSet.valueFormatter?.numberStyle = .NoStyle;
+                        dataSet.valueFormatter?.numberStyle = .none;
                         break;
                     case "OrdinalStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .OrdinalStyle;
+                            dataSet.valueFormatter?.numberStyle = .ordinal;
                         }
                         break;
                     case "PercentStyle":
-                        dataSet.valueFormatter?.numberStyle = .PercentStyle;
+                        dataSet.valueFormatter?.numberStyle = .percent;
                         break;
                     case "ScientificStyle":
-                        dataSet.valueFormatter?.numberStyle = .ScientificStyle;
+                        dataSet.valueFormatter?.numberStyle = .scientific;
                         break;
                     case "SpellOutStyle":
-                        dataSet.valueFormatter?.numberStyle = .SpellOutStyle;
+                        dataSet.valueFormatter?.numberStyle = .spellOut;
                         break;
                     default:
-                        dataSet.valueFormatter?.numberStyle = .NoStyle;
+                        dataSet.valueFormatter?.numberStyle = .none;
                     }
                 }
                 
@@ -545,7 +545,7 @@ func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
 }
 
 func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
-    if !json["dataSets"].isExists() {
+    if !json["dataSets"].exists() {
         return ScatterChartData();
     }
     
@@ -555,9 +555,9 @@ func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
     
     for set in dataSets! {
         let tmp = JSON(set);
-        if tmp["values"].isExists() {
+        if tmp["values"].exists() {
             let values = tmp["values"].arrayObject as! [Double];
-            let label = tmp["label"].isExists() ? tmp["label"].stringValue : "";
+            let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [ChartDataEntry] = [];
             
             for i in 0..<values.count {
@@ -567,141 +567,141 @@ func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
             
             let dataSet = ScatterChartDataSet(yVals: dataEntries, label: label);
             
-            if tmp["colors"].isExists() {
+            if tmp["colors"].exists() {
                 let arrColors = tmp["colors"].arrayObject as! [Int];
-                dataSet.colors = arrColors.map({return RCTConvert.UIColor($0)});
+                dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
             }
             
-            if tmp["drawValues"].isExists() {
+            if tmp["drawValues"].exists() {
                 dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
             }
             
-            if tmp["highlightEnabled"].isExists() {
+            if tmp["highlightEnabled"].exists() {
                 dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
             }
             
-            if tmp["scatterShapeSize"].isExists() {
+            if tmp["scatterShapeSize"].exists() {
                 dataSet.scatterShapeSize = CGFloat(tmp["scatterShapeSize"].floatValue);
             }
             
-            if tmp["scatterShapeHoleRadius"].isExists() {
+            if tmp["scatterShapeHoleRadius"].exists() {
                 dataSet.scatterShapeHoleRadius = CGFloat(tmp["scatterShapeHoleRadius"].floatValue);
             }
             
-            if tmp["scatterShapeHoleColor"].isExists() {
-                dataSet.scatterShapeHoleColor = RCTConvert.UIColor(tmp["scatterShapeHoleColor"].intValue);
+            if tmp["scatterShapeHoleColor"].exists() {
+                dataSet.scatterShapeHoleColor = RCTConvert.uiColor(tmp["scatterShapeHoleColor"].intValue);
             }
             
-            if tmp["scatterShape"].isExists() {
+            if tmp["scatterShape"].exists() {
                 switch(tmp["scatterShape"]) {
                 case "Square":
-                    dataSet.scatterShape = .Square;
+                    dataSet.scatterShape = .square;
                     break;
                 case "Circle":
-                    dataSet.scatterShape = .Circle;
+                    dataSet.scatterShape = .circle;
                     break;
                 case "Triangle":
-                    dataSet.scatterShape = .Triangle;
+                    dataSet.scatterShape = .triangle;
                     break;
                 case "Cross":
-                    dataSet.scatterShape = .Cross;
+                    dataSet.scatterShape = .cross;
                     break;
                 case "X":
-                    dataSet.scatterShape = .X;
+                    dataSet.scatterShape = .x;
                     break;
                 default:
-                    dataSet.scatterShape = .Square;
+                    dataSet.scatterShape = .square;
                     break;
                 }
             }
             
-            if tmp["valueTextFontName"].isExists() {
+            if tmp["valueTextFontName"].exists() {
                 dataSet.valueFont = UIFont(
                     name: tmp["valueTextFontName"].stringValue,
                     size: dataSet.valueFont.pointSize
                     )!;
             }
             
-            if tmp["valueTextFontSize"].isExists() {
-                dataSet.valueFont = dataSet.valueFont.fontWithSize(CGFloat(tmp["valueTextFontSize"].floatValue))
+            if tmp["valueTextFontSize"].exists() {
+                dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue))
             }
             
-            if tmp["valueTextColor"].isExists() {
-                dataSet.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
+            if tmp["valueTextColor"].exists() {
+                dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
             }
             
-            if tmp["axisDependency"].isExists() {
+            if tmp["axisDependency"].exists() {
                 let value = tmp["axisDependency"].stringValue;
                 if value == "left" {
-                    dataSet.axisDependency = .Left;
+                    dataSet.axisDependency = .left;
                 } else if value == "right" {
-                    dataSet.axisDependency = .Right;
+                    dataSet.axisDependency = .right;
                 }
             }
             
-            if json["valueFormatter"].isExists() {
-                if json["valueFormatter"]["minimumDecimalPlaces"].isExists() {
+            if json["valueFormatter"].exists() {
+                if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                     minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
                 }
-                if json["valueFormatter"]["maximumDecimalPlaces"].isExists() {
+                if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                     maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
                 }
                 
-                if json["valueFormatter"]["type"].isExists() {
+                if json["valueFormatter"]["type"].exists() {
                     switch(json["valueFormatter"]["type"]) {
                     case "regular":
-                        dataSet.valueFormatter = NSNumberFormatter();
+                        dataSet.valueFormatter = NumberFormatter();
                         break;
                     case "abbreviated":
                         dataSet.valueFormatter = ABNumberFormatter(minimumDecimalPlaces: minimumDecimalPlaces, maximumDecimalPlaces: maximumDecimalPlaces);
                         break;
                     default:
-                        dataSet.valueFormatter = NSNumberFormatter();
+                        dataSet.valueFormatter = NumberFormatter();
                     }
                 }
                 
-                if json["valueFormatter"]["numberStyle"].isExists() {
+                if json["valueFormatter"]["numberStyle"].exists() {
                     switch(json["valueFormatter"]["numberStyle"]) {
                     case "CurrencyAccountingStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyAccounting;
                         }
                         break;
                     case "CurrencyISOCodeStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyISOCode;
                         }
                         break;
                     case "CurrencyPluralStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyPluralStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyPlural;
                         }
                         break;
                     case "CurrencyStyle":
-                        dataSet.valueFormatter?.numberStyle = .CurrencyStyle;
+                        dataSet.valueFormatter?.numberStyle = .currency;
                         break;
                     case "DecimalStyle":
-                        dataSet.valueFormatter?.numberStyle = .DecimalStyle;
+                        dataSet.valueFormatter?.numberStyle = .decimal;
                         break;
                     case "NoStyle":
-                        dataSet.valueFormatter?.numberStyle = .NoStyle;
+                        dataSet.valueFormatter?.numberStyle = .none;
                         break;
                     case "OrdinalStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .OrdinalStyle;
+                            dataSet.valueFormatter?.numberStyle = .ordinal;
                         }
                         break;
                     case "PercentStyle":
-                        dataSet.valueFormatter?.numberStyle = .PercentStyle;
+                        dataSet.valueFormatter?.numberStyle = .percent;
                         break;
                     case "ScientificStyle":
-                        dataSet.valueFormatter?.numberStyle = .ScientificStyle;
+                        dataSet.valueFormatter?.numberStyle = .scientific;
                         break;
                     case "SpellOutStyle":
-                        dataSet.valueFormatter?.numberStyle = .SpellOutStyle;
+                        dataSet.valueFormatter?.numberStyle = .spellOut;
                         break;
                     default:
-                        dataSet.valueFormatter?.numberStyle = .NoStyle;
+                        dataSet.valueFormatter?.numberStyle = .none;
                     }
                 }
                 
@@ -716,7 +716,7 @@ func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
 }
 
 func getCandleStickData(_ labels: [String], json: JSON!) -> CandleChartData {
-    if !json["dataSets"].isExists() {
+    if !json["dataSets"].exists() {
         return CandleChartData();
     }
     
@@ -726,9 +726,9 @@ func getCandleStickData(_ labels: [String], json: JSON!) -> CandleChartData {
     
     for set in dataSets! {
         let tmp = JSON(set);
-        if tmp["values"].isExists() {
+        if tmp["values"].exists() {
             let values = tmp["values"].arrayObject!;
-            let label = tmp["label"].isExists() ? tmp["label"].stringValue : "";
+            let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [CandleChartDataEntry] = [];
             
             for i in 0..<values.count {
@@ -745,146 +745,146 @@ func getCandleStickData(_ labels: [String], json: JSON!) -> CandleChartData {
             
             let dataSet = CandleChartDataSet(yVals: dataEntries, label: label);
             
-            if tmp["colors"].isExists() {
+            if tmp["colors"].exists() {
                 let arrColors = tmp["colors"].arrayObject as! [Int];
-                dataSet.colors = arrColors.map({return RCTConvert.UIColor($0)});
+                dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
             }
             
-            if tmp["drawValues"].isExists() {
+            if tmp["drawValues"].exists() {
                 dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
             }
             
-            if tmp["highlightEnabled"].isExists() {
+            if tmp["highlightEnabled"].exists() {
                 dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
             }
             
-            if tmp["valueTextFontName"].isExists() {
+            if tmp["valueTextFontName"].exists() {
                 dataSet.valueFont = UIFont(
                     name: tmp["valueTextFontName"].stringValue,
                     size: dataSet.valueFont.pointSize
                     )!;
             }
             
-            if tmp["valueTextFontSize"].isExists() {
-                dataSet.valueFont = dataSet.valueFont.fontWithSize(CGFloat(tmp["valueTextFontSize"].floatValue))
+            if tmp["valueTextFontSize"].exists() {
+                dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue))
             }
             
-            if tmp["valueTextColor"].isExists() {
-                dataSet.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
+            if tmp["valueTextColor"].exists() {
+                dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
             }
             
-            if tmp["axisDependency"].isExists() {
+            if tmp["axisDependency"].exists() {
                 let value = tmp["axisDependency"].stringValue;
                 if value == "left" {
-                    dataSet.axisDependency = .Left;
+                    dataSet.axisDependency = .left;
                 } else if value == "right" {
-                    dataSet.axisDependency = .Right;
+                    dataSet.axisDependency = .right;
                 }
             }
 
-            if tmp["barSpace"].isExists() {
+            if tmp["barSpace"].exists() {
                 dataSet.barSpace = CGFloat(tmp["barSpace"].floatValue);
             }
 
-            if tmp["showCandleBar"].isExists() {
+            if tmp["showCandleBar"].exists() {
                 dataSet.showCandleBar = tmp["showCandleBar"].boolValue;
             }
 
-            if tmp["shadowWidth"].isExists() {
+            if tmp["shadowWidth"].exists() {
                 dataSet.shadowWidth = CGFloat(tmp["shadowWidth"].floatValue);
             }
 
-            if tmp["shadowColor"].isExists() {
-                dataSet.shadowColor = RCTConvert.UIColor(tmp["shadowColor"].intValue);
+            if tmp["shadowColor"].exists() {
+                dataSet.shadowColor = RCTConvert.uiColor(tmp["shadowColor"].intValue);
             }
 
-            if tmp["shadowColorSameAsCandle"].isExists() {
+            if tmp["shadowColorSameAsCandle"].exists() {
                 dataSet.shadowColorSameAsCandle = tmp["shadowColorSameAsCandle"].boolValue;
             }
 
-            if tmp["neutralColor"].isExists() {
-                dataSet.neutralColor = RCTConvert.UIColor(tmp["neutralColor"].intValue);
+            if tmp["neutralColor"].exists() {
+                dataSet.neutralColor = RCTConvert.uiColor(tmp["neutralColor"].intValue);
             }
 
-            if tmp["increasingColor"].isExists() {
-                dataSet.increasingColor = RCTConvert.UIColor(tmp["increasingColor"].intValue);
+            if tmp["increasingColor"].exists() {
+                dataSet.increasingColor = RCTConvert.uiColor(tmp["increasingColor"].intValue);
             }
 
-            if tmp["decreasingColor"].isExists() {
-                dataSet.decreasingColor = RCTConvert.UIColor(tmp["decreasingColor"].intValue);
+            if tmp["decreasingColor"].exists() {
+                dataSet.decreasingColor = RCTConvert.uiColor(tmp["decreasingColor"].intValue);
             }
 
-            if tmp["increasingFilled"].isExists() {
+            if tmp["increasingFilled"].exists() {
                 dataSet.increasingFilled = tmp["increasingFilled"].boolValue;
             }
 
-            if tmp["decreasingFilled"].isExists() {
+            if tmp["decreasingFilled"].exists() {
                 dataSet.decreasingFilled = tmp["decreasingFilled"].boolValue;
             }
             
-            if json["valueFormatter"].isExists() {
-                if json["valueFormatter"]["minimumDecimalPlaces"].isExists() {
+            if json["valueFormatter"].exists() {
+                if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                     minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
                 }
-                if json["valueFormatter"]["maximumDecimalPlaces"].isExists() {
+                if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                     maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
                 }
                 
-                if json["valueFormatter"]["type"].isExists() {
+                if json["valueFormatter"]["type"].exists() {
                     switch(json["valueFormatter"]["type"]) {
                     case "regular":
-                        dataSet.valueFormatter = NSNumberFormatter();
+                        dataSet.valueFormatter = NumberFormatter();
                         break;
                     case "abbreviated":
                         dataSet.valueFormatter = ABNumberFormatter(minimumDecimalPlaces: minimumDecimalPlaces, maximumDecimalPlaces: maximumDecimalPlaces);
                         break;
                     default:
-                        dataSet.valueFormatter = NSNumberFormatter();
+                        dataSet.valueFormatter = NumberFormatter();
                     }
                 }
                 
-                if json["valueFormatter"]["numberStyle"].isExists() {
+                if json["valueFormatter"]["numberStyle"].exists() {
                     switch(json["valueFormatter"]["numberStyle"]) {
                     case "CurrencyAccountingStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyAccounting;
                         }
                         break;
                     case "CurrencyISOCodeStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyISOCode;
                         }
                         break;
                     case "CurrencyPluralStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .CurrencyPluralStyle;
+                            dataSet.valueFormatter?.numberStyle = .currencyPlural;
                         }
                         break;
                     case "CurrencyStyle":
-                        dataSet.valueFormatter?.numberStyle = .CurrencyStyle;
+                        dataSet.valueFormatter?.numberStyle = .currency;
                         break;
                     case "DecimalStyle":
-                        dataSet.valueFormatter?.numberStyle = .DecimalStyle;
+                        dataSet.valueFormatter?.numberStyle = .decimal;
                         break;
                     case "NoStyle":
-                        dataSet.valueFormatter?.numberStyle = .NoStyle;
+                        dataSet.valueFormatter?.numberStyle = .none;
                         break;
                     case "OrdinalStyle":
                         if #available(iOS 9.0, *) {
-                            dataSet.valueFormatter?.numberStyle = .OrdinalStyle;
+                            dataSet.valueFormatter?.numberStyle = .ordinal;
                         }
                         break;
                     case "PercentStyle":
-                        dataSet.valueFormatter?.numberStyle = .PercentStyle;
+                        dataSet.valueFormatter?.numberStyle = .percent;
                         break;
                     case "ScientificStyle":
-                        dataSet.valueFormatter?.numberStyle = .ScientificStyle;
+                        dataSet.valueFormatter?.numberStyle = .scientific;
                         break;
                     case "SpellOutStyle":
-                        dataSet.valueFormatter?.numberStyle = .SpellOutStyle;
+                        dataSet.valueFormatter?.numberStyle = .spellOut;
                         break;
                     default:
-                        dataSet.valueFormatter?.numberStyle = .NoStyle;
+                        dataSet.valueFormatter?.numberStyle = .none;
                     }
                 }
                 

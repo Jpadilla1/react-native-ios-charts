@@ -106,7 +106,7 @@ class RNPieChart : PieChartView {
           
           if tmp["colors"].exists() {
             let arrColors = tmp["colors"].arrayObject as! [Int];
-            dataSet.colors = arrColors.map({return RCTConvert.UIColor($0)});
+            dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
           }
           
           if tmp["drawValues"].exists() {
@@ -125,11 +125,11 @@ class RNPieChart : PieChartView {
           }
           
           if tmp["valueTextFontSize"].exists() {
-            dataSet.valueFont = dataSet.valueFont.fontWithSize(CGFloat(tmp["valueTextFontSize"].floatValue))
+            dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue))
           }
           
           if tmp["valueTextColor"].exists() {
-            dataSet.valueTextColor = RCTConvert.UIColor(tmp["valueTextColor"].intValue);
+            dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
           }
           
           if json["valueFormatter"].exists() {
@@ -143,13 +143,13 @@ class RNPieChart : PieChartView {
             if json["valueFormatter"]["type"].exists() {
               switch(json["valueFormatter"]["type"]) {
               case "regular":
-                dataSet.valueFormatter = NSNumberFormatter();
+                dataSet.valueFormatter = NumberFormatter();
                 break;
               case "abbreviated":
                 dataSet.valueFormatter = ABNumberFormatter(minimumDecimalPlaces: minimumDecimalPlaces, maximumDecimalPlaces: maximumDecimalPlaces);
                 break;
               default:
-                dataSet.valueFormatter = NSNumberFormatter();
+                dataSet.valueFormatter = NumberFormatter();
               }
             }
             
@@ -157,44 +157,44 @@ class RNPieChart : PieChartView {
               switch(json["valueFormatter"]["numberStyle"]) {
               case "CurrencyAccountingStyle":
                 if #available(iOS 9.0, *) {
-                  dataSet.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
+                  dataSet.valueFormatter?.numberStyle = .currencyAccounting;
                 }
                 break;
               case "CurrencyISOCodeStyle":
                 if #available(iOS 9.0, *) {
-                  dataSet.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
+                  dataSet.valueFormatter?.numberStyle = .currencyISOCode;
                 }
                 break;
               case "CurrencyPluralStyle":
                 if #available(iOS 9.0, *) {
-                  dataSet.valueFormatter?.numberStyle = .CurrencyPluralStyle;
+                  dataSet.valueFormatter?.numberStyle = .currencyPlural;
                 }
                 break;
               case "CurrencyStyle":
-                dataSet.valueFormatter?.numberStyle = .CurrencyStyle;
+                dataSet.valueFormatter?.numberStyle = .currency;
                 break;
               case "DecimalStyle":
-                dataSet.valueFormatter?.numberStyle = .DecimalStyle;
+                dataSet.valueFormatter?.numberStyle = .decimal;
                 break;
               case "NoStyle":
-                dataSet.valueFormatter?.numberStyle = .NoStyle;
+                dataSet.valueFormatter?.numberStyle = .none;
                 break;
               case "OrdinalStyle":
                 if #available(iOS 9.0, *) {
-                  dataSet.valueFormatter?.numberStyle = .OrdinalStyle;
+                  dataSet.valueFormatter?.numberStyle = .ordinal;
                 }
                 break;
               case "PercentStyle":
-                dataSet.valueFormatter?.numberStyle = .PercentStyle;
+                dataSet.valueFormatter?.numberStyle = .percent;
                 break;
               case "ScientificStyle":
-                dataSet.valueFormatter?.numberStyle = .ScientificStyle;
+                dataSet.valueFormatter?.numberStyle = .scientific;
                 break;
               case "SpellOutStyle":
-                dataSet.valueFormatter?.numberStyle = .SpellOutStyle;
+                dataSet.valueFormatter?.numberStyle = .spellOut;
                 break;
               default:
-                dataSet.valueFormatter?.numberStyle = .NoStyle;
+                dataSet.valueFormatter?.numberStyle = .none;
               }
             }
             

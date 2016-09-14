@@ -69,7 +69,7 @@ class ABNumberFormatter : NumberFormatter {
         return formatter.string(from: NSNumber(Float(ret)!))!;
     }
     
-    override func string(for obj: AnyObject) -> String? {
+    override func string(for obj: Any?) -> String? {
         let value = self.abbreviateNumber(obj as! Int);
         if String(value.characters.last!) == "0" {
             return super.string(for: Int(value)!);

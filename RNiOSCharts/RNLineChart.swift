@@ -35,17 +35,17 @@ class RNLineChart : LineChartView {
             json = JSON(data: data);
         };
         
-        if json["labels"].isExists() {
+        if json["labels"].exists() {
             labels = json["labels"].arrayObject as! [String];
         }
       
         self.data = getLineData(labels, json: json);
       
-        if json["drawMarkers"].isExists() {
+        if json["drawMarkers"].exists() {
           self.drawMarkers = json["drawMarkers"].boolValue;
         }
         
-        if json["leftAxis"]["startAtZero"].isExists() {
+        if json["leftAxis"]["startAtZero"].exists() {
             self.leftAxis.startAtZeroEnabled = json["leftAxis"]["startAtZero"].boolValue;
         }
     }

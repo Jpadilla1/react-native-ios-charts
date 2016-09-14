@@ -158,19 +158,19 @@ extension BarLineChartViewBase {
                             if tmp["position"].exists() {
                                 switch(tmp["position"]) {
                                 case "leftBottom":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftBottom;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.leftBottom;
                                     break;
                                 case "leftTop":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftTop;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.leftTop;
                                     break;
                                 case "rightBottom":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightBottom;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.rightBottom;
                                     break;
                                 case "rightTop":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightTop;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.rightTop;
                                     break;
                                 default:
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightTop;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.rightTop;
                                     break;
                                 }
                             }
@@ -223,22 +223,22 @@ extension BarLineChartViewBase {
             if json["xAxis"]["position"].exists() {
                 switch(json["xAxis"]["position"].stringValue) {
                 case "bothSided":
-                    self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.BothSided;
+                    self.xAxis.labelPosition = ChartXAxis.LabelPosition.bothSided;
                     break;
                 case "bottom":
-                    self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom;
+                    self.xAxis.labelPosition = ChartXAxis.LabelPosition.bottom;
                     break;
                 case "bottomInside":
-                    self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.BottomInside;
+                    self.xAxis.labelPosition = ChartXAxis.LabelPosition.bottomInside;
                     break;
                 case "top":
-                    self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Top;
+                    self.xAxis.labelPosition = ChartXAxis.LabelPosition.top;
                     break;
                 case "topInside":
-                    self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.TopInside;
+                    self.xAxis.labelPosition = ChartXAxis.LabelPosition.topInside;
                     break;
                 default:
-                    self.xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom;
+                    self.xAxis.labelPosition = ChartXAxis.LabelPosition.bottom;
                     break;
                 }
             }
@@ -345,19 +345,19 @@ extension BarLineChartViewBase {
                             if tmp["position"].exists() {
                                 switch(tmp["position"]) {
                                 case "leftBottom":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftBottom;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.leftBottom;
                                     break;
                                 case "leftTop":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftTop;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.leftTop;
                                     break;
                                 case "rightBottom":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightBottom;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.rightBottom;
                                     break;
                                 case "rightTop":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightTop;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.rightTop;
                                     break;
                                 default:
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightTop;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.rightTop;
                                     break;
                                 }
                             }
@@ -409,13 +409,13 @@ extension BarLineChartViewBase {
             if json["leftAxis"]["position"].exists() {
                 switch(json["leftAxis"]["position"].stringValue) {
                 case "inside":
-                    self.leftAxis.labelPosition = ChartYAxis.YAxisLabelPosition.InsideChart;
+                    self.leftAxis.labelPosition = ChartYAxis.LabelPosition.insideChart;
                     break;
                 case "outside":
-                    self.leftAxis.labelPosition = ChartYAxis.YAxisLabelPosition.OutsideChart;
+                    self.leftAxis.labelPosition = ChartYAxis.LabelPosition.outsideChart;
                     break;
                 default:
-                    self.leftAxis.labelPosition = ChartYAxis.YAxisLabelPosition.OutsideChart;
+                    self.leftAxis.labelPosition = ChartYAxis.LabelPosition.outsideChart;
                     break;
                 }
             }
@@ -437,11 +437,11 @@ extension BarLineChartViewBase {
             }
 
             if json["leftAxis"]["axisMinimum"].exists() {
-                self.leftAxis.customAxisMin = json["leftAxis"]["axisMinimum"].doubleValue;
+                self.leftAxis.axisMinValue = json["leftAxis"]["axisMinimum"].doubleValue;
             }
 
             if json["leftAxis"]["axisMaximum"].exists() {
-                self.leftAxis.customAxisMax = json["leftAxis"]["axisMaximum"].doubleValue;
+                self.leftAxis.axisMaxValue = json["leftAxis"]["axisMaximum"].doubleValue;
             }
 
             if json["leftAxis"]["labelCount"].exists() {
@@ -538,19 +538,19 @@ extension BarLineChartViewBase {
                             if tmp["position"].exists() {
                                 switch(tmp["position"]) {
                                 case "leftBottom":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftBottom;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.leftBottom;
                                     break;
                                 case "leftTop":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.LeftTop;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.leftTop;
                                     break;
                                 case "rightBottom":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightBottom;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.rightBottom;
                                     break;
                                 case "rightTop":
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightTop;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.rightTop;
                                     break;
                                 default:
-                                    line.labelPosition = ChartLimitLine.ChartLimitLabelPosition.RightTop;
+                                    line.labelPosition = ChartLimitLine.LabelPosition.rightTop;
                                     break;
                                 }
                             }
@@ -602,13 +602,13 @@ extension BarLineChartViewBase {
             if json["rightAxis"]["position"].exists() {
                 switch(json["rightAxis"]["position"].stringValue) {
                 case "inside":
-                    self.rightAxis.labelPosition = ChartYAxis.YAxisLabelPosition.InsideChart;
+                    self.rightAxis.labelPosition = ChartYAxis.LabelPosition.insideChart;
                     break;
                 case "outside":
-                    self.rightAxis.labelPosition = ChartYAxis.YAxisLabelPosition.OutsideChart;
+                    self.rightAxis.labelPosition = ChartYAxis.LabelPosition.outsideChart;
                     break;
                 default:
-                    self.rightAxis.labelPosition = ChartYAxis.YAxisLabelPosition.OutsideChart;
+                    self.rightAxis.labelPosition = ChartYAxis.LabelPosition.outsideChart;
                     break;
                 }
             }
@@ -630,11 +630,11 @@ extension BarLineChartViewBase {
             }
 
             if json["rightAxis"]["axisMinimum"].exists() {
-                self.rightAxis.customAxisMin = json["rightAxis"]["axisMinimum"].doubleValue;
+                self.rightAxis.axisMinValue = json["rightAxis"]["axisMinimum"].doubleValue;
             }
 
             if json["rightAxis"]["axisMaximum"].exists() {
-                self.rightAxis.customAxisMax = json["rightAxis"]["axisMaximum"].doubleValue;
+                self.rightAxis.axisMaxValue = json["rightAxis"]["axisMaximum"].doubleValue;
             }
 
             if json["rightAxis"]["labelCount"].exists() {
@@ -670,55 +670,55 @@ extension BarLineChartViewBase {
                 switch(json["valueFormatter"]["numberStyle"]) {
                 case "CurrencyAccountingStyle":
                     if #available(iOS 9.0, *) {
-                        self.leftAxis.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
-                        self.rightAxis.valueFormatter?.numberStyle = .CurrencyAccountingStyle;
+                        self.leftAxis.valueFormatter?.numberStyle = .currencyAccounting;
+                        self.rightAxis.valueFormatter?.numberStyle = .currencyAccounting;
                     }
                     break;
                 case "CurrencyISOCodeStyle":
                     if #available(iOS 9.0, *) {
-                        self.leftAxis.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
-                        self.rightAxis.valueFormatter?.numberStyle = .CurrencyISOCodeStyle;
+                        self.leftAxis.valueFormatter?.numberStyle = .currencyISOCode;
+                        self.rightAxis.valueFormatter?.numberStyle = .currencyISOCode;
                     }
                     break;
                 case "CurrencyPluralStyle":
                     if #available(iOS 9.0, *) {
-                        self.leftAxis.valueFormatter?.numberStyle = .CurrencyPluralStyle;
-                        self.rightAxis.valueFormatter?.numberStyle = .CurrencyPluralStyle;
+                        self.leftAxis.valueFormatter?.numberStyle = .currencyPlural;
+                        self.rightAxis.valueFormatter?.numberStyle = .currencyPlural;
                     }
                     break;
                 case "CurrencyStyle":
-                    self.leftAxis.valueFormatter?.numberStyle = .CurrencyStyle;
-                    self.rightAxis.valueFormatter?.numberStyle = .CurrencyStyle;
+                    self.leftAxis.valueFormatter?.numberStyle = .currency;
+                    self.rightAxis.valueFormatter?.numberStyle = .currency;
                     break;
                 case "DecimalStyle":
-                    self.leftAxis.valueFormatter?.numberStyle = .DecimalStyle;
-                    self.rightAxis.valueFormatter?.numberStyle = .DecimalStyle;
+                    self.leftAxis.valueFormatter?.numberStyle = .decimal;
+                    self.rightAxis.valueFormatter?.numberStyle = .decimal;
                     break;
                 case "NoStyle":
-                    self.leftAxis.valueFormatter?.numberStyle = .NoStyle;
-                    self.rightAxis.valueFormatter?.numberStyle = .NoStyle;
+                    self.leftAxis.valueFormatter?.numberStyle = .none;
+                    self.rightAxis.valueFormatter?.numberStyle = .none;
                     break;
                 case "OrdinalStyle":
                     if #available(iOS 9.0, *) {
-                        self.leftAxis.valueFormatter?.numberStyle = .OrdinalStyle
-                        self.rightAxis.valueFormatter?.numberStyle = .OrdinalStyle;
+                        self.leftAxis.valueFormatter?.numberStyle = .ordinal;
+                        self.rightAxis.valueFormatter?.numberStyle = .ordinal;
                     }
                     break;
                 case "PercentStyle":
-                    self.leftAxis.valueFormatter?.numberStyle = .PercentStyle;
-                    self.rightAxis.valueFormatter?.numberStyle = .PercentStyle;
+                    self.leftAxis.valueFormatter?.numberStyle = .percent;
+                    self.rightAxis.valueFormatter?.numberStyle = .percent;
                     break;
                 case "ScientificStyle":
-                    self.leftAxis.valueFormatter?.numberStyle = .ScientificStyle;
-                    self.rightAxis.valueFormatter?.numberStyle = .ScientificStyle;
+                    self.leftAxis.valueFormatter?.numberStyle = .scientific;
+                    self.rightAxis.valueFormatter?.numberStyle = .scientific;
                     break;
                 case "SpellOutStyle":
-                    self.leftAxis.valueFormatter?.numberStyle = .SpellOutStyle;
-                    self.rightAxis.valueFormatter?.numberStyle = .SpellOutStyle;
+                    self.leftAxis.valueFormatter?.numberStyle = .spellOut;
+                    self.rightAxis.valueFormatter?.numberStyle = .spellOut;
                     break;
                 default:
-                    self.leftAxis.valueFormatter?.numberStyle = .NoStyle;
-                    self.rightAxis.valueFormatter?.numberStyle = .NoStyle;
+                    self.leftAxis.valueFormatter?.numberStyle = .none;
+                    self.rightAxis.valueFormatter?.numberStyle = .none;
                 }
             }
 

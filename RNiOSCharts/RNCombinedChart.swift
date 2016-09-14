@@ -72,18 +72,18 @@ class RNCombinedChart : CombinedChartView {
     if json["drawOrder"].exists() {
       self.drawOrder = json["drawOrder"].map({
         if (String(describing: $0) == "Bar") {
-          return DrawOrder.Bar.rawValue;
+          return DrawOrder.bar.rawValue;
         }
         if (String(describing: $0) == "Bubble") {
-          return DrawOrder.Bubble.rawValue;
+          return DrawOrder.bubble.rawValue;
         }
         if (String(describing: $0) == "Line") {
-          return DrawOrder.Line.rawValue;
+          return DrawOrder.line.rawValue;
         }
         if (String(describing: $0) == "Candle") {
-          return DrawOrder.Candle.rawValue;
+          return DrawOrder.candle.rawValue;
         }
-        return DrawOrder.Scatter.rawValue;
+        return DrawOrder.scatter.rawValue;
       });
     }
     
