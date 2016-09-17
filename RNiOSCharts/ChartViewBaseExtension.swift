@@ -12,7 +12,7 @@ import Charts
 
 extension ChartViewBase {
 
-    func setChartViewBaseProps(config: String!) {
+    func setChartViewBaseProps(_ config: String!) {
         var legendColors: [UIColor] = ChartColorTemplates.colorful();
         var legendLabels: [String] = [];
 
@@ -20,40 +20,40 @@ extension ChartViewBase {
         self.backgroundColor = UIColor(red: 255.0, green: 255.0, blue: 255.0, alpha: 0.0);
 
         var json: JSON = nil;
-        if let data = config.dataUsingEncoding(NSUTF8StringEncoding) {
+        if let data = config.data(using: String.Encoding.utf8) {
             json = JSON(data: data);
         };
 
-        if json["backgroundColor"].isExists() {
-            self.backgroundColor = RCTConvert.UIColor(json["backgroundColor"].intValue);
+        if json["backgroundColor"].exists() {
+            self.backgroundColor = RCTConvert.uiColor(json["backgroundColor"].intValue);
         }
 
-        if json["noDataText"].isExists() {
+        if json["noDataText"].exists() {
             self.noDataText = json["noDataText"].stringValue;
         }
 
-        if json["descriptionText"].isExists() {
+        if json["descriptionText"].exists() {
             self.descriptionText = json["descriptionText"].stringValue;
         }
 
-        if json["descriptionFontName"].isExists() {
+        if json["descriptionFontName"].exists() {
             self.descriptionFont = UIFont(
                 name: json["descriptionFontName"].stringValue,
                 size: self.descriptionFont!.pointSize
             );
         }
 
-        if json["descriptionFontSize"].isExists() {
-            self.descriptionFont = self.descriptionFont?.fontWithSize(CGFloat(json["descriptionFontSize"].floatValue));
+        if json["descriptionFontSize"].exists() {
+            self.descriptionFont = self.descriptionFont?.withSize(CGFloat(json["descriptionFontSize"].floatValue));
         }
 
-        if json["descriptionTextColor"].isExists() {
-            self.descriptionTextColor = RCTConvert.UIColor(json["descriptionTextColor"].intValue);
+        if json["descriptionTextColor"].exists() {
+            self.descriptionTextColor = RCTConvert.uiColor(json["descriptionTextColor"].intValue);
         }
 
-        if json["descriptionTextPosition"].isExists() &&
-            json["descriptionTextPosition"]["x"].isExists() &&
-            json["descriptionTextPosition"]["y"].isExists() {
+        if json["descriptionTextPosition"].exists() &&
+            json["descriptionTextPosition"]["x"].exists() &&
+            json["descriptionTextPosition"]["y"].exists() {
 
                 self.setDescriptionTextPosition(
                     x: CGFloat(json["descriptionTextPosition"]["x"].floatValue),
@@ -61,161 +61,161 @@ extension ChartViewBase {
                 )
         }
 
-        if json["infoTextFontName"].isExists() {
+        if json["infoTextFontName"].exists() {
             self.infoFont = UIFont(
                 name: json["infoTextFontName"].stringValue,
                 size: self.infoFont!.pointSize
             );
         }
 
-        if json["infoTextFontSize"].isExists() {
-            self.infoFont = self.infoFont?.fontWithSize(CGFloat(json["infoTextFontSize"].floatValue));
+        if json["infoTextFontSize"].exists() {
+            self.infoFont = self.infoFont?.withSize(CGFloat(json["infoTextFontSize"].floatValue));
         }
 
-        if json["infoTextColor"].isExists() {
-            self.infoTextColor = RCTConvert.UIColor(json["infoTextColor"].intValue);
+        if json["infoTextColor"].exists() {
+            self.infoTextColor = RCTConvert.uiColor(json["infoTextColor"].intValue);
         }
 
-        if json["descriptionTextAlign"].isExists() {
+        if json["descriptionTextAlign"].exists() {
             switch (json["descriptionTextAlign"].stringValue) {
             case "left":
-                self.descriptionTextAlign = NSTextAlignment.Left;
+                self.descriptionTextAlign = NSTextAlignment.left;
                 break;
             case "center":
-                self.descriptionTextAlign = NSTextAlignment.Center;
+                self.descriptionTextAlign = NSTextAlignment.center;
                 break;
             case "right":
-                self.descriptionTextAlign = NSTextAlignment.Right;
+                self.descriptionTextAlign = NSTextAlignment.right;
                 break;
             case "justified":
-                self.descriptionTextAlign = NSTextAlignment.Justified;
+                self.descriptionTextAlign = NSTextAlignment.justified;
                 break;
             default:
                 break;
             }
         }
 
-        if json["drawMarkers"].isExists() {
+        if json["drawMarkers"].exists() {
             self.drawMarkers = json["drawMarkers"].boolValue;
         }
 
-        if json["showLegend"].isExists() {
+        if json["showLegend"].exists() {
             self.legend.enabled = json["showLegend"].boolValue;
         }
 
-        if json["legend"].isExists() {
-            if json["legend"]["textColor"].isExists() {
-                self.legend.textColor = RCTConvert.UIColor(json["legend"]["textColor"].intValue);
+        if json["legend"].exists() {
+            if json["legend"]["textColor"].exists() {
+                self.legend.textColor = RCTConvert.uiColor(json["legend"]["textColor"].intValue);
             }
 
-            if json["legend"]["textSize"].isExists() {
-                self.legend.font = self.legend.font.fontWithSize(CGFloat(json["legend"]["textSize"].floatValue));
+            if json["legend"]["textSize"].exists() {
+                self.legend.font = self.legend.font.withSize(CGFloat(json["legend"]["textSize"].floatValue));
             }
 
-            if json["legend"]["textFontName"].isExists() {
+            if json["legend"]["textFontName"].exists() {
                 self.legend.font = UIFont(
                     name: json["legend"]["textFontName"].stringValue,
                     size: self.legend.font.pointSize
                     )!;
             }
 
-            if json["legend"]["wordWrap"].isExists() {
+            if json["legend"]["wordWrap"].exists() {
                 self.legend.wordWrapEnabled = json["legend"]["wordWrap"].boolValue;
             }
 
-            if json["legend"]["maxSizePercent"].isExists() {
+            if json["legend"]["maxSizePercent"].exists() {
                 self.legend.maxSizePercent = CGFloat(json["legend"]["maxSizePercent"].floatValue);
             }
 
-            if json["legend"]["position"].isExists() {
+            if json["legend"]["position"].exists() {
                 switch(json["legend"]["position"].stringValue) {
                 case "rightOfChart":
-                    self.legend.position = ChartLegend.ChartLegendPosition.RightOfChart;
+                    self.legend.position = ChartLegend.Position.rightOfChart;
                     break;
                 case "rightOfChartCenter":
-                    self.legend.position = ChartLegend.ChartLegendPosition.RightOfChartCenter;
+                    self.legend.position = ChartLegend.Position.rightOfChartCenter;
                     break;
                 case "rightOfChartInside":
-                    self.legend.position = ChartLegend.ChartLegendPosition.RightOfChartInside;
+                    self.legend.position = ChartLegend.Position.rightOfChartInside;
                     break;
                 case "leftOfChart":
-                    self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChart;
+                    self.legend.position = ChartLegend.Position.leftOfChart;
                     break;
                 case "leftOfChartCenter":
-                    self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChartCenter;
+                    self.legend.position = ChartLegend.Position.leftOfChartCenter;
                     break;
                 case "leftOfChartInside":
-                    self.legend.position = ChartLegend.ChartLegendPosition.LeftOfChartInside;
+                    self.legend.position = ChartLegend.Position.leftOfChartInside;
                     break;
                 case "belowChartLeft":
-                    self.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft;
+                    self.legend.position = ChartLegend.Position.belowChartLeft;
                     break;
                 case "belowChartRight":
-                    self.legend.position = ChartLegend.ChartLegendPosition.BelowChartRight;
+                    self.legend.position = ChartLegend.Position.belowChartRight;
                     break;
                 case "belowChartCenter":
-                    self.legend.position = ChartLegend.ChartLegendPosition.BelowChartCenter;
+                    self.legend.position = ChartLegend.Position.belowChartCenter;
                     break;
                 case "aboveChartLeft":
-                    self.legend.position = ChartLegend.ChartLegendPosition.AboveChartLeft;
+                    self.legend.position = ChartLegend.Position.aboveChartLeft;
                     break;
                 case "aboveChartRight":
-                    self.legend.position = ChartLegend.ChartLegendPosition.AboveChartRight;
+                    self.legend.position = ChartLegend.Position.aboveChartRight;
                     break;
                 case "aboveChartCenter":
-                    self.legend.position = ChartLegend.ChartLegendPosition.AboveChartCenter;
+                    self.legend.position = ChartLegend.Position.aboveChartCenter;
                     break;
                 case "pieChartCenter":
-                    self.legend.position = ChartLegend.ChartLegendPosition.PiechartCenter;
+                    self.legend.position = ChartLegend.Position.piechartCenter;
                     break;
                 default:
-                    self.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft;
+                    self.legend.position = ChartLegend.Position.belowChartLeft;
                     break;
                 }
             }
 
-            if json["legend"]["form"].isExists() {
+            if json["legend"]["form"].exists() {
                 switch(json["legend"]["form"]) {
                 case "square":
-                    self.legend.form = ChartLegend.ChartLegendForm.Square;
+                    self.legend.form = ChartLegend.Form.square;
                     break;
                 case "circle":
-                    self.legend.form = ChartLegend.ChartLegendForm.Circle;
+                    self.legend.form = ChartLegend.Form.circle;
                     break;
                 case "line":
-                    self.legend.form = ChartLegend.ChartLegendForm.Line;
+                    self.legend.form = ChartLegend.Form.line;
                     break;
                 default:
-                    self.legend.form = ChartLegend.ChartLegendForm.Square;
+                    self.legend.form = ChartLegend.Form.square;
                     break;
                 }
             }
 
-            if json["legend"]["formSize"].isExists() {
+            if json["legend"]["formSize"].exists() {
                 self.legend.formSize = CGFloat(json["legend"]["formSize"].floatValue);
             }
 
-            if json["legend"]["xEntrySpace"].isExists() {
+            if json["legend"]["xEntrySpace"].exists() {
                 self.legend.xEntrySpace = CGFloat(json["legend"]["xEntrySpace"].floatValue);
             }
 
-            if json["legend"]["yEntrySpace"].isExists() {
+            if json["legend"]["yEntrySpace"].exists() {
                 self.legend.yEntrySpace = CGFloat(json["legend"]["yEntrySpace"].floatValue);
             }
 
-            if json["legend"]["formToTextSpace"].isExists() {
+            if json["legend"]["formToTextSpace"].exists() {
                 self.legend.formToTextSpace = CGFloat(json["legend"]["formToTextSpace"].floatValue);
             }
 
-            if json["legend"]["colors"].isExists() {
+            if json["legend"]["colors"].exists() {
                 let arrColors = json["legend"]["colors"].arrayObject as! [Int];
-                legendColors = arrColors.map({return RCTConvert.UIColor($0)});
+                legendColors = arrColors.map({return RCTConvert.uiColor($0)});
                 if legendLabels.count == legendColors.count {
                     legend.setCustom(colors: legendColors, labels: legendLabels);
                 }
             }
 
-            if json["legend"]["labels"].isExists() {
+            if json["legend"]["labels"].exists() {
                 legendLabels = json["legend"]["labels"].arrayObject as! [String];
                 if legendLabels.count == legendColors.count {
                     legend.setCustom(colors:  legendColors, labels: legendLabels);
@@ -223,129 +223,129 @@ extension ChartViewBase {
             }
         }
 
-        if json["userInteractionEnabled"].isExists() {
-          self.userInteractionEnabled = json["userInteractionEnabled"].boolValue;
+        if json["userInteractionEnabled"].exists() {
+          self.isUserInteractionEnabled = json["userInteractionEnabled"].boolValue;
         }
 
-        if json["dragDecelerationEnabled"].isExists() {
+        if json["dragDecelerationEnabled"].exists() {
           self.dragDecelerationEnabled = json["dragDecelerationEnabled"].boolValue;
         }
 
-        if json["dragDecelerationFrictionCoef"].isExists() {
+        if json["dragDecelerationFrictionCoef"].exists() {
           self.dragDecelerationFrictionCoef = CGFloat(json["dragDecelerationFrictionCoef"].floatValue);
         }
 
-        if json["highlightPerTap"].isExists() {
+        if json["highlightPerTap"].exists() {
           self.highlightPerTapEnabled = json["highlightPerTap"].boolValue;
         }
 
-        if json["highlightValues"].isExists() {
+        if json["highlightValues"].exists() {
             let highlightValues = json["highlightValues"].arrayObject as! [Int];
             self.highlightValues(highlightValues.map({return ChartHighlight(xIndex: $0, dataSetIndex: 0)}));
         }
 
-        if json["animation"].isExists() {
-            let xAxisDuration = json["animation"]["xAxisDuration"].isExists() ?
+        if json["animation"].exists() {
+            let xAxisDuration = json["animation"]["xAxisDuration"].exists() ?
                 json["animation"]["xAxisDuration"].doubleValue : 0;
-            let yAxisDuration = json["animation"]["yAxisDuration"].isExists() ?
+            let yAxisDuration = json["animation"]["yAxisDuration"].exists() ?
                 json["animation"]["yAxisDuration"].doubleValue : 0;
 
-            var easingOption: ChartEasingOption = .Linear;
+            var easingOption: ChartEasingOption = .linear;
 
-            if json["animation"]["easingOption"].isExists() {
+            if json["animation"]["easingOption"].exists() {
                 switch(json["animation"]["easingOption"]) {
                 case "linear":
-                    easingOption = .Linear;
+                    easingOption = .linear;
                     break;
                 case "easeInQuad":
-                    easingOption = .EaseInQuad;
+                    easingOption = .easeInQuad;
                     break;
                 case "easeOutQuad":
-                    easingOption = .EaseOutQuad;
+                    easingOption = .easeOutQuad;
                     break;
                 case "easeInOutQuad":
-                    easingOption = .EaseInOutQuad;
+                    easingOption = .easeInOutQuad;
                     break;
                 case "easeInCubic":
-                    easingOption = .EaseInCubic;
+                    easingOption = .easeInCubic;
                     break;
                 case "easeOutCubic":
-                    easingOption = .EaseOutCubic;
+                    easingOption = .easeOutCubic;
                     break;
                 case "easeInOutCubic":
-                    easingOption = .EaseInOutCubic;
+                    easingOption = .easeInOutCubic;
                     break;
                 case "easeInQuart":
-                    easingOption = .EaseInQuart;
+                    easingOption = .easeInQuart;
                     break;
                 case "easeOutQuart":
-                    easingOption = .EaseOutQuart;
+                    easingOption = .easeOutQuart;
                     break;
                 case "easeInOutQuart":
-                    easingOption = .EaseInOutQuart;
+                    easingOption = .easeInOutQuart;
                     break;
                 case "easeInQuint":
-                    easingOption = .EaseInQuint;
+                    easingOption = .easeInQuint;
                     break;
                 case "easeOutQuint":
-                    easingOption = .EaseOutQuint;
+                    easingOption = .easeOutQuint;
                     break;
                 case "easeInOutQuint":
-                    easingOption = .EaseInOutQuint;
+                    easingOption = .easeInOutQuint;
                     break;
                 case "easeInSine":
-                    easingOption = .EaseInSine;
+                    easingOption = .easeInSine;
                     break;
                 case "easeOutSine":
-                    easingOption = .EaseOutSine;
+                    easingOption = .easeOutSine;
                     break;
                 case "easeInOutSine":
-                    easingOption = .EaseInOutSine;
+                    easingOption = .easeInOutSine;
                     break;
                 case "easeInExpo":
-                    easingOption = .EaseInExpo;
+                    easingOption = .easeInExpo;
                     break;
                 case "easeOutExpo":
-                    easingOption = .EaseOutExpo;
+                    easingOption = .easeOutExpo;
                     break;
                 case "easeInOutExpo":
-                    easingOption = .EaseInOutExpo;
+                    easingOption = .easeInOutExpo;
                     break;
                 case "easeInCirc":
-                    easingOption = .EaseInCirc;
+                    easingOption = .easeInCirc;
                     break;
                 case "easeOutCirc":
-                    easingOption = .EaseOutCirc;
+                    easingOption = .easeOutCirc;
                     break;
                 case "easeInOutCirc":
-                    easingOption = .EaseInOutCirc;
+                    easingOption = .easeInOutCirc;
                     break;
                 case "easeInElastic":
-                    easingOption = .EaseInElastic;
+                    easingOption = .easeInElastic;
                     break;
                 case "easeOutElastic":
-                    easingOption = .EaseOutElastic;
+                    easingOption = .easeOutElastic;
                     break;
                 case "easeInBack":
-                    easingOption = .EaseInBack;
+                    easingOption = .easeInBack;
                     break;
                 case "easeOutBack":
-                    easingOption = .EaseOutBack;
+                    easingOption = .easeOutBack;
                     break;
                 case "easeInOutBack":
-                    easingOption = .EaseInOutBack;
+                    easingOption = .easeInOutBack;
                     break;
                 case "easeInBounce":
-                    easingOption = .EaseInBounce;
+                    easingOption = .easeInBounce;
                     break;
                 case "easeOutBounce":
-                    easingOption = .EaseOutBounce;
+                    easingOption = .easeOutBounce;
                     break;
                 case "easeInOutBounce":
-                    easingOption = .EaseInOutBounce;
+                    easingOption = .easeInOutBounce;
                     break;
                 default:
-                    easingOption = .Linear;
+                    easingOption = .linear;
                     break;
                 }
             }

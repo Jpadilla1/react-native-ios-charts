@@ -8,10 +8,10 @@
 
 import Foundation
 
-class ABNumberFormatter : NSNumberFormatter {
+class ABNumberFormatter : NumberFormatter {
     
-    private var maximumDecimalPlaces: Int = 0;
-    private var minimumDecimalPlaces: Int = 0;
+    fileprivate var maximumDecimalPlaces: Int = 0;
+    fileprivate var minimumDecimalPlaces: Int = 0;
     
     init(minimumDecimalPlaces: Int, maximumDecimalPlaces: Int) {
         if (minimumDecimalPlaces < 0) {
@@ -31,12 +31,12 @@ class ABNumberFormatter : NSNumberFormatter {
         fatalError("init(coder:) has not been implemented");
     }
     
-    func abbreviateNumber(num: Int) -> String {
+    func abbreviateNumber(_ num: Int) -> String {
         var abbrevNum : String = "";
         var number : Float = Float(num);
         if (num >= 1000) {
             let abbrev = ["K", "M", "B"];
-            for i in (abbrev.count - 1).stride(to: 0, by: -1) {
+            for i in stride(from: (abbrev.count - 1), to: 0, by: -1) {
                 let size = Float(pow(Double(10), Double((i+1)*3)));
                 if(size <= number) {
                     number = number/size;
@@ -53,28 +53,29 @@ class ABNumberFormatter : NSNumberFormatter {
         return abbrevNum;
     }
     
-    func floatToString(val: Float) -> String {
+    func floatToString(_ val: Float) -> String {
         var ret = String(format:"%.\(self.maximumDecimalPlaces)f", val);
         var c = UniChar(String(ret.characters.last! as Character));
         while (c == 48) {
-            ret = ret.substringToIndex(ret.startIndex.advancedBy(ret.characters.count - 1));
+            ret = ret.substring(to: ret.characters.index(ret.startIndex, offsetBy: ret.characters.count - 1));
             c = UniChar(String(ret.characters.last! as Character));
             if(c == 46) {
-                ret = ret.substringToIndex(ret.startIndex.advancedBy(ret.characters.count - 1));
+                ret = ret.substring(to: ret.characters.index(ret.startIndex, offsetBy: ret.characters.count - 1));
             }
         }
-        let formatter = NSNumberFormatter();
+        let formatter = NumberFormatter();
         formatter.minimumFractionDigits = self.minimumDecimalPlaces;
         formatter.maximumFractionDigits = self.maximumDecimalPlaces;
-        return formatter.stringFromNumber(Float(ret)!)!;
+        let floatValue = (ret as NSString).floatValue
+        return formatter.string(from: NSNumber(value: floatValue))!;
     }
     
-    override func stringForObjectValue(obj: AnyObject) -> String? {
+    override func string(for obj: Any?) -> String? {
         let value = self.abbreviateNumber(obj as! Int);
         if String(value.characters.last!) == "0" {
-            return super.stringForObjectValue(Int(value)!);
+            return super.string(for: Int(value)!);
         }
         
-        return super.stringForObjectValue(Float(value)!);
+        return super.string(for: Float(value)!);
     }
 }
