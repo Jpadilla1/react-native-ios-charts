@@ -34,8 +34,16 @@ The aim of this library is to provide reusable React Native components that can 
   use_frameworks!
 
   target 'MyApp' do
-    pod 'SwiftyJSON', '2.3.1'
-    pod 'Charts', '2.2.3'
+    pod 'SwiftyJSON', git: 'https://github.com/IBM-Swift/SwiftyJSON.git'
+    pod 'Charts', git: 'https://github.com/danielgindi/Charts.git', branch: 'Swift-3.0'
+  end
+  
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '3.0'
+      end
+    end
   end
   ```
 4. Install [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) and [iOS Charts](https://github.com/danielgindi/ios-charts) libraries and add `SwiftyJSON.xcodeproj` and `Charts.xcodeproj` files to your project.

@@ -23,7 +23,7 @@ class RNLineChart : LineChartView {
         fatalError("init(coder:) has not been implemented");
     }
     
-    func setConfig(config: String!) {
+    func setConfig(_ config: String!) {
         self.descriptionText = "";
         
         setBarLineChartViewBaseProps(config);
@@ -31,21 +31,21 @@ class RNLineChart : LineChartView {
         var labels: [String] = [];
         
         var json: JSON = nil;
-        if let data = config.dataUsingEncoding(NSUTF8StringEncoding) {
+        if let data = config.data(using: String.Encoding.utf8) {
             json = JSON(data: data);
         };
         
-        if json["labels"].isExists() {
+        if json["labels"].exists() {
             labels = json["labels"].arrayObject as! [String];
         }
       
         self.data = getLineData(labels, json: json);
       
-        if json["drawMarkers"].isExists() {
+        if json["drawMarkers"].exists() {
           self.drawMarkers = json["drawMarkers"].boolValue;
         }
         
-        if json["leftAxis"]["startAtZero"].isExists() {
+        if json["leftAxis"]["startAtZero"].exists() {
             self.leftAxis.startAtZeroEnabled = json["leftAxis"]["startAtZero"].boolValue;
         }
     }
