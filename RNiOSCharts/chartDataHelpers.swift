@@ -25,7 +25,7 @@ func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
     for set in dataSets! {
         let tmp = JSON(set);
         if tmp["values"].exists() {
-            let values = tmps["values"].arrayValue.map({$0.doubleValue})
+            let values = tmp["values"].arrayValue.map({$0.doubleValue});
             let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [ChartDataEntry] = [];
 
