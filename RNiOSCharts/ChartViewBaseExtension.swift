@@ -208,7 +208,7 @@ extension ChartViewBase {
             }
 
             if json["legend"]["colors"].exists() {
-                let arrColors = json["legend"]["colors"].arrayObject as! [Int];
+                let arrColors = json["legend"]["colors"].arrayValue.map({$0.intValue});
                 legendColors = arrColors.map({return RCTConvert.uiColor($0)});
                 if legendLabels.count == legendColors.count {
                     legend.setCustom(colors: legendColors, labels: legendLabels);
@@ -216,7 +216,7 @@ extension ChartViewBase {
             }
 
             if json["legend"]["labels"].exists() {
-                legendLabels = json["legend"]["labels"].arrayObject as! [String];
+                legendLabels = json["legend"]["labels"].arrayValue.map({$0.stringValue});
                 if legendLabels.count == legendColors.count {
                     legend.setCustom(colors:  legendColors, labels: legendLabels);
                 }
@@ -240,7 +240,7 @@ extension ChartViewBase {
         }
 
         if json["highlightValues"].exists() {
-            let highlightValues = json["highlightValues"].arrayObject as! [Int];
+            let highlightValues = json["highlightValues"].arrayValue.map({$0.intValue});
             self.highlightValues(highlightValues.map({return ChartHighlight(xIndex: $0, dataSetIndex: 0)}));
         }
 

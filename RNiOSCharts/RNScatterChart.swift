@@ -32,7 +32,7 @@ class RNScatterChart : ScatterChartView {
     };
     
     if json["labels"].exists() {
-      labels = json["labels"].arrayObject as! [String];
+      labels = json["labels"].arrayValue.map({$0.stringValue});
     }
     
     self.data = getScatterData(labels, json: json);

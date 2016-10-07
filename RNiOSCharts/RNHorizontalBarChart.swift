@@ -34,7 +34,7 @@ class RNHorizontalBarChart : HorizontalBarChartView {
         };
         
         if json["labels"].exists() {
-            labels = json["labels"].arrayObject as! [String];
+            labels = json["labels"].arrayValue.map({$0.stringValue});
         }
         
         if json["dataSets"].exists() {
@@ -45,7 +45,7 @@ class RNHorizontalBarChart : HorizontalBarChartView {
             for set in dataSets! {
                 let tmp = JSON(set);
                 if tmp["values"].exists() {
-                    let values = tmp["values"].arrayObject as! [Double];
+                    let values = tmp["values"].arrayValue.map({$0.doubleValue});
                     let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
                     var dataEntries: [BarChartDataEntry] = [];
                     
@@ -85,11 +85,11 @@ class RNHorizontalBarChart : HorizontalBarChartView {
                     }
                     
                     if tmp["stackLabels"].exists() {
-                        dataSet.stackLabels = tmp["stackLabels"].arrayObject as! [String];
+                        dataSet.stackLabels = tmp["stackLabels"].arrayValue.map({$0.stringValue});
                     }
                     
                     if tmp["colors"].exists() {
-                        let arrColors = tmp["colors"].arrayObject as! [Int];
+                        let arrColors = tmp["colors"].arrayValue.map({$0.intValue});
                         dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
                     }
                     

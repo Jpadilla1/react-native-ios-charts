@@ -18,118 +18,118 @@ func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
     if !json["dataSets"].exists() {
         return LineChartData();
     }
-    
+
     let dataSets = json["dataSets"].arrayObject;
     var sets: [LineChartDataSet] = [];
-    
+
     for set in dataSets! {
         let tmp = JSON(set);
         if tmp["values"].exists() {
-            let values = tmp["values"].arrayObject as! [Double];
+            let values = tmps["values"].arrayValue.map({$0.doubleValue})
             let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [ChartDataEntry] = [];
-            
+
             for i in 0..<values.count {
                 let dataEntry = ChartDataEntry(value: values[i], xIndex: i);
                 dataEntries.append(dataEntry);
             }
-            
+
             let dataSet = LineChartDataSet(yVals: dataEntries, label: label);
-            
+
             if tmp["colors"].exists() {
-                let arrColors = tmp["colors"].arrayObject as! [Int];
+                let arrColors = tmp["colors"].arrayValue.map({$0.intValue});
                 dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
             }
-            
+
             if tmp["drawCircles"].exists() {
                 dataSet.drawCirclesEnabled = tmp["drawCircles"].boolValue;
             }
-            
+
             if tmp["lineWidth"].exists() {
                 dataSet.lineWidth = CGFloat(tmp["lineWidth"].floatValue);
             }
-            
+
             if tmp["circleColors"].exists() {
-                let arrColors = tmp["circleColors"].arrayObject as! [Int];
+                let arrColors = tmp["circleColors"].arrayValue.map({$0.intValue});
                 dataSet.circleColors = arrColors.map({return RCTConvert.uiColor($0)});
             }
-            
+
             if tmp["circleHoleColor"].exists() {
                 dataSet.circleHoleColor = RCTConvert.uiColor(tmp["circleHoleColor"].intValue);
             }
-            
+
             if tmp["circleRadius"].exists() {
                 dataSet.circleRadius = CGFloat(tmp["circleRadius"].floatValue);
             }
-            
+
             if tmp["cubicIntensity"].exists() {
                 dataSet.cubicIntensity = CGFloat(tmp["cubicIntensity"].floatValue);
             }
-            
+
             if tmp["drawCircleHole"].exists() {
                 dataSet.drawCircleHoleEnabled = tmp["drawCircleHole"].boolValue;
             }
-            
+
             if tmp["drawCubic"].exists() {
                 dataSet.drawCubicEnabled = tmp["drawCubic"].boolValue;
             }
-            
+
             if tmp["drawFilled"].exists() {
                 dataSet.drawFilledEnabled = tmp["drawFilled"].boolValue;
             }
-            
+
             if tmp["drawHorizontalHighlightIndicator"].exists() {
                 dataSet.drawHorizontalHighlightIndicatorEnabled = tmp["drawHorizontalHighlightIndicator"].boolValue;
             }
-            
+
             if tmp["drawVerticalHighlightIndicator"].exists() {
                 dataSet.drawVerticalHighlightIndicatorEnabled = tmp["drawVerticalHighlightIndicator"].boolValue;
             }
-            
+
             if tmp["drawValues"].exists() {
                 dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
             }
-            
+
             if tmp["fillAlpha"].exists() {
                 dataSet.fillAlpha = CGFloat(tmp["fillAlpha"].floatValue);
             }
-            
+
             if tmp["fillColor"].exists() {
                 dataSet.fillColor = RCTConvert.uiColor(tmp["fillColor"].intValue);
             }
-            
+
             if tmp["highlightColor"].exists() {
                 dataSet.highlightColor = RCTConvert.uiColor(tmp["highlightColor"].intValue);
             }
-            
+
             if tmp["highlightEnabled"].exists() {
                 dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
             }
-            
+
             if tmp["highlightLineDashLengths"].exists() {
                 dataSet.highlightLineDashLengths = [CGFloat(tmp["highlightLineDashLengths"].floatValue)];
             }
-            
+
             if tmp["highlightLineDashPhase"].exists() {
                 dataSet.highlightLineDashPhase = CGFloat(tmp["highlightLineDashPhase"].floatValue);
             }
-            
+
             if tmp["highlightLineWidth"].exists() {
                 dataSet.highlightLineWidth = CGFloat(tmp["highlightLineWidth"].floatValue);
             }
-            
+
             if tmp["lineDashLengths"].exists() {
                 dataSet.lineDashLengths = [CGFloat(tmp["lineDashLengths"].floatValue)];
             }
-            
+
             if tmp["lineDashPhase"].exists() {
                 dataSet.lineDashPhase = CGFloat(tmp["lineDashPhase"].floatValue);
             }
-            
+
             if tmp["lineWidth"].exists() {
                 dataSet.lineWidth = CGFloat(tmp["lineWidth"].floatValue);
             }
-            
+
             if tmp["axisDependency"].exists() {
                 let value = tmp["axisDependency"].stringValue;
                 if value == "left" {
@@ -138,22 +138,22 @@ func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
                     dataSet.axisDependency = .right;
                 }
             }
-            
+
             if tmp["valueTextFontName"].exists() {
                 dataSet.valueFont = UIFont(
                     name: tmp["valueTextFontName"].stringValue,
                     size: dataSet.valueFont.pointSize
                     )!;
             }
-            
+
             if tmp["valueTextFontSize"].exists() {
                 dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue));
             }
-            
+
             if tmp["valueTextColor"].exists() {
                 dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
             }
-            
+
             if json["valueFormatter"].exists() {
                 if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                     minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
@@ -161,7 +161,7 @@ func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
                 if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                     maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
                 }
-                
+
                 if json["valueFormatter"]["type"].exists() {
                     switch(json["valueFormatter"]["type"]) {
                     case "regular":
@@ -174,7 +174,7 @@ func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
                         dataSet.valueFormatter = NumberFormatter();
                     }
                 }
-                
+
                 if json["valueFormatter"]["numberStyle"].exists() {
                     switch(json["valueFormatter"]["numberStyle"]) {
                     case "CurrencyAccountingStyle":
@@ -219,11 +219,11 @@ func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
                         dataSet.valueFormatter?.numberStyle = .none;
                     }
                 }
-                
+
                 dataSet.valueFormatter?.minimumFractionDigits = minimumDecimalPlaces;
                 dataSet.valueFormatter?.maximumFractionDigits = maximumDecimalPlaces;
             }
-            
+
             sets.append(dataSet);
         }
     }
@@ -235,84 +235,84 @@ func getBarData(_ labels: [String], json: JSON!) -> BarChartData {
     if !json["dataSets"].exists() {
         return BarChartData();
     }
-    
+
     let dataSets = json["dataSets"].arrayObject;
     var sets: [BarChartDataSet] = [];
-    
+
     for set in dataSets! {
         let tmp = JSON(set);
         if tmp["values"].exists() {
-            let values = tmp["values"].arrayObject as! [Double];
+            let values = tmp["values"].arrayValue.map({$0.doubleValue});
             let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [BarChartDataEntry] = [];
-            
+
             for i in 0..<values.count {
                 let dataEntry = BarChartDataEntry(value: values[i], xIndex: i);
                 dataEntries.append(dataEntry);
             }
-            
+
             let dataSet = BarChartDataSet(yVals: dataEntries, label: label);
-            
+
             if tmp["barShadowColor"].exists() {
                 dataSet.barShadowColor = RCTConvert.uiColor(tmp["barShadowColor"].intValue);
             }
-            
+
             if tmp["barSpace"].exists() {
                 dataSet.barSpace = CGFloat(tmp["barSpace"].floatValue);
             }
-            
+
             if tmp["highlightAlpha"].exists() {
                 dataSet.highlightAlpha = CGFloat(tmp["highlightAlpha"].floatValue);
             }
-            
+
             if tmp["highlightColor"].exists() {
                 dataSet.highlightColor = RCTConvert.uiColor(tmp["highlightColor"].intValue);
             }
-            
+
             if tmp["highlightLineDashLengths"].exists() {
                 dataSet.highlightLineDashLengths = [CGFloat(tmp["highlightLineDashLengths"].floatValue)];
             }
-            
+
             if tmp["highlightLineDashPhase"].exists() {
                 dataSet.highlightLineDashPhase = CGFloat(tmp["highlightLineDashPhase"].floatValue);
             }
-            
+
             if tmp["highlightLineWidth"].exists() {
                 dataSet.highlightLineWidth = CGFloat(tmp["highlightLineWidth"].floatValue);
             }
-            
+
             if tmp["stackLabels"].exists() {
-                dataSet.stackLabels = tmp["stackLabels"].arrayObject as! [String];
+                dataSet.stackLabels = tmp["stackLabels"].arrayValue.map({$0.stringValue});
             }
-            
+
             if tmp["colors"].exists() {
-                let arrColors = tmp["colors"].arrayObject as! [Int];
+                let arrColors = tmp["colors"].arrayValue.map({$0.intValue});
                 dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
             }
-            
+
             if tmp["drawValues"].exists() {
                 dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
             }
-            
+
             if tmp["highlightEnabled"].exists() {
                 dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
             }
-            
+
             if tmp["valueTextFontName"].exists() {
                 dataSet.valueFont = UIFont(
                     name: tmp["valueTextFontName"].stringValue,
                     size: dataSet.valueFont.pointSize
                     )!;
             }
-            
+
             if tmp["valueTextFontSize"].exists() {
                 dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue))
             }
-            
+
             if tmp["valueTextColor"].exists() {
                 dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
             }
-            
+
             if tmp["axisDependency"].exists() {
                 let value = tmp["axisDependency"].stringValue;
                 if value == "left" {
@@ -321,7 +321,7 @@ func getBarData(_ labels: [String], json: JSON!) -> BarChartData {
                     dataSet.axisDependency = .right;
                 }
             }
-            
+
             if json["valueFormatter"].exists() {
                 if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                     minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
@@ -329,7 +329,7 @@ func getBarData(_ labels: [String], json: JSON!) -> BarChartData {
                 if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                     maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
                 }
-                
+
                 if json["valueFormatter"]["type"].exists() {
                     switch(json["valueFormatter"]["type"]) {
                     case "regular":
@@ -342,7 +342,7 @@ func getBarData(_ labels: [String], json: JSON!) -> BarChartData {
                         dataSet.valueFormatter = NumberFormatter();
                     }
                 }
-                
+
                 if json["valueFormatter"]["numberStyle"].exists() {
                     switch(json["valueFormatter"]["numberStyle"]) {
                     case "CurrencyAccountingStyle":
@@ -387,11 +387,11 @@ func getBarData(_ labels: [String], json: JSON!) -> BarChartData {
                         dataSet.valueFormatter?.numberStyle = .none;
                     }
                 }
-                
+
                 dataSet.valueFormatter?.minimumFractionDigits = minimumDecimalPlaces;
                 dataSet.valueFormatter?.maximumFractionDigits = maximumDecimalPlaces;
             }
-            
+
             sets.append(dataSet);
         }
     }
@@ -403,18 +403,18 @@ func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
     if !json["dataSets"].exists() {
         return BubbleChartData();
     }
-    
+
     let dataSets = json["dataSets"].arrayObject;
-    
+
     var sets: [BubbleChartDataSet] = [];
-    
+
     for set in dataSets! {
         let tmp = JSON(set);
         if tmp["values"].exists() {
             let values = tmp["values"].arrayObject!;
             let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [BubbleChartDataEntry] = [];
-            
+
             for i in 0..<values.count {
                 let object = JSON(values[i]);
                 let dataEntry = BubbleChartDataEntry(
@@ -424,33 +424,33 @@ func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
                 );
                 dataEntries.append(dataEntry);
             }
-            
+
             let dataSet = BubbleChartDataSet(yVals: dataEntries, label: label);
-            
+
             if tmp["colors"].exists() {
-                let arrColors = tmp["colors"].arrayObject as! [Int];
+                let arrColors = tmp["colors"].arrayValue.map({$0.intValue});
                 dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
             }
-            
+
             if tmp["drawValues"].exists() {
                 dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
             }
-            
+
             if tmp["highlightEnabled"].exists() {
                 dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
             }
-            
+
             if tmp["highlightCircleWidth"].exists() {
                 dataSet.highlightCircleWidth = CGFloat(tmp["highlightCircleWidth"].floatValue);
             }
-            
+
             if tmp["valueTextFontName"].exists() {
                 dataSet.valueFont = UIFont(
                     name: tmp["valueTextFontName"].stringValue,
                     size: dataSet.valueFont.pointSize
                     )!;
             }
-            
+
             if tmp["axisDependency"].exists() {
                 let value = tmp["axisDependency"].stringValue;
                 if value == "left" {
@@ -459,15 +459,15 @@ func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
                     dataSet.axisDependency = .right;
                 }
             }
-            
+
             if tmp["valueTextFontSize"].exists() {
                 dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue))
             }
-            
+
             if tmp["valueTextColor"].exists() {
                 dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
             }
-            
+
             if json["valueFormatter"].exists() {
                 if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                     minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
@@ -475,7 +475,7 @@ func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
                 if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                     maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
                 }
-                
+
                 if json["valueFormatter"]["type"].exists() {
                     switch(json["valueFormatter"]["type"]) {
                     case "regular":
@@ -488,7 +488,7 @@ func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
                         dataSet.valueFormatter = NumberFormatter();
                     }
                 }
-                
+
                 if json["valueFormatter"]["numberStyle"].exists() {
                     switch(json["valueFormatter"]["numberStyle"]) {
                     case "CurrencyAccountingStyle":
@@ -533,11 +533,11 @@ func getBubbleData(_ labels: [String], json: JSON!) -> BubbleChartData {
                         dataSet.valueFormatter?.numberStyle = .none;
                     }
                 }
-                
+
                 dataSet.valueFormatter?.minimumFractionDigits = minimumDecimalPlaces;
                 dataSet.valueFormatter?.maximumFractionDigits = maximumDecimalPlaces;
             }
-            
+
             sets.append(dataSet);
         }
     }
@@ -548,50 +548,50 @@ func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
     if !json["dataSets"].exists() {
         return ScatterChartData();
     }
-    
+
     let dataSets = json["dataSets"].arrayObject;
-    
+
     var sets: [ScatterChartDataSet] = [];
-    
+
     for set in dataSets! {
         let tmp = JSON(set);
         if tmp["values"].exists() {
-            let values = tmp["values"].arrayObject as! [Double];
+            let values = tmp["values"].arrayValue.map({$0.doubleValue});
             let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [ChartDataEntry] = [];
-            
+
             for i in 0..<values.count {
                 let dataEntry = ChartDataEntry(value: values[i], xIndex: i);
                 dataEntries.append(dataEntry);
             }
-            
+
             let dataSet = ScatterChartDataSet(yVals: dataEntries, label: label);
-            
+
             if tmp["colors"].exists() {
-                let arrColors = tmp["colors"].arrayObject as! [Int];
+                let arrColors = tmp["colors"].arrayValue.map({$0.intValue});
                 dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
             }
-            
+
             if tmp["drawValues"].exists() {
                 dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
             }
-            
+
             if tmp["highlightEnabled"].exists() {
                 dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
             }
-            
+
             if tmp["scatterShapeSize"].exists() {
                 dataSet.scatterShapeSize = CGFloat(tmp["scatterShapeSize"].floatValue);
             }
-            
+
             if tmp["scatterShapeHoleRadius"].exists() {
                 dataSet.scatterShapeHoleRadius = CGFloat(tmp["scatterShapeHoleRadius"].floatValue);
             }
-            
+
             if tmp["scatterShapeHoleColor"].exists() {
                 dataSet.scatterShapeHoleColor = RCTConvert.uiColor(tmp["scatterShapeHoleColor"].intValue);
             }
-            
+
             if tmp["scatterShape"].exists() {
                 switch(tmp["scatterShape"]) {
                 case "Square":
@@ -614,22 +614,22 @@ func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
                     break;
                 }
             }
-            
+
             if tmp["valueTextFontName"].exists() {
                 dataSet.valueFont = UIFont(
                     name: tmp["valueTextFontName"].stringValue,
                     size: dataSet.valueFont.pointSize
                     )!;
             }
-            
+
             if tmp["valueTextFontSize"].exists() {
                 dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue))
             }
-            
+
             if tmp["valueTextColor"].exists() {
                 dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
             }
-            
+
             if tmp["axisDependency"].exists() {
                 let value = tmp["axisDependency"].stringValue;
                 if value == "left" {
@@ -638,7 +638,7 @@ func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
                     dataSet.axisDependency = .right;
                 }
             }
-            
+
             if json["valueFormatter"].exists() {
                 if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                     minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
@@ -646,7 +646,7 @@ func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
                 if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                     maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
                 }
-                
+
                 if json["valueFormatter"]["type"].exists() {
                     switch(json["valueFormatter"]["type"]) {
                     case "regular":
@@ -659,7 +659,7 @@ func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
                         dataSet.valueFormatter = NumberFormatter();
                     }
                 }
-                
+
                 if json["valueFormatter"]["numberStyle"].exists() {
                     switch(json["valueFormatter"]["numberStyle"]) {
                     case "CurrencyAccountingStyle":
@@ -704,11 +704,11 @@ func getScatterData(_ labels: [String], json: JSON!) -> ScatterChartData {
                         dataSet.valueFormatter?.numberStyle = .none;
                     }
                 }
-                
+
                 dataSet.valueFormatter?.minimumFractionDigits = minimumDecimalPlaces;
                 dataSet.valueFormatter?.maximumFractionDigits = maximumDecimalPlaces;
             }
-            
+
             sets.append(dataSet);
         }
     }
@@ -719,18 +719,18 @@ func getCandleStickData(_ labels: [String], json: JSON!) -> CandleChartData {
     if !json["dataSets"].exists() {
         return CandleChartData();
     }
-    
+
     let dataSets = json["dataSets"].arrayObject;
-    
+
     var sets: [CandleChartDataSet] = [];
-    
+
     for set in dataSets! {
         let tmp = JSON(set);
         if tmp["values"].exists() {
             let values = tmp["values"].arrayObject!;
             let label = tmp["label"].exists() ? tmp["label"].stringValue : "";
             var dataEntries: [CandleChartDataEntry] = [];
-            
+
             for i in 0..<values.count {
                 let object = JSON(values[i]);
                 let dataEntry = CandleChartDataEntry(
@@ -742,37 +742,37 @@ func getCandleStickData(_ labels: [String], json: JSON!) -> CandleChartData {
                 );
                 dataEntries.append(dataEntry);
             }
-            
+
             let dataSet = CandleChartDataSet(yVals: dataEntries, label: label);
-            
+
             if tmp["colors"].exists() {
-                let arrColors = tmp["colors"].arrayObject as! [Int];
+                let arrColors = tmp["colors"].arrayValue.map({$0.intValue});
                 dataSet.colors = arrColors.map({return RCTConvert.uiColor($0)});
             }
-            
+
             if tmp["drawValues"].exists() {
                 dataSet.drawValuesEnabled = tmp["drawValues"].boolValue;
             }
-            
+
             if tmp["highlightEnabled"].exists() {
                 dataSet.highlightEnabled = tmp["highlightEnabled"].boolValue;
             }
-            
+
             if tmp["valueTextFontName"].exists() {
                 dataSet.valueFont = UIFont(
                     name: tmp["valueTextFontName"].stringValue,
                     size: dataSet.valueFont.pointSize
                     )!;
             }
-            
+
             if tmp["valueTextFontSize"].exists() {
                 dataSet.valueFont = dataSet.valueFont.withSize(CGFloat(tmp["valueTextFontSize"].floatValue))
             }
-            
+
             if tmp["valueTextColor"].exists() {
                 dataSet.valueTextColor = RCTConvert.uiColor(tmp["valueTextColor"].intValue);
             }
-            
+
             if tmp["axisDependency"].exists() {
                 let value = tmp["axisDependency"].stringValue;
                 if value == "left" {
@@ -821,7 +821,7 @@ func getCandleStickData(_ labels: [String], json: JSON!) -> CandleChartData {
             if tmp["decreasingFilled"].exists() {
                 dataSet.decreasingFilled = tmp["decreasingFilled"].boolValue;
             }
-            
+
             if json["valueFormatter"].exists() {
                 if json["valueFormatter"]["minimumDecimalPlaces"].exists() {
                     minimumDecimalPlaces = json["valueFormatter"]["minimumDecimalPlaces"].intValue;
@@ -829,7 +829,7 @@ func getCandleStickData(_ labels: [String], json: JSON!) -> CandleChartData {
                 if json["valueFormatter"]["maximumDecimalPlaces"].exists() {
                     maximumDecimalPlaces = json["valueFormatter"]["maximumDecimalPlaces"].intValue;
                 }
-                
+
                 if json["valueFormatter"]["type"].exists() {
                     switch(json["valueFormatter"]["type"]) {
                     case "regular":
@@ -842,7 +842,7 @@ func getCandleStickData(_ labels: [String], json: JSON!) -> CandleChartData {
                         dataSet.valueFormatter = NumberFormatter();
                     }
                 }
-                
+
                 if json["valueFormatter"]["numberStyle"].exists() {
                     switch(json["valueFormatter"]["numberStyle"]) {
                     case "CurrencyAccountingStyle":
@@ -887,14 +887,13 @@ func getCandleStickData(_ labels: [String], json: JSON!) -> CandleChartData {
                         dataSet.valueFormatter?.numberStyle = .none;
                     }
                 }
-                
+
                 dataSet.valueFormatter?.minimumFractionDigits = minimumDecimalPlaces;
                 dataSet.valueFormatter?.maximumFractionDigits = maximumDecimalPlaces;
             }
-            
+
             sets.append(dataSet);
         }
     }
     return CandleChartData(xVals: labels, dataSets: sets);
 }
-
