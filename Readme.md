@@ -35,7 +35,7 @@ The aim of this library is to provide reusable React Native components that can 
 
   target 'MyApp' do
     pod 'SwiftyJSON', git: 'https://github.com/IBM-Swift/SwiftyJSON.git'
-    pod 'Charts', git: 'https://github.com/danielgindi/Charts.git', branch: 'Swift-3.0'
+    pod 'Charts', git: 'https://github.com/danielgindi/Charts.git', branch: 'Chart2.2.5-Swift3.0'
   end
   
   post_install do |installer|
