@@ -99,6 +99,28 @@ extension ChartViewBase {
             self.drawMarkers = json["drawMarkers"].boolValue;
         }
 
+        if json["marker"].exists() {
+            var markerFont = UIFont.systemFontOfSize(12.0);
+
+            if json["marker"]["markerFontSize"].exists() {
+                markerFont = markerFont.fontWithSize(CGFloat(json["marker"]["markerFontSize"].floatValue));
+            }
+
+            if json["marker"]["markerFontName"].exists() {
+                markerFont = UIFont(
+                  name: json["marker"]["markerFontName"].stringValue,
+                  size: markerFont.pointSize
+                )!;
+            }
+
+            self.marker = BalloonMarker(
+              color: RCTConvert.UIColor(json["marker"]["markerColor"].intValue),
+              font: markerFont,
+              textColor: RCTConvert.UIColor(json["marker"]["markerTextColor"].intValue),
+              insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0)
+            )
+        }
+
         if json["showLegend"].exists() {
             self.legend.enabled = json["showLegend"].boolValue;
         }
