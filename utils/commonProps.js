@@ -190,7 +190,8 @@ export const barLineCommonProps = {
       valueTextColor: React.PropTypes.string,
       xOffset: React.PropTypes.number,
       yOffset: React.PropTypes.number
-    }))
+    })),
+    avoidFirstLastClippingEnabled: React.PropTypes.bool,
   }),
   leftAxis: React.PropTypes.shape({
     enabled: React.PropTypes.bool,

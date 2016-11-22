@@ -255,6 +255,10 @@ extension BarLineChartViewBase {
                 self.xAxis.spaceBetweenLabels = json["xAxis"]["spaceBetweenLabels"].intValue;
             }
 
+            if json["xAxis"]["avoidFirstLastClippingEnabled"].exists() {
+                self.xAxis.avoidFirstLastClippingEnabled = json["xAxis"]["avoidFirstLastClippingEnabled"].boolValue;
+            }
+
         }
 
         // leftAxis
