@@ -128,7 +128,7 @@
          location = "group:RNiOSCharts/ChartViewBaseExtension.swift">
       </FileRef>
       <FileRef
-         location = "group:/Users/josepadilla/Documents/github/react-native-ios-charts/RNiOSCharts/BarLineChartViewBaseExtension.swift">
+         location = "group:RNiOSCharts/BarLineChartViewBaseExtension.swift">
       </FileRef>
    </Group>
 </Workspace>
