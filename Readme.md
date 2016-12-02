@@ -1,4 +1,9 @@
 # react-native-ios-charts
+
+# NOT MAINTAINED, LOOKING FOR NEW PROJECT OWNER
+
+**It's been a while since I've been able to spend some time on this repo and I prefer to transfer it to someone that can do a better job at maintaining it than I am doing right now. If you are interested, please let me know right away at jpadilla1293@gmail.com**
+
 [![npm version](https://img.shields.io/npm/v/react-native-ios-charts.svg?style=flat-square)](https://www.npmjs.com/package/react-native-ios-charts)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-ios-charts.svg?style=flat-square)](https://www.npmjs.com/package/react-native-ios-charts)
 
